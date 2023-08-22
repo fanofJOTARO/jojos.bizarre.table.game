@@ -1,0 +1,62 @@
+@charset "utf-8";
+h1{
+    font-size: 30px;
+    background-color: #3e1ba0;
+    color: #ffffff;
+    padding: 8px 14px;
+
+}
+/**
+ol{
+    border: 2px solid #F3F3F3;
+    padding: 14px 14px 14px 32px;
+}
+**/
+table, table td, table th{
+    border-collapse: collapse;
+    border: 2px #000 solid;
+    background-color: white;
+    padding: 10px 10px 10px 10px;
+    font-size: 20px;
+}
+input{
+    line-height: 2;
+    border: 2px #000 solid;
+    font-size: 15px;
+}
+input[type=checkbox]{
+    transform: scale(1.5);
+}
+select{
+    font-size: 15px;
+}
+input:read-only{
+    background-color: #bebebe;
+}
+h2{
+    vertical-align: middle;
+}
+button{
+    padding: 5px 5px 0px 5px;
+}
+#tabcontrol a{
+    display: inline-block;            /* インラインブロック化 */
+    border-width: 2px 2px 0px 2px;    /* 下以外の枠線を引く */
+    border-style: solid;              /* 枠線の種類：実線 */
+    border-color: #646464;              /* 枠線の色：黒色 */
+    border-radius: 0.75em 0.75em 0 0; /* 枠線の左上角と右上角だけを丸く */
+    padding: 0.75em 1em;              /* 内側の余白 */
+    text-decoration: none;            /* リンクの下線を消す */
+    color: black;                     /* 文字色：黒色 */
+    background-color: white;          /* 背景色：白色 */
+    font-weight: bold;                /* 太字 */
+    position: relative;               /* JavaScriptでz-indexを調整するために必要 */
+}
+#tabbody div {
+    border: 2px solid #646464; /* 枠線：黒色の実線を1pxの太さで引く */
+    margin-top: -16px;        /* 上側にあるタブと1pxだけ重ねるために「-1px」を指定 */
+    padding: 1em;            /* 内側の余白量 */
+    background-color: white; /* 背景色：白色 */
+    position: relative;      /* z-indexを調整するために必要 */
+    z-index: 0;              /* 重なり順序を「最も背面」にするため */
+}
