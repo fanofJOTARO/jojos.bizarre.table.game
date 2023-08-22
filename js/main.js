@@ -422,10 +422,7 @@ function save6(){
     var isinitial = false;
 
     for(let table = 0; table < standabilitybattle.rows.length-1; table++){
-        if(document.getElementsByName("tostandabilitybattle"+table)[0].value
-            == document.getElementsByName("defstandabilitybattle"+table)[0].value) isinitial = true;
-            else isinitial = false;
-        if(table < defstandbattlenum && !isinitial){
+        if(table < defstandbattlenum){
             
             if(standabilitybattle.rows[table+1].cells[1].innerHTML.includes("input")){
                 standstatusB += standabilitybattle.rows[table+1].cells[1].innerText
@@ -437,16 +434,13 @@ function save6(){
             }
             
             
-        }else if(!isinitial){
+        }else{
             standstatusB += document.getElementsByName("standabilitybattlename"+table)[0].value + "- " 
                             + document.getElementsByName("tostandabilitybattle"+table)[0].value + "\n";
         }
     }
     for(let table = 0; table < standabilityaction.rows.length-1; table++){
-        if(document.getElementsByName("tostandabilityaction"+table)[0].value
-            == document.getElementsByName("defstandabilityaction"+table)[0].value) isinitial = true;
-            else isinitial = false;
-        if(table < defstandactionnum && !isinitial){
+        if(table < defstandactionnum){
             if(standabilityaction.rows[table+1].cells[1].innerHTML.includes("input")){
                 standstatusA += standabilityaction.rows[table+1].cells[1].innerText
                 + document.getElementsByName("standabilityactionname"+table)[0].value + "- " 
@@ -456,7 +450,7 @@ function save6(){
                 + document.getElementsByName("tostandabilityaction"+table)[0].value + "\n";
             }
         
-        }else if(!isinitial){
+        }else{
             standstatusA += document.getElementsByName("standabilityactionname"+table)[0].value + "- " 
                             + document.getElementsByName("tostandabilityaction"+table)[0].value + "\n";
         }
@@ -833,10 +827,7 @@ function chapare6(){
     }
 
     for(let table = 0; table < standabilitybattle.rows.length-1; table++){
-        if(document.getElementsByName("tostandabilitybattle"+table)[0].value
-            == document.getElementsByName("defstandabilitybattle"+table)[0].value) isinitial = true;
-            else isinitial = false;
-        if(table < defstandbattlenum && !isinitial){
+        if(table < defstandbattlenum){
             if(standabilitybattle.rows[table+1].cells[1].innerHTML.includes("input")){
                 //standstatusB += standabilitybattle.rows[table+1].cells[1].innerText
                 //+ document.getElementsByName("standabilitybattlename"+table)[0].value + "- " 
@@ -854,7 +845,7 @@ function chapare6(){
             }
             
             
-        }else if(!isinitial){
+        }else{
             //standstatusB += document.getElementsByName("standabilitybattlename"+table)[0].value + "- " 
             //                + document.getElementsByName("tostandabilitybattle"+table)[0].value + "\n";
 
@@ -863,10 +854,7 @@ function chapare6(){
         }
     }
     for(let table = 0; table < standabilityaction.rows.length-1; table++){
-        if(document.getElementsByName("tostandabilityaction"+table)[0].value
-            == document.getElementsByName("defstandabilityaction"+table)[0].value) isinitial = true;
-            else isinitial = false;
-        if(table < defstandactionnum && !isinitial){
+        if(table < defstandactionnum){
             if(standabilityaction.rows[table+1].cells[1].innerHTML.includes("input")){
                 //standstatusA += standabilityaction.rows[table+1].cells[1].innerText
                 //+ document.getElementsByName("standabilityactionname"+table)[0].value + "- " 
@@ -884,7 +872,7 @@ function chapare6(){
             }
             
             
-        }else if(!isinitial){
+        }else{
             //standstatusA += document.getElementsByName("standabilityactionname"+table)[0].value + "- " 
             //                + document.getElementsByName("tostandabilityaction"+table)[0].value + "\n";
 
