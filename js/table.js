@@ -11,7 +11,7 @@ let defstandactionnum = 0;
 function create6(){
     adddef6("battle", "波紋", "0");
     adddef6("battle", "こぶし", "50");
-    adddef6("battle", "回避", Number(document.status.dex2.value)*2);
+    adddef6("battle", "回避", Number(document.status6.dex2.value)*2);
     adddef6("battle", "キック", "25");
     adddef6("battle", "頭突き", "10");
     adddef6("battle", "組みつき", "25");
@@ -87,54 +87,54 @@ function create6(){
     adddef6("standabilityaction", "聞き耳S", "25", false);
     adddef6("standabilityaction", "登攀S", "50", false);
     adddef6("standabilityaction", "水泳S", "25", false);
-    if(document.status.usestand.value == true){
-        document.status.defbattle6.value = 50;
-        document.status.defsearch9.value = 50;
-        document.status.defaction8.value = 50;
+    if(document.status6.usestand.value == true){
+        document.status6.defbattle66.value = 50;
+        document.status6.defsearch69.value = 50;
+        document.status6.defaction68.value = 50;
     }else{
-        document.status.defbattle6.value = 25;
-        document.status.defsearch9.value = 40;
-        document.status.defaction8.value = 25;
+        document.status6.defbattle66.value = 25;
+        document.status6.defsearch69.value = 40;
+        document.status6.defaction68.value = 25;
     }
     reset6();
 }
 
 function reset6(){
-    var standabilitybattle = document.getElementById("standabilitybattle");
-    var standabilityaction = document.getElementById("standabilityaction");
-    var battle = document.getElementById("battle");
-    var search = document.getElementById("search");
-    var action = document.getElementById("action");
-    var negotiations = document.getElementById("negotiations");
-    var knowledge = document.getElementById("knowledge");
+    var standabilitybattle = document.getElementById("standabilitybattle6");
+    var standabilityaction = document.getElementById("standabilityaction6");
+    var battle = document.getElementById("battle6");
+    var search = document.getElementById("search6");
+    var action = document.getElementById("action6");
+    var negotiations = document.getElementById("negotiations6");
+    var knowledge = document.getElementById("knowledge6");
     
     for(let table = 0; table < standabilitybattle.rows.length-1; table++){
-        var def = Number(document.getElementsByName("defstandabilitybattle"+table)[0].value);
-        var cor = Number(document.getElementsByName("corstandabilitybattle"+table)[0].value);
+        var def = Number(document.getElementsByName("defstandabilitybattle6"+table)[0].value);
+        var cor = Number(document.getElementsByName("corstandabilitybattle6"+table)[0].value);
         var pl = 0;
         var add = 0;
 
         var sum = def+cor+pl+add;
-        document.getElementsByName("plstandabilitybattle"+table)[0].value = pl;
-        document.getElementsByName("addstandabilitybattle"+table)[0].value = add;
-        document.getElementsByName("tostandabilitybattle"+table)[0].value = sum;
+        document.getElementsByName("plstandabilitybattle6"+table)[0].value = pl;
+        document.getElementsByName("addstandabilitybattle6"+table)[0].value = add;
+        document.getElementsByName("tostandabilitybattle6"+table)[0].value = sum;
     }
     
     for(let table = 0; table < standabilityaction.rows.length-1; table++){
-        var def = Number(document.getElementsByName("defstandabilityaction"+table)[0].value);
-        var cor = Number(document.getElementsByName("corstandabilityaction"+table)[0].value);
+        var def = Number(document.getElementsByName("defstandabilityaction6"+table)[0].value);
+        var cor = Number(document.getElementsByName("corstandabilityaction6"+table)[0].value);
         var pl = 0;
         var add = 0;
         
         var sum = def+cor+pl+add;
 
-        document.getElementsByName("plstandabilityaction"+table)[0].value = 0;
-        document.getElementsByName("addstandabilityaction"+table)[0].value = 0;
-        document.getElementsByName("tostandabilityaction"+table)[0].value = sum;
+        document.getElementsByName("plstandabilityaction6"+table)[0].value = 0;
+        document.getElementsByName("addstandabilityaction6"+table)[0].value = 0;
+        document.getElementsByName("tostandabilityaction6"+table)[0].value = sum;
     }
 
     for(let table = 0; table < battle.rows.length-1; table++){
-        var def = Number(document.getElementsByName("defbattle"+table)[0].value);
+        var def = Number(document.getElementsByName("defbattle6"+table)[0].value);
         //var bp = Number(document.getElementsByName("bpbattle"+table)[0].value);
         //var ip = Number(document.getElementsByName("ipbattle"+table)[0].value);
         //var pl = Number(document.getElementsByName("plbattle"+table)[0].value);
@@ -142,15 +142,15 @@ function reset6(){
 
         var sum = def;
 
-        document.getElementsByName("bpbattle"+table)[0].value = 0;
-        document.getElementsByName("ipbattle"+table)[0].value = 0;
-        document.getElementsByName("plbattle"+table)[0].value = 0;
-        document.getElementsByName("addbattle"+table)[0].value = 0;
-        document.getElementsByName("tobattle"+table)[0].value = sum;
+        document.getElementsByName("bpbattle6"+table)[0].value = 0;
+        document.getElementsByName("ipbattle6"+table)[0].value = 0;
+        document.getElementsByName("plbattle6"+table)[0].value = 0;
+        document.getElementsByName("addbattle6"+table)[0].value = 0;
+        document.getElementsByName("tobattle6"+table)[0].value = sum;
     }
 
     for(let table = 0; table < search.rows.length-1; table++){
-        var def = Number(document.getElementsByName("defsearch"+table)[0].value);
+        var def = Number(document.getElementsByName("defsearch6"+table)[0].value);
         //var bp = Number(document.getElementsByName("bpsearch"+table)[0].value);
         //var ip = Number(document.getElementsByName("ipsearch"+table)[0].value);
         //var pl = Number(document.getElementsByName("plsearch"+table)[0].value);
@@ -158,15 +158,15 @@ function reset6(){
 
         var sum = def;
 
-        document.getElementsByName("bpsearch"+table)[0].value = 0;
-        document.getElementsByName("ipsearch"+table)[0].value = 0;
-        document.getElementsByName("plsearch"+table)[0].value = 0;
-        document.getElementsByName("addsearch"+table)[0].value = 0;
-        document.getElementsByName("tosearch"+table)[0].value = sum;
+        document.getElementsByName("bpsearch6"+table)[0].value = 0;
+        document.getElementsByName("ipsearch6"+table)[0].value = 0;
+        document.getElementsByName("plsearch6"+table)[0].value = 0;
+        document.getElementsByName("addsearch6"+table)[0].value = 0;
+        document.getElementsByName("tosearch6"+table)[0].value = sum;
     }
 
     for(let table = 0; table < action.rows.length-1; table++){
-        var def = Number(document.getElementsByName("defaction"+table)[0].value);
+        var def = Number(document.getElementsByName("defaction6"+table)[0].value);
         //var bp = Number(document.getElementsByName("bpaction"+table)[0].value);
         //var ip = Number(document.getElementsByName("ipaction"+table)[0].value);
         //var pl = Number(document.getElementsByName("plaction"+table)[0].value);
@@ -174,15 +174,15 @@ function reset6(){
 
         var sum = def;
 
-        document.getElementsByName("bpaction"+table)[0].value = 0;
-        document.getElementsByName("ipaction"+table)[0].value = 0;
-        document.getElementsByName("plaction"+table)[0].value = 0;
-        document.getElementsByName("addaction"+table)[0].value = 0;
-        document.getElementsByName("toaction"+table)[0].value = sum;
+        document.getElementsByName("bpaction6"+table)[0].value = 0;
+        document.getElementsByName("ipaction6"+table)[0].value = 0;
+        document.getElementsByName("plaction6"+table)[0].value = 0;
+        document.getElementsByName("addaction6"+table)[0].value = 0;
+        document.getElementsByName("toaction6"+table)[0].value = sum;
     }
 
     for(let table = 0; table < negotiations.rows.length-1; table++){
-        var def = Number(document.getElementsByName("defnegotiations"+table)[0].value);
+        var def = Number(document.getElementsByName("defnegotiations6"+table)[0].value);
         //var bp = Number(document.getElementsByName("bpnegotiations"+table)[0].value);
         //var ip = Number(document.getElementsByName("ipnegotiations"+table)[0].value);
         //var pl = Number(document.getElementsByName("plnegotiations"+table)[0].value);
@@ -190,15 +190,15 @@ function reset6(){
 
         var sum = def;
 
-        document.getElementsByName("bpnegotiations"+table)[0].value = 0;
-        document.getElementsByName("ipnegotiations"+table)[0].value = 0;
-        document.getElementsByName("plnegotiations"+table)[0].value = 0;
-        document.getElementsByName("addnegotiations"+table)[0].value = 0;
-        document.getElementsByName("tonegotiations"+table)[0].value = sum;
+        document.getElementsByName("bpnegotiations6"+table)[0].value = 0;
+        document.getElementsByName("ipnegotiations6"+table)[0].value = 0;
+        document.getElementsByName("plnegotiations6"+table)[0].value = 0;
+        document.getElementsByName("addnegotiations6"+table)[0].value = 0;
+        document.getElementsByName("tonegotiations6"+table)[0].value = sum;
     }
 
     for(let table = 0; table < knowledge.rows.length-1; table++){
-        var def = Number(document.getElementsByName("defknowledge"+table)[0].value);
+        var def = Number(document.getElementsByName("defknowledge6"+table)[0].value);
         //var bp = Number(document.getElementsByName("bpknowledge"+table)[0].value);
         //var ip = Number(document.getElementsByName("ipknowledge"+table)[0].value);
         //var pl = Number(document.getElementsByName("plknowledge"+table)[0].value);
@@ -206,11 +206,11 @@ function reset6(){
 
         var sum = def;
 
-        document.getElementsByName("bpknowledge"+table)[0].value = 0;
-        document.getElementsByName("ipknowledge"+table)[0].value = 0;
-        document.getElementsByName("plknowledge"+table)[0].value = 0;
-        document.getElementsByName("addknowledge"+table)[0].value = 0;
-        document.getElementsByName("toknowledge"+table)[0].value = sum;
+        document.getElementsByName("bpknowledge6"+table)[0].value = 0;
+        document.getElementsByName("ipknowledge6"+table)[0].value = 0;
+        document.getElementsByName("plknowledge6"+table)[0].value = 0;
+        document.getElementsByName("addknowledge6"+table)[0].value = 0;
+        document.getElementsByName("toknowledge6"+table)[0].value = sum;
     }
 }
 
@@ -218,7 +218,7 @@ function adddef6(name, names, defval, intext, intexttag){
     let tr = document.createElement("tr");
     if(name == "battle"){
         defpcbattlenum++;
-        var row = document.getElementById("battle").rows.length - 1;
+        var row = document.getElementById("battle6").rows.length - 1;
         const td = [];
         for(let i = 0; i < 8; i++){
             td.push(document.createElement("td"));
@@ -233,7 +233,7 @@ function adddef6(name, names, defval, intext, intexttag){
             let inp = document.createElement("input");
             inp.type = "text";
             inp.size = "10";
-            inp.name = "battlename"+row;
+            inp.name = "battlename6"+row;
             inp.className = "intext";
             inp.value = "()";
             name.name = intexttag;
@@ -241,14 +241,14 @@ function adddef6(name, names, defval, intext, intexttag){
             td[1].appendChild(inp);
         }else{
             let name = document.createTextNode(names);
-            name.name = "battlename"+row;
+            name.name = "battlename6"+row;
             td[1].appendChild(name);
         }
         
 
         let def = document.createElement("input");
         def.type = "text";
-        def.name = "defbattle"+row;
+        def.name = "defbattle6"+row;
         def.size = "2";
         def.readOnly = "readonly";
         def.value = defval;
@@ -256,35 +256,35 @@ function adddef6(name, names, defval, intext, intexttag){
 
         let bp = document.createElement("input");
         bp.type = "text";
-        bp.name = "bpbattle"+row;
+        bp.name = "bpbattle6"+row;
         bp.size = "2";
         bp.addEventListener("change", (event) => {calcstatus6()});
         td[3].appendChild(bp);
         
         let ip = document.createElement("input");
         ip.type = "text";
-        ip.name = "ipbattle"+row;
+        ip.name = "ipbattle6"+row;
         ip.size = "2";
         ip.addEventListener("change", (event) => {calcstatus6()});
         td[4].appendChild(ip);
 
         let pl = document.createElement("input");
         pl.type = "text";
-        pl.name = "plbattle"+row;
+        pl.name = "plbattle6"+row;
         pl.size = "2";
         pl.addEventListener("change", (event) => {calcstatus6()});
         td[5].appendChild(pl);
 
         let add = document.createElement("input");
         add.type = "text";
-        add.name = "addbattle"+row;
+        add.name = "addbattle6"+row;
         add.size = "2";
         add.addEventListener("change", (event) => {calcstatus6()});
         td[6].appendChild(add);
 
         let to = document.createElement("input");
         to.type = "text";
-        to.name = "tobattle"+row;
+        to.name = "tobattle6"+row;
         to.size = "2";
         to.value = defval;
         to.readOnly = "readonly";
@@ -293,11 +293,11 @@ function adddef6(name, names, defval, intext, intexttag){
         for(let i = 0; i < 8; i++){
             tr.appendChild(td[i]);
         }
-        document.getElementById("battle").appendChild(tr);
+        document.getElementById("battle6").appendChild(tr);
 
     }else if(name == "search"){
         defpcsearchnum++;
-        var row = document.getElementById("search").rows.length - 1;
+        var row = document.getElementById("search6").rows.length - 1;
         const td = [];
         for(let i = 0; i < 8; i++){
             td.push(document.createElement("td"));
@@ -312,7 +312,7 @@ function adddef6(name, names, defval, intext, intexttag){
             let inp = document.createElement("input");
             inp.type = "text";
             inp.size = "10";
-            inp.name = "searchname"+row;
+            inp.name = "searchname6"+row;
             inp.className = "intext";
             inp.value = "()";
             name.name = intexttag;
@@ -320,14 +320,14 @@ function adddef6(name, names, defval, intext, intexttag){
             td[1].appendChild(inp);
         }else{
             let name = document.createTextNode(names);
-            name.name = "searchname"+row;
+            name.name = "searchname6"+row;
             td[1].appendChild(name);
         }
         
 
         let def = document.createElement("input");
         def.type = "text";
-        def.name = "defsearch"+row;
+        def.name = "defsearch6"+row;
         def.size = "2";
         def.readOnly = "readonly";
         def.value = defval;
@@ -335,35 +335,35 @@ function adddef6(name, names, defval, intext, intexttag){
 
         let bp = document.createElement("input");
         bp.type = "text";
-        bp.name = "bpsearch"+row;
+        bp.name = "bpsearch6"+row;
         bp.size = "2";
         bp.addEventListener("change", (event) => {calcstatus6()});
         td[3].appendChild(bp);
         
         let ip = document.createElement("input");
         ip.type = "text";
-        ip.name = "ipsearch"+row;
+        ip.name = "ipsearch6"+row;
         ip.size = "2";
         ip.addEventListener("change", (event) => {calcstatus6()});
         td[4].appendChild(ip);
 
         let pl = document.createElement("input");
         pl.type = "text";
-        pl.name = "plsearch"+row;
+        pl.name = "plsearch6"+row;
         pl.size = "2";
         pl.addEventListener("change", (event) => {calcstatus6()});
         td[5].appendChild(pl);
 
         let add = document.createElement("input");
         add.type = "text";
-        add.name = "addsearch"+row;
+        add.name = "addsearch6"+row;
         add.size = "2";
         add.addEventListener("change", (event) => {calcstatus6()});
         td[6].appendChild(add);
 
         let to = document.createElement("input");
         to.type = "text";
-        to.name = "tosearch"+row;
+        to.name = "tosearch6"+row;
         to.size = "2";
         to.value = defval;
         to.readOnly = "readonly";
@@ -372,11 +372,11 @@ function adddef6(name, names, defval, intext, intexttag){
         for(let i = 0; i < 8; i++){
             tr.appendChild(td[i]);
         }
-        document.getElementById("search").appendChild(tr);
+        document.getElementById("search6").appendChild(tr);
         
     }else if(name == "action"){
         defpcactionnum++;
-        var row = document.getElementById("action").rows.length - 1;
+        var row = document.getElementById("action6").rows.length - 1;
         const td = [];
         for(let i = 0; i < 8; i++){
             td.push(document.createElement("td"));
@@ -391,7 +391,7 @@ function adddef6(name, names, defval, intext, intexttag){
             let inp = document.createElement("input");
             inp.type = "text";
             inp.size = "10";
-            inp.name = "actionname"+row;
+            inp.name = "actionname6"+row;
             inp.className = "intext";
             inp.value = "()";
             name.name = intexttag;
@@ -399,14 +399,14 @@ function adddef6(name, names, defval, intext, intexttag){
             td[1].appendChild(inp);
         }else{
             let name = document.createTextNode(names);
-            name.name = "actionname"+row;
+            name.name = "actionname6"+row;
             td[1].appendChild(name);
         }
         
 
         let def = document.createElement("input");
         def.type = "text";
-        def.name = "defaction"+row;
+        def.name = "defaction6"+row;
         def.size = "2";
         def.readOnly = "readonly";
         def.value = defval;
@@ -414,35 +414,35 @@ function adddef6(name, names, defval, intext, intexttag){
 
         let bp = document.createElement("input");
         bp.type = "text";
-        bp.name = "bpaction"+row;
+        bp.name = "bpaction6"+row;
         bp.size = "2";
         bp.addEventListener("change", (event) => {calcstatus6()});
         td[3].appendChild(bp);
         
         let ip = document.createElement("input");
         ip.type = "text";
-        ip.name = "ipaction"+row;
+        ip.name = "ipaction6"+row;
         ip.size = "2";
         ip.addEventListener("change", (event) => {calcstatus6()});
         td[4].appendChild(ip);
 
         let pl = document.createElement("input");
         pl.type = "text";
-        pl.name = "plaction"+row;
+        pl.name = "plaction6"+row;
         pl.size = "2";
         pl.addEventListener("change", (event) => {calcstatus6()});
         td[5].appendChild(pl);
 
         let add = document.createElement("input");
         add.type = "text";
-        add.name = "addaction"+row;
+        add.name = "addaction6"+row;
         add.size = "2";
         add.addEventListener("change", (event) => {calcstatus6()});
         td[6].appendChild(add);
 
         let to = document.createElement("input");
         to.type = "text";
-        to.name = "toaction"+row;
+        to.name = "toaction6"+row;
         to.size = "2";
         to.value = defval;
         to.readOnly = "readonly";
@@ -451,11 +451,11 @@ function adddef6(name, names, defval, intext, intexttag){
         for(let i = 0; i < 8; i++){
             tr.appendChild(td[i]);
         }
-        document.getElementById("action").appendChild(tr);
+        document.getElementById("action6").appendChild(tr);
         
     }else if(name == "negotiations"){
         defpcnegotiationsnum++;
-        var row = document.getElementById("negotiations").rows.length - 1;
+        var row = document.getElementById("negotiations6").rows.length - 1;
         const td = [];
         for(let i = 0; i < 8; i++){
             td.push(document.createElement("td"));
@@ -470,7 +470,7 @@ function adddef6(name, names, defval, intext, intexttag){
             let inp = document.createElement("input");
             inp.type = "text";
             inp.size = "10";
-            inp.name = "negotiationsname"+row;
+            inp.name = "negotiationsname6"+row;
             inp.className = "intext";
             inp.value = "()";
             name.name = intexttag;
@@ -478,14 +478,14 @@ function adddef6(name, names, defval, intext, intexttag){
             td[1].appendChild(inp);
         }else{
             let name = document.createTextNode(names);
-            name.name = "negotiationsname"+row;
+            name.name = "negotiationsname6"+row;
             td[1].appendChild(name);
         }
         
 
         let def = document.createElement("input");
         def.type = "text";
-        def.name = "defnegotiations"+row;
+        def.name = "defnegotiations6"+row;
         def.size = "2";
         def.readOnly = "readonly";
         def.value = defval;
@@ -493,35 +493,35 @@ function adddef6(name, names, defval, intext, intexttag){
 
         let bp = document.createElement("input");
         bp.type = "text";
-        bp.name = "bpnegotiations"+row;
+        bp.name = "bpnegotiations6"+row;
         bp.size = "2";
         bp.addEventListener("change", (event) => {calcstatus6()});
         td[3].appendChild(bp);
         
         let ip = document.createElement("input");
         ip.type = "text";
-        ip.name = "ipnegotiations"+row;
+        ip.name = "ipnegotiations6"+row;
         ip.size = "2";
         ip.addEventListener("change", (event) => {calcstatus6()});
         td[4].appendChild(ip);
 
         let pl = document.createElement("input");
         pl.type = "text";
-        pl.name = "plnegotiations"+row;
+        pl.name = "plnegotiations6"+row;
         pl.size = "2";
         pl.addEventListener("change", (event) => {calcstatus6()});
         td[5].appendChild(pl);
 
         let add = document.createElement("input");
         add.type = "text";
-        add.name = "addnegotiations"+row;
+        add.name = "addnegotiations6"+row;
         add.size = "2";
         add.addEventListener("change", (event) => {calcstatus6()});
         td[6].appendChild(add);
 
         let to = document.createElement("input");
         to.type = "text";
-        to.name = "tonegotiations"+row;
+        to.name = "tonegotiations6"+row;
         to.size = "2";
         to.value = defval;
         to.readOnly = "readonly";
@@ -530,11 +530,11 @@ function adddef6(name, names, defval, intext, intexttag){
         for(let i = 0; i < 8; i++){
             tr.appendChild(td[i]);
         }
-        document.getElementById("negotiations").appendChild(tr);
+        document.getElementById("negotiations6").appendChild(tr);
         
     }else if(name == "knowledge"){
         defpcknowledgenum++;
-        var row = document.getElementById("knowledge").rows.length - 1;
+        var row = document.getElementById("knowledge6").rows.length - 1;
         const td = [];
         for(let i = 0; i < 8; i++){
             td.push(document.createElement("td"));
@@ -549,7 +549,7 @@ function adddef6(name, names, defval, intext, intexttag){
             let inp = document.createElement("input");
             inp.type = "text";
             inp.size = "10";
-            inp.name = "knowledgename"+row;
+            inp.name = "knowledgename6"+row;
             inp.className = "intext";
             inp.value = "()";
             name.name = intexttag;
@@ -557,14 +557,14 @@ function adddef6(name, names, defval, intext, intexttag){
             td[1].appendChild(inp);
         }else{
             let name = document.createTextNode(names);
-            name.name = "knowledgename"+row;
+            name.name = "knowledgename6"+row;
             td[1].appendChild(name);
         }
         
 
         let def = document.createElement("input");
         def.type = "text";
-        def.name = "defknowledge"+row;
+        def.name = "defknowledge6"+row;
         def.size = "2";
         def.readOnly = "readonly";
         def.value = defval;
@@ -572,35 +572,35 @@ function adddef6(name, names, defval, intext, intexttag){
 
         let bp = document.createElement("input");
         bp.type = "text";
-        bp.name = "bpknowledge"+row;
+        bp.name = "bpknowledge6"+row;
         bp.size = "2";
         bp.addEventListener("change", (event) => {calcstatus6()});
         td[3].appendChild(bp);
         
         let ip = document.createElement("input");
         ip.type = "text";
-        ip.name = "ipknowledge"+row;
+        ip.name = "ipknowledge6"+row;
         ip.size = "2";
         ip.addEventListener("change", (event) => {calcstatus6()});
         td[4].appendChild(ip);
 
         let pl = document.createElement("input");
         pl.type = "text";
-        pl.name = "plknowledge"+row;
+        pl.name = "plknowledge6"+row;
         pl.size = "2";
         pl.addEventListener("change", (event) => {calcstatus6()});
         td[5].appendChild(pl);
 
         let add = document.createElement("input");
         add.type = "text";
-        add.name = "addknowledge"+row;
+        add.name = "addknowledge6"+row;
         add.size = "2";
         add.addEventListener("change", (event) => {calcstatus6()});
         td[6].appendChild(add);
 
         let to = document.createElement("input");
         to.type = "text";
-        to.name = "toknowledge"+row;
+        to.name = "toknowledge6"+row;
         to.size = "2";
         to.value = defval;
         to.readOnly = "readonly";
@@ -609,11 +609,11 @@ function adddef6(name, names, defval, intext, intexttag){
         for(let i = 0; i < 8; i++){
             tr.appendChild(td[i]);
         }
-        document.getElementById("knowledge").appendChild(tr);
+        document.getElementById("knowledge6").appendChild(tr);
         
     }else if(name == "standabilitybattle"){
         defstandbattlenum++;
-        var row = document.getElementById("standabilitybattle").rows.length - 1;
+        var row = document.getElementById("standabilitybattle6").rows.length - 1;
         const td = [];
         for(let i = 0; i < 7; i++){
             td.push(document.createElement("td"));
@@ -628,7 +628,7 @@ function adddef6(name, names, defval, intext, intexttag){
             let inp = document.createElement("input");
             inp.type = "text";
             inp.size = "10";
-            inp.name = "standabilitybattlename"+row;
+            inp.name = "standabilitybattlename6"+row;
             inp.className = "intext";
             inp.value = "()";
             name.name = intexttag;
@@ -636,14 +636,14 @@ function adddef6(name, names, defval, intext, intexttag){
             td[1].appendChild(inp);
         }else{
             let name = document.createTextNode(names);
-            name.name = "standabilitybattlename"+row;
+            name.name = "standabilitybattlename6"+row;
             td[1].appendChild(name);
         }
         
 
         let def = document.createElement("input");
         def.type = "text";
-        def.name = "defstandabilitybattle"+row;
+        def.name = "defstandabilitybattle6"+row;
         def.size = "2";
         def.readOnly = "readonly";
         def.value = defval;
@@ -651,8 +651,8 @@ function adddef6(name, names, defval, intext, intexttag){
 
         let cor = document.createElement("input");
         cor.type = "text";
-        cor.name = "corstandabilitybattle"+row;
-        cor.className = "corstandbattle";
+        cor.name = "corstandabilitybattle6"+row;
+        cor.className = "corstandbattle6";
         cor.size = "2";
         cor.readOnly = "readonly";
         cor.value = "0";
@@ -660,21 +660,21 @@ function adddef6(name, names, defval, intext, intexttag){
 
         let pl = document.createElement("input");
         pl.type = "text";
-        pl.name = "plstandabilitybattle"+row;
+        pl.name = "plstandabilitybattle6"+row;
         pl.size = "2";
         pl.addEventListener("change", (event) => {calcstatus6()});
         td[4].appendChild(pl);
 
         let add = document.createElement("input");
         add.type = "text";
-        add.name = "addstandabilitybattle"+row;
+        add.name = "addstandabilitybattle6"+row;
         add.size = "2";
         add.addEventListener("change", (event) => {calcstatus6()});
         td[5].appendChild(add);
 
         let to = document.createElement("input");
         to.type = "text";
-        to.name = "tostandabilitybattle"+row;
+        to.name = "tostandabilitybattle6"+row;
         to.size = "2";
         to.value = defval;
         to.readOnly = "readonly";
@@ -683,11 +683,11 @@ function adddef6(name, names, defval, intext, intexttag){
         for(let i = 0; i < 7; i++){
             tr.appendChild(td[i]);
         }
-        document.getElementById("standabilitybattle").appendChild(tr);
+        document.getElementById("standabilitybattle6").appendChild(tr);
         
     }else if(name == "standabilityaction"){
         defstandactionnum++;
-        var row = document.getElementById("standabilityaction").rows.length - 1;
+        var row = document.getElementById("standabilityaction6").rows.length - 1;
         const td = [];
         for(let i = 0; i < 7; i++){
             td.push(document.createElement("td"));
@@ -702,7 +702,7 @@ function adddef6(name, names, defval, intext, intexttag){
             let inp = document.createElement("input");
             inp.type = "text";
             inp.size = "10";
-            inp.name = "standabilityactionname"+row;
+            inp.name = "standabilityactionname6"+row;
             inp.className = "intext";
             inp.value = "()";
             name.name = intexttag;
@@ -710,14 +710,14 @@ function adddef6(name, names, defval, intext, intexttag){
             td[1].appendChild(inp);
         }else{
             let name = document.createTextNode(names);
-            name.name = "standabilityactionname"+row;
+            name.name = "standabilityactionname6"+row;
             td[1].appendChild(name);
         }
         
 
         let def = document.createElement("input");
         def.type = "text";
-        def.name = "defstandabilityaction"+row;
+        def.name = "defstandabilityaction6"+row;
         def.size = "2";
         def.readOnly = "readonly";
         def.value = defval;
@@ -725,8 +725,8 @@ function adddef6(name, names, defval, intext, intexttag){
 
         let cor = document.createElement("input");
         cor.type = "text";
-        cor.name = "corstandabilityaction"+row;
-        cor.className = "corstandaction";
+        cor.name = "corstandabilityaction6"+row;
+        cor.className = "corstandaction6";
         cor.size = "2";
         cor.readOnly = "readonly";
         cor.value = "0";
@@ -734,21 +734,21 @@ function adddef6(name, names, defval, intext, intexttag){
 
         let pl = document.createElement("input");
         pl.type = "text";
-        pl.name = "plstandabilityaction"+row;
+        pl.name = "plstandabilityaction6"+row;
         pl.size = "2";
         pl.addEventListener("change", (event) => {calcstatus6()});
         td[4].appendChild(pl);
 
         let add = document.createElement("input");
         add.type = "text";
-        add.name = "addstandabilityaction"+row;
+        add.name = "addstandabilityaction6"+row;
         add.size = "2";
         add.addEventListener("change", (event) => {calcstatus6()});
         td[5].appendChild(add);
 
         let to = document.createElement("input");
         to.type = "text";
-        to.name = "tostandabilityaction"+row;
+        to.name = "tostandabilityaction6"+row;
         to.size = "2";
         to.value = defval;
         to.readOnly = "readonly";
@@ -757,7 +757,7 @@ function adddef6(name, names, defval, intext, intexttag){
         for(let i = 0; i < 7; i++){
             tr.appendChild(td[i]);
         }
-        document.getElementById("standabilityaction").appendChild(tr);
+        document.getElementById("standabilityaction6").appendChild(tr);
         
     }
 }
@@ -765,7 +765,7 @@ function adddef6(name, names, defval, intext, intexttag){
 function add6(name){
     let tr = document.createElement("tr");
     if(name == "battle"){
-        var row = document.getElementById("battle").rows.length - 1;
+        var row = document.getElementById("battle6").rows.length - 1;
         const td = [];
         for(let i = 0; i < 8; i++){
             td.push(document.createElement("td"));
@@ -777,13 +777,13 @@ function add6(name){
 
         let name = document.createElement("input");
         name.type = "text";
-        name.name = "battlename"+row;
+        name.name = "battlename6"+row;
         name.size = "16";
         td[1].appendChild(name);
 
         let def = document.createElement("input");
         def.type = "text";
-        def.name = "defbattle"+row;
+        def.name = "defbattle6"+row;
         def.size = "2";
         def.value = 0;
         def.addEventListener("change", (event) => {calcstatus6()});
@@ -791,7 +791,7 @@ function add6(name){
 
         let bp = document.createElement("input");
         bp.type = "text";
-        bp.name = "bpbattle"+row;
+        bp.name = "bpbattle6"+row;
         bp.size = "2";
         bp.value = 0;
         bp.addEventListener("change", (event) => {calcstatus6()});
@@ -799,7 +799,7 @@ function add6(name){
         
         let ip = document.createElement("input");
         ip.type = "text";
-        ip.name = "ipbattle"+row;
+        ip.name = "ipbattle6"+row;
         ip.size = "2";
         ip.value = 0;
         ip.addEventListener("change", (event) => {calcstatus6()});
@@ -807,7 +807,7 @@ function add6(name){
 
         let pl = document.createElement("input");
         pl.type = "text";
-        pl.name = "plbattle"+row;
+        pl.name = "plbattle6"+row;
         pl.size = "2";
         pl.value = 0;
         pl.addEventListener("change", (event) => {calcstatus6()});
@@ -815,7 +815,7 @@ function add6(name){
 
         let add = document.createElement("input");
         add.type = "text";
-        add.name = "addbattle"+row;
+        add.name = "addbattle6"+row;
         add.size = "2";
         add.value = 0;
         add.addEventListener("change", (event) => {calcstatus6()});
@@ -823,7 +823,7 @@ function add6(name){
 
         let to = document.createElement("input");
         to.type = "text";
-        to.name = "tobattle"+row;
+        to.name = "tobattle6"+row;
         to.size = "2";
         to.value = 0;
         to.readOnly = "readonly";
@@ -832,9 +832,9 @@ function add6(name){
         for(let i = 0; i < 8; i++){
             tr.appendChild(td[i]);
         }
-        document.getElementById("battle").appendChild(tr);
+        document.getElementById("battle6").appendChild(tr);
     }else if(name == "search"){
-        var row = document.getElementById("search").rows.length - 1;
+        var row = document.getElementById("search6").rows.length - 1;
         const td = [];
         for(let i = 0; i < 8; i++){
             td.push(document.createElement("td"));
@@ -846,13 +846,13 @@ function add6(name){
 
         let name = document.createElement("input");
         name.type = "text";
-        name.name = "searchname"+row;
+        name.name = "searchname6"+row;
         name.size = "16";
         td[1].appendChild(name);
 
         let def = document.createElement("input");
         def.type = "text";
-        def.name = "defsearch"+row;
+        def.name = "defsearch6"+row;
         def.size = "2";
         def.value = 0;
         def.addEventListener("change", (event) => {calcstatus6()});
@@ -860,7 +860,7 @@ function add6(name){
 
         let bp = document.createElement("input");
         bp.type = "text";
-        bp.name = "bpsearch"+row;
+        bp.name = "bpsearch6"+row;
         bp.size = "2";
         bp.value = 0;
         bp.addEventListener("change", (event) => {calcstatus6()});
@@ -868,7 +868,7 @@ function add6(name){
         
         let ip = document.createElement("input");
         ip.type = "text";
-        ip.name = "ipsearch"+row;
+        ip.name = "ipsearch6"+row;
         ip.size = "2";
         ip.value = 0;
         ip.addEventListener("change", (event) => {calcstatus6()});
@@ -876,7 +876,7 @@ function add6(name){
 
         let pl = document.createElement("input");
         pl.type = "text";
-        pl.name = "plsearch"+row;
+        pl.name = "plsearch6"+row;
         pl.size = "2";
         pl.value = 0;
         pl.addEventListener("change", (event) => {calcstatus6()});
@@ -884,7 +884,7 @@ function add6(name){
 
         let add = document.createElement("input");
         add.type = "text";
-        add.name = "addsearch"+row;
+        add.name = "addsearch6"+row;
         add.size = "2";
         add.value = 0;
         add.addEventListener("change", (event) => {calcstatus6()});
@@ -892,7 +892,7 @@ function add6(name){
 
         let to = document.createElement("input");
         to.type = "text";
-        to.name = "tosearch"+row;
+        to.name = "tosearch6"+row;
         to.size = "2";
         to.readOnly = "readonly";
         to.value = 0;
@@ -901,9 +901,9 @@ function add6(name){
         for(let i = 0; i < 8; i++){
             tr.appendChild(td[i]);
         }
-        document.getElementById("search").appendChild(tr);
+        document.getElementById("search6").appendChild(tr);
     }else if(name == "action"){
-        var row = document.getElementById("action").rows.length - 1;
+        var row = document.getElementById("action6").rows.length - 1;
         const td = [];
         for(let i = 0; i < 8; i++){
             td.push(document.createElement("td"));
@@ -915,13 +915,13 @@ function add6(name){
 
         let name = document.createElement("input");
         name.type = "text";
-        name.name = "actionname"+row;
+        name.name = "actionname6"+row;
         name.size = "16";
         td[1].appendChild(name);
 
         let def = document.createElement("input");
         def.type = "text";
-        def.name = "defaction"+row;
+        def.name = "defaction6"+row;
         def.size = "2";
         def.value = 0;
         def.addEventListener("change", (event) => {calcstatus6()});
@@ -929,7 +929,7 @@ function add6(name){
 
         let bp = document.createElement("input");
         bp.type = "text";
-        bp.name = "bpaction"+row;
+        bp.name = "bpaction6"+row;
         bp.size = "2";
         bp.value = 0;
         bp.addEventListener("change", (event) => {calcstatus6()});
@@ -937,7 +937,7 @@ function add6(name){
         
         let ip = document.createElement("input");
         ip.type = "text";
-        ip.name = "ipaction"+row;
+        ip.name = "ipaction6"+row;
         ip.size = "2";
         ip.value = 0;
         ip.addEventListener("change", (event) => {calcstatus6()});
@@ -945,7 +945,7 @@ function add6(name){
 
         let pl = document.createElement("input");
         pl.type = "text";
-        pl.name = "plaction"+row;
+        pl.name = "plaction6"+row;
         pl.size = "2";
         pl.value = 0;
         pl.addEventListener("change", (event) => {calcstatus6()});
@@ -953,7 +953,7 @@ function add6(name){
 
         let add = document.createElement("input");
         add.type = "text";
-        add.name = "addaction"+row;
+        add.name = "addaction6"+row;
         add.size = "2";
         add.value = 0;
         add.addEventListener("change", (event) => {calcstatus6()});
@@ -961,7 +961,7 @@ function add6(name){
 
         let to = document.createElement("input");
         to.type = "text";
-        to.name = "toaction"+row;
+        to.name = "toaction6"+row;
         to.size = "2";
         to.readOnly = "readonly";
         to.value = 0;
@@ -970,9 +970,9 @@ function add6(name){
         for(let i = 0; i < 8; i++){
             tr.appendChild(td[i]);
         }
-        document.getElementById("action").appendChild(tr);
+        document.getElementById("action6").appendChild(tr);
     }else if(name == "negotiations"){
-        var row = document.getElementById("negotiations").rows.length - 1;
+        var row = document.getElementById("negotiations6").rows.length - 1;
         const td = [];
         for(let i = 0; i < 8; i++){
             td.push(document.createElement("td"));
@@ -984,13 +984,13 @@ function add6(name){
 
         let name = document.createElement("input");
         name.type = "text";
-        name.name = "negotiationsname"+row;
+        name.name = "negotiationsname6"+row;
         name.size = "16";
         td[1].appendChild(name);
 
         let def = document.createElement("input");
         def.type = "text";
-        def.name = "defnegotiations"+row;
+        def.name = "defnegotiations6"+row;
         def.size = "2";
         def.value = 0;
         def.addEventListener("change", (event) => {calcstatus6()});
@@ -998,7 +998,7 @@ function add6(name){
 
         let bp = document.createElement("input");
         bp.type = "text";
-        bp.name = "bpnegotiations"+row;
+        bp.name = "bpnegotiations6"+row;
         bp.size = "2";
         bp.value = 0;
         bp.addEventListener("change", (event) => {calcstatus6()});
@@ -1006,7 +1006,7 @@ function add6(name){
         
         let ip = document.createElement("input");
         ip.type = "text";
-        ip.name = "ipnegotiations"+row;
+        ip.name = "ipnegotiations6"+row;
         ip.size = "2";
         ip.value = 0;
         ip.addEventListener("change", (event) => {calcstatus6()});
@@ -1014,7 +1014,7 @@ function add6(name){
 
         let pl = document.createElement("input");
         pl.type = "text";
-        pl.name = "plnegotiations"+row;
+        pl.name = "plnegotiations6"+row;
         pl.size = "2";
         pl.value = 0;
         pl.addEventListener("change", (event) => {calcstatus6()});
@@ -1022,7 +1022,7 @@ function add6(name){
 
         let add = document.createElement("input");
         add.type = "text";
-        add.name = "addnegotiations"+row;
+        add.name = "addnegotiations6"+row;
         add.size = "2";
         add.value = 0;
         add.addEventListener("change", (event) => {calcstatus6()});
@@ -1030,7 +1030,7 @@ function add6(name){
 
         let to = document.createElement("input");
         to.type = "text";
-        to.name = "tonegotiations"+row;
+        to.name = "tonegotiations6"+row;
         to.size = "2";
         to.value = 0;
         to.readOnly = "readonly";
@@ -1039,9 +1039,9 @@ function add6(name){
         for(let i = 0; i < 8; i++){
             tr.appendChild(td[i]);
         }
-        document.getElementById("negotiations").appendChild(tr);
+        document.getElementById("negotiations6").appendChild(tr);
     }else if(name == "knowledge"){
-        var row = document.getElementById("knowledge").rows.length - 1;
+        var row = document.getElementById("knowledge6").rows.length - 1;
         const td = [];
         for(let i = 0; i < 8; i++){
             td.push(document.createElement("td"));
@@ -1053,13 +1053,13 @@ function add6(name){
 
         let name = document.createElement("input");
         name.type = "text";
-        name.name = "knowledgename"+row;
+        name.name = "knowledgename6"+row;
         name.size = "16";
         td[1].appendChild(name);
 
         let def = document.createElement("input");
         def.type = "text";
-        def.name = "defknowledge"+row;
+        def.name = "defknowledge6"+row;
         def.size = "2";
         def.value = 0;
         def.addEventListener("change", (event) => {calcstatus6()});
@@ -1067,7 +1067,7 @@ function add6(name){
 
         let bp = document.createElement("input");
         bp.type = "text";
-        bp.name = "bpknowledge"+row;
+        bp.name = "bpknowledge6"+row;
         bp.size = "2";
         bp.value = 0;
         bp.addEventListener("change", (event) => {calcstatus6()});
@@ -1075,7 +1075,7 @@ function add6(name){
         
         let ip = document.createElement("input");
         ip.type = "text";
-        ip.name = "ipknowledge"+row;
+        ip.name = "ipknowledge6"+row;
         ip.size = "2";
         ip.value = 0;
         ip.addEventListener("change", (event) => {calcstatus6()});
@@ -1083,7 +1083,7 @@ function add6(name){
 
         let pl = document.createElement("input");
         pl.type = "text";
-        pl.name = "plknowledge"+row;
+        pl.name = "plknowledge6"+row;
         pl.size = "2";
         pl.value = 0;
         pl.addEventListener("change", (event) => {calcstatus6()});
@@ -1091,7 +1091,7 @@ function add6(name){
 
         let add = document.createElement("input");
         add.type = "text";
-        add.name = "addknowledge"+row;
+        add.name = "addknowledge6"+row;
         add.size = "2";
         add.value = 0;
         add.addEventListener("change", (event) => {calcstatus6()});
@@ -1099,7 +1099,7 @@ function add6(name){
 
         let to = document.createElement("input");
         to.type = "text";
-        to.name = "toknowledge"+row;
+        to.name = "toknowledge6"+row;
         to.size = "2";
         to.value = 0;
         to.readOnly = "readonly";
@@ -1108,9 +1108,9 @@ function add6(name){
         for(let i = 0; i < 8; i++){
             tr.appendChild(td[i]);
         }
-        document.getElementById("knowledge").appendChild(tr);
+        document.getElementById("knowledge6").appendChild(tr);
     }else if(name == "etc"){
-        var row = document.getElementById("etc").rows.length - 1;
+        var row = document.getElementById("etc6").rows.length - 1;
         const td = [];
         for(let i = 0; i < 8; i++){
             td.push(document.createElement("td"));
@@ -1122,13 +1122,13 @@ function add6(name){
 
         let name = document.createElement("input");
         name.type = "text";
-        name.name = "etcname"+row;
+        name.name = "etcname6"+row;
         name.size = "16";
         td[1].appendChild(name);
 
         let def = document.createElement("input");
         def.type = "text";
-        def.name = "defetc"+row;
+        def.name = "defetc6"+row;
         def.size = "2";
         def.value = 0;
         def.addEventListener("change", (event) => {calcstatus6()});
@@ -1136,7 +1136,7 @@ function add6(name){
 
         let bp = document.createElement("input");
         bp.type = "text";
-        bp.name = "bpetc"+row;
+        bp.name = "bpetc6"+row;
         bp.size = "2";
         bp.value = 0;
         bp.addEventListener("change", (event) => {calcstatus6()});
@@ -1144,7 +1144,7 @@ function add6(name){
         
         let ip = document.createElement("input");
         ip.type = "text";
-        ip.name = "ipetc"+row;
+        ip.name = "ipetc6"+row;
         ip.size = "2";
         ip.value = 0;
         ip.addEventListener("change", (event) => {calcstatus6()});
@@ -1152,7 +1152,7 @@ function add6(name){
 
         let pl = document.createElement("input");
         pl.type = "text";
-        pl.name = "pletc"+row;
+        pl.name = "pletc6"+row;
         pl.size = "2";
         pl.value = 0;
         pl.addEventListener("change", (event) => {calcstatus6()});
@@ -1160,7 +1160,7 @@ function add6(name){
 
         let add = document.createElement("input");
         add.type = "text";
-        add.name = "addetc"+row;
+        add.name = "addetc6"+row;
         add.size = "2";
         add.value = 0;
         add.addEventListener("change", (event) => {calcstatus6()});
@@ -1168,7 +1168,7 @@ function add6(name){
 
         let to = document.createElement("input");
         to.type = "text";
-        to.name = "toetc"+row;
+        to.name = "toetc6"+row;
         to.size = "2";
         to.value = 0;
         to.readOnly = "readonly";
@@ -1177,9 +1177,9 @@ function add6(name){
         for(let i = 0; i < 8; i++){
             tr.appendChild(td[i]);
         }
-        document.getElementById("etc").appendChild(tr);
+        document.getElementById("etc6").appendChild(tr);
     }else if(name == "standabilitybattle"){
-        var row = document.getElementById("standabilitybattle").rows.length - 1;
+        var row = document.getElementById("standabilitybattle6").rows.length - 1;
         const td = [];
         for(let i = 0; i < 7; i++){
             td.push(document.createElement("td"));
@@ -1191,13 +1191,13 @@ function add6(name){
 
         let name = document.createElement("input");
         name.type = "text";
-        name.name = "standabilitybattlename"+row;
+        name.name = "standabilitybattlename6"+row;
         name.size = "16";
         td[1].appendChild(name);
 
         let def = document.createElement("input");
         def.type = "text";
-        def.name = "defstandabilitybattle"+row;
+        def.name = "defstandabilitybattle6"+row;
         def.size = "2";
         def.value = 0;
         def.addEventListener("change", (event) => {calcstatus6()});
@@ -1205,15 +1205,15 @@ function add6(name){
 
         let cor = document.createElement("input");
         cor.type = "text";
-        cor.name = "corstandabilitybattle"+row;
-        cor.className = "corstandbattle";
+        cor.name = "corstandabilitybattle6"+row;
+        cor.className = "corstandbattle6";
         cor.size = "2";
         cor.readOnly = "readonly";
         td[3].appendChild(cor);
 
         let pl = document.createElement("input");
         pl.type = "text";
-        pl.name = "plstandabilitybattle"+row;
+        pl.name = "plstandabilitybattle6"+row;
         pl.size = "2";
         pl.value = 0;
         pl.addEventListener("change", (event) => {calcstatus6()});
@@ -1221,7 +1221,7 @@ function add6(name){
 
         let add = document.createElement("input");
         add.type = "text";
-        add.name = "addstandabilitybattle"+row;
+        add.name = "addstandabilitybattle6"+row;
         add.size = "2";
         add.value = 0;
         add.addEventListener("change", (event) => {calcstatus6()});
@@ -1229,7 +1229,7 @@ function add6(name){
 
         let to = document.createElement("input");
         to.type = "text";
-        to.name = "tostandabilitybattle"+row;
+        to.name = "tostandabilitybattle6"+row;
         to.size = "2";
         to.readOnly = "readonly";
         td[6].appendChild(to);
@@ -1237,10 +1237,10 @@ function add6(name){
         for(let i = 0; i < 7; i++){
             tr.appendChild(td[i]);
         }
-        document.getElementById("standabilitybattle").appendChild(tr);
+        document.getElementById("standabilitybattle6").appendChild(tr);
         calc6();
     }else if(name == "standabilityaction"){
-        var row = document.getElementById("standabilityaction").rows.length - 1;
+        var row = document.getElementById("standabilityaction6").rows.length - 1;
         const td = [];
         for(let i = 0; i < 7; i++){
             td.push(document.createElement("td"));
@@ -1252,13 +1252,13 @@ function add6(name){
 
         let name = document.createElement("input");
         name.type = "text";
-        name.name = "standabilityactionname"+row;
+        name.name = "standabilityactionname6"+row;
         name.size = "16";
         td[1].appendChild(name);
 
         let def = document.createElement("input");
         def.type = "text";
-        def.name = "defstandabilityaction"+row;
+        def.name = "defstandabilityaction6"+row;
         def.size = "2";
         def.value = 0;
         def.addEventListener("change", (event) => {calcstatus6()});
@@ -1266,15 +1266,15 @@ function add6(name){
 
         let cor = document.createElement("input");
         cor.type = "text";
-        cor.name = "corstandabilityaction"+row;
-        cor.className = "corstandaction";
+        cor.name = "corstandabilityaction6"+row;
+        cor.className = "corstandaction6";
         cor.size = "2";
         cor.readOnly = "readonly";
         td[3].appendChild(cor);
 
         let pl = document.createElement("input");
         pl.type = "text";
-        pl.name = "plstandabilityaction"+row;
+        pl.name = "plstandabilityaction6"+row;
         pl.size = "2";
         pl.value = 0;
         pl.addEventListener("change", (event) => {calcstatus6()});
@@ -1282,7 +1282,7 @@ function add6(name){
 
         let add = document.createElement("input");
         add.type = "text";
-        add.name = "addstandabilityaction"+row;
+        add.name = "addstandabilityaction6"+row;
         add.size = "2";
         add.value = 0;
         add.addEventListener("change", (event) => {calcstatus6()});
@@ -1290,7 +1290,7 @@ function add6(name){
 
         let to = document.createElement("input");
         to.type = "text";
-        to.name = "tostandabilityaction"+row;
+        to.name = "tostandabilityaction6"+row;
         to.size = "2";
         to.readOnly = "readonly";
         td[6].appendChild(to);
@@ -1298,11 +1298,11 @@ function add6(name){
         for(let i = 0; i < 7; i++){
             tr.appendChild(td[i]);
         }
-        document.getElementById("standabilityaction").appendChild(tr);
+        document.getElementById("standabilityaction6").appendChild(tr);
         calc6();
     }else if(name == "items"){
         
-        var row = document.getElementById("items").rows.length - 1;
+        var row = document.getElementById("items6").rows.length - 1;
         const td = [];
         for(let i = 0; i < 3; i++){
             td.push(document.createElement("td"));
@@ -1310,65 +1310,65 @@ function add6(name){
 
         let name = document.createElement("input");
         name.type = "text";
-        name.name = "itemsname"+row;
+        name.name = "itemsname6"+row;
         td[0].appendChild(name);
 
         let num = document.createElement("input");
         num.type = "text";
-        num.name = "itemsnum"+row;
+        num.name = "itemsnum6"+row;
         num.size = "2";
         td[1].appendChild(num);
 
         let detail = document.createElement("input");
         detail.type = "text";
-        detail.name = "itemsdetail"+row;
+        detail.name = "itemsdetail6"+row;
         detail.size = "30";
         td[2].appendChild(detail);
 
         for(let i = 0; i < 3; i++){
             tr.appendChild(td[i]);
         }
-        document.getElementById("items").appendChild(tr);
+        document.getElementById("items6").appendChild(tr);
         calc6();
     }
 }
 
 function del6(name){
     if(name == "battle"){
-        if(document.getElementById("battle").rows.length > defpcbattlenum+1){
-            document.getElementById("battle").deleteRow(document.getElementById("battle").rows.length - 1);
+        if(document.getElementById("battle6").rows.length > defpcbattlenum+1){
+            document.getElementById("battle6").deleteRow(document.getElementById("battle6").rows.length - 1);
         }
     }else if(name == "search"){
-        if(document.getElementById("search").rows.length > defpcsearchnum+1){
-            document.getElementById("search").deleteRow(document.getElementById("search").rows.length - 1);
+        if(document.getElementById("search6").rows.length > defpcsearchnum+1){
+            document.getElementById("search6").deleteRow(document.getElementById("search6").rows.length - 1);
         }
     }else if(name == "action"){
-        if(document.getElementById("action").rows.length > defpcactionnum+1){
-            document.getElementById("action").deleteRow(document.getElementById("action").rows.length - 1);
+        if(document.getElementById("action6").rows.length > defpcactionnum+1){
+            document.getElementById("action6").deleteRow(document.getElementById("action6").rows.length - 1);
         }
     }else if(name == "negotiations"){
-        if(document.getElementById("negotiations").rows.length > defpcnegotiationsnum+1){
-            document.getElementById("negotiations").deleteRow(document.getElementById("negotiations").rows.length - 1);
+        if(document.getElementById("negotiations6").rows.length > defpcnegotiationsnum+1){
+            document.getElementById("negotiations6").deleteRow(document.getElementById("negotiations6").rows.length - 1);
         }
     }else if(name == "knowledge"){
-        if(document.getElementById("knowledge").rows.length > defpcknowledgenum+1){
-            document.getElementById("knowledge").deleteRow(document.getElementById("knowledge").rows.length - 1);
+        if(document.getElementById("knowledge6").rows.length > defpcknowledgenum+1){
+            document.getElementById("knowledge6").deleteRow(document.getElementById("knowledge6").rows.length - 1);
         }
     }else if(name == "etc"){
-        if(document.getElementById("etc").rows.length > defpcetcnum+1){
-            document.getElementById("etc").deleteRow(document.getElementById("etc").rows.length - 1);
+        if(document.getElementById("etc6").rows.length > defpcetcnum+1){
+            document.getElementById("etc6").deleteRow(document.getElementById("etc6").rows.length - 1);
         }
     }else if(name == "standabilitybattle"){
-        if(document.getElementById("standabilitybattle").rows.length > defstandbattlenum+1){
-            document.getElementById("standabilitybattle").deleteRow(document.getElementById("standabilitybattle").rows.length - 1);
+        if(document.getElementById("standabilitybattle6").rows.length > defstandbattlenum+1){
+            document.getElementById("standabilitybattle6").deleteRow(document.getElementById("standabilitybattle6").rows.length - 1);
         }
     }else if(name == "standabilityaction"){
-        if(document.getElementById("standabilityaction").rows.length > defstandactionnum+1){
-            document.getElementById("standabilityaction").deleteRow(document.getElementById("standabilityaction").rows.length - 1);
+        if(document.getElementById("standabilityaction6").rows.length > defstandactionnum+1){
+            document.getElementById("standabilityaction6").deleteRow(document.getElementById("standabilityaction6").rows.length - 1);
         }
     }else if(name == "items"){
-        if(document.getElementById("items").rows.length > defpcitemsnum+1){
-            document.getElementById("items").deleteRow(document.getElementById("items").rows.length - 1);
+        if(document.getElementById("items6").rows.length > defpcitemsnum+1){
+            document.getElementById("items6").deleteRow(document.getElementById("items6").rows.length - 1);
         }
     }
 }
