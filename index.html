@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>ジョジョ卓キャラシート作成所Ver1.0</title>
+        <title>ジョジョ卓キャラシート作成所Ver1.0.1</title>
         <link rel="stylesheet" href="main.css" type="text/css">
         <script type="text/javascript" src="js/main.js"></script>
         <script type="text/javascript" src="js/table.js"></script>
@@ -12,7 +12,7 @@
 
     <body>
         
-        <h1>ジョジョ卓キャラシート作成所[Ver1.0]</h1>
+        <h1>ジョジョ卓キャラシート作成所[Ver1.0.1]</h1>
         <h2 style="padding-left: 15px;">サイトの説明</h2>
         <p style="padding-left: 15px;">
             このサイトは<a title="ジョジョ卓回し隊！" href="https://line.me/ti/g2/d9Rnn7YQqPNGVVZ0FI9QbzCEATMaONzUf2aJMw?utm_source=invitation&utm_medium=link_copy&utm_campaign=default">ジョジョ卓のオープンチャット</a>で使うためのキャラシートを作るための個人サイトです。<br>
@@ -52,7 +52,7 @@
                     </b>
                 </p>
                 <button type="button" onclick="save6()">キャラシ保存</button> <button type="button" onclick="chapare6()">チャパレ保存</button>
-                <form name="status">
+                <form name="status6">
                     <h2>プロフィール</h2>
                     <table>
                         <tr>
@@ -107,14 +107,14 @@
                     <br>
                     <h2>その他情報</h2>
                     <h3>所持品</h3>
-                    <table id="items">
+                    <table id="items6">
                         <th>名称</th>
                         <th>個数</th>
                         <th>詳細</th>
                         
                     </table>
-                    <button type="button" onclick="add6('items')">行追加</button>
-                    <button type="button" onclick="del6('items')">行削除</button>
+                    <button type="button" onclick="add6('items6')">行追加</button>
+                    <button type="button" onclick="del6('items6')">行削除</button>
                     <h2>ステータス<button type="button" onclick="randomStatus6()"><img src="images/dice.png" width="50" height="50"/></button></h2>
                     <table>
                         <th></th>
@@ -294,7 +294,7 @@
                     <br>
                     <br>
                     <h3>技能値(戦闘)</h3>
-                    <table id="standabilitybattle">
+                    <table id="standabilitybattle6">
                         <th>成長C</th>
                         <th>技能S</th>
                         <th>初期値</th>
@@ -308,7 +308,7 @@
 
                     <br>
                     <h3>技能値(行動)</h3>
-                    <table id="standabilityaction">
+                    <table id="standabilityaction6">
                         <th>成長C</th>
                         <th>技能S</th>
                         <th>初期値</th>
@@ -323,7 +323,7 @@
                     <br>
                     <h2>技能</h2>
                     <h3>戦闘技能</h3>
-                    <table id="battle">
+                    <table id="battle6">
                         <th>成長C</th>
                         <th>技能</th>
                         <th>初期値</th>
@@ -340,7 +340,7 @@
                     <br>
                     <br>
                     <h3>探索技能</h3>
-                    <table id="search">
+                    <table id="search6">
                         <th>成長C</th>
                         <th>技能</th>
                         <th>初期値</th>
@@ -357,7 +357,7 @@
                     <br>
                     <br>
                     <h3>行動技能</h3>
-                    <table id="action">
+                    <table id="action6">
                         <th>成長C</th>
                         <th>技能</th>
                         <th>初期値</th>
@@ -374,7 +374,7 @@
                     <br>
                     <br>
                     <h3>交渉技能</h3>
-                    <table id="negotiations">
+                    <table id="negotiations6">
                         <th>成長C</th>
                         <th>技能</th>
                         <th>初期値</th>
@@ -391,7 +391,7 @@
                     <br>
                     <br>
                     <h3>知識技能</h3>
-                    <table id="knowledge">
+                    <table id="knowledge6">
                         <th>成長C</th>
                         <th>技能</th>
                         <th>初期値</th>
@@ -408,7 +408,7 @@
                     <br>
                     <br>
                     <h3>その他の技能</h3>
-                    <table id="etc">
+                    <table id="etc6">
                         <th>成長C</th>
                         <th>技能</th>
                         <th>初期値</th>
@@ -460,6 +460,7 @@
                         読んで字のごとくスタンドの素早さなので、スタンド自体のDEXと回避技能にあてはめられる。<br>
                         DEXは最小が4、パラメータが1つ上がるごとに4づつプラスされていくため最大が20(変更する可能性あり)<br>
                         回避技能は最小で0、パラメータが1つ上がるごとに15づつプラスされていくため最大が60(変更する可能性あり)<br>
+                        ラッシュ攻撃のこぶしの数にも影響する
                         <li>持続力</li>
                         ここではスタンドのビジョンを出すのにかかるコスト量として考える。<br>
                         コストはMPで換算し持続力が高ければ高いほど消費MPが少なくなる。<br>
@@ -477,6 +478,51 @@
                     </ul>
                     <li>スタンドの技能は必要だと思ったものは好きに増やして構わないが、職業Pや興味Pで上乗せすることは出来ない。</li>
                     <li>ただし、クリティカルやスペシャル判定での成長ロールは振ることができる。あとはハウスルールで。</li>
+                </ul>
+                <p style="padding-left: 15px;">
+                    <b>ラッシュ</b><br>
+                    ラッシュ攻撃をする場合、まずスタンドのタイプが近距離パワー型であることが必要になる。<br>
+                    一方的にラッシュする場合はスタンドのDEX発のパンチ、もしくはキックになるため、その数だけこぶしかキックのダイスロールを行う<br>
+                    そして[成功した数-ファンブルの数]だけダメージロールを行う。<br>
+                    ただし相手に装甲があった場合は当たった数×装甲の分だけダメージ軽減が行われる。<br>
+                    <br>
+                    例:スタープラチナ　破壊力A・スピードA → ダメージボーナス3d6・DEX20　こぶし70<br>
+                    敵の装甲 → 5<br>
+                    こぶし判定を20回 → (<b style="color: blue;">68</b>,<b style="color: blue;">10</b>,<b style="color: blue;">2</b>,<b style="color: blue;">25</b>,<b style="color: blue;">64</b>,95,<b style="color: blue;">4</b>,<b style="color: blue;">17</b>,<b style="color: blue;">66</b>,77,93,<b style="color: blue;">44</b>,<b style="color: blue;">47</b>,80,<b style="color: blue;">43</b>,<b style="color: red;">99</b>,81,<b style="color: blue;">50</b>,<b style="color: blue;">59</b>,<b style="color: blue;">17</b>) → <b>成功数14 - ファンブル数1</b><br>
+                    ダメージ → (1*13)d3 + (3*13)d6<br>
+                    → 28[1,2,3,3,2,1,2,2,3,3,2,3,1]<br>
+                    +144[2,1,2,3,6,1,3,1,4,1,3,3,5,5,6,4,5,1,3,1,5,5,2,2,5,3,6,6,5,4,4,4,6,6,3,4,4,1,1,5,3] = <b>172</b><br>
+                    敵の装甲*14 → <b>70</b><br>
+                    <b>最終ダメージ → 172 - 70 → 102</b><br>
+                    <br>
+                    ラッシュに対し対抗ラッシュがある場合は先にお互い上記の計算を行いダメージを算出する。<br>
+                    その後お互いのダメージ量で対抗ロールを行う。<br>
+                    6版の対抗計算表は<br>
+                    <b>50 + 能動側能力値*5 - 受動側能力値*5 = 能動側対抗成功率</b><br>
+                    これをダメージ対抗に置き換えると<br>
+                    <b>50 + 能動側ダメージ量*5 - 受動側ダメージ量*5 = 能動側対抗成功率</b><br>
+                    となる。<br>
+                    しかし先ほどのラッシュのダメージ計算では数ポイントのズレで自動成功や自動失敗になってしまうので*5は外して計算する。<br>
+                    最終的な計算式はこちら<br>
+                    <b style="color: blue;">50 + 能動側ダメージ量 - 受動側ダメージ量 = 能動側対抗成功率</b><br>
+                    <br>
+                    例:スタープラチナ VS ザ・ワールド　スタープラチナ側ダメージ → 172　ザ・ワールド側ダメージ → 141<br>
+                    50 + 172 - 141 = 50 + 31 = <b>対抗成功率81</b><br>
+                    <br>
+                    この対抗ロールに成功した場合、成功側のダメージ量の半分を相手に与えることができる。<br>
+                    相手に装甲がある場合は前述と同じように当たった数×装甲の分÷2だけダメージから引かれる。<br>
+                    対抗ロールに失敗した場合は相手が上記と同じ処理でダメージを与えてくる。
+                </p>
+                <p style="padding-left: 15px;">
+                    <b>吸血鬼について</b><br>
+                    クトゥルフにデフォルトでいる吸血鬼や屍生人はジョジョ卓だと全然雑魚なので独自の補正を行う。<br>
+                </p>
+                <ul>
+                    <li>CONとSTRをプラス10</li>
+                    <li>投擲、登攀、跳躍、キックの初期値が50になる</li>
+                    <li>攻撃を受けた時即座に2ポイント回復</li>
+                    <li>こぶしを当てることで吸血可能</li>
+                    <li>現在のHPが最大値より低い場合1時間に1ポイント回復する</li>
                 </ul>
                 <p style="padding-left: 15px;">
                     <b>波紋について</b><br>
