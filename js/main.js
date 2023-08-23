@@ -1,29 +1,29 @@
 function calc6(){
     
-    var defstr = Number(document.status.str0.value);
-    var defcon = Number(document.status.con0.value);
-    var defpow = Number(document.status.pow0.value);
-    var defdex = Number(document.status.dex0.value);
-    var defapp = Number(document.status.app0.value);
-    var defsiz = Number(document.status.siz0.value);
-    var defint = Number(document.status.int0.value);
-    var defedu = Number(document.status.edu0.value);
-    var str = defstr + Number(document.status.str1.value);
-    var con = defcon + Number(document.status.con1.value);
-    var pow = defpow + Number(document.status.pow1.value);
-    var dex = defdex + Number(document.status.dex1.value);
-    var app = defapp + Number(document.status.app1.value);
-    var siz = defsiz + Number(document.status.siz1.value);
-    var int = defint + Number(document.status.int1.value);
-    var edu = defedu + Number(document.status.edu1.value);
-    document.status.str2.value = str;
-    document.status.con2.value = con;
-    document.status.pow2.value = pow;
-    document.status.dex2.value = dex;
-    document.status.app2.value = app;
-    document.status.siz2.value = siz;
-    document.status.int2.value = int;
-    document.status.edu2.value = edu;
+    var defstr = Number(document.status6.str0.value);
+    var defcon = Number(document.status6.con0.value);
+    var defpow = Number(document.status6.pow0.value);
+    var defdex = Number(document.status6.dex0.value);
+    var defapp = Number(document.status6.app0.value);
+    var defsiz = Number(document.status6.siz0.value);
+    var defint = Number(document.status6.int0.value);
+    var defedu = Number(document.status6.edu0.value);
+    var str = defstr + Number(document.status6.str1.value);
+    var con = defcon + Number(document.status6.con1.value);
+    var pow = defpow + Number(document.status6.pow1.value);
+    var dex = defdex + Number(document.status6.dex1.value);
+    var app = defapp + Number(document.status6.app1.value);
+    var siz = defsiz + Number(document.status6.siz1.value);
+    var int = defint + Number(document.status6.int1.value);
+    var edu = defedu + Number(document.status6.edu1.value);
+    document.status6.str2.value = str;
+    document.status6.con2.value = con;
+    document.status6.pow2.value = pow;
+    document.status6.dex2.value = dex;
+    document.status6.app2.value = app;
+    document.status6.siz2.value = siz;
+    document.status6.int2.value = int;
+    document.status6.edu2.value = edu;
 
     var defhp = Math.ceil((defcon+defsiz)/2);
     var defmp = defpow;
@@ -31,38 +31,38 @@ function calc6(){
     var defidea = defint*5;
     var defluck = defpow*5;
     var defknow = defedu*5;
-    if(document.status.usestand.value == "true"){
-        document.status.defbattle6.value = 50;
-        document.status.defsearch9.value = 50;
-        document.status.defaction8.value = 50;
+    if(document.status6.usestand.value == "true"){
+        document.status6.defbattle66.value = 50;
+        document.status6.defsearch69.value = 50;
+        document.status6.defaction68.value = 50;
         defhp *= 2;
         defmp /= 2;
         defsan /= 2;
         defluck /= 2;
     }else{
-        document.status.defbattle6.value = 25;
-        document.status.defsearch9.value = 40;
-        document.status.defaction8.value = 25;
+        document.status6.defbattle66.value = 25;
+        document.status6.defsearch69.value = 40;
+        document.status6.defaction68.value = 25;
     }
-    document.status.hp0.value = defhp;
-    document.status.mp0.value = defmp;
-    document.status.san0.value = defsan;
-    document.status.idea0.value = defidea;
-    document.status.luck0.value = defluck;
-    document.status.know0.value = defknow;
+    document.status6.hp0.value = defhp;
+    document.status6.mp0.value = defmp;
+    document.status6.san0.value = defsan;
+    document.status6.idea0.value = defidea;
+    document.status6.luck0.value = defluck;
+    document.status6.know0.value = defknow;
 
-    var hp = defhp + Number(document.status.hp1.value);
-    var mp = defmp + Number(document.status.mp1.value);
-    var san = defsan + Number(document.status.san1.value);
-    var idea = defidea + Number(document.status.idea1.value);
-    var luck = defluck + Number(document.status.luck1.value);
-    var know = defknow + Number(document.status.know1.value);
-    document.status.hp2.value = hp;
-    document.status.mp2.value = mp;
-    document.status.san2.value = san;
-    document.status.idea2.value = idea;
-    document.status.luck2.value = luck;
-    document.status.know2.value = know;
+    var hp = defhp + Number(document.status6.hp1.value);
+    var mp = defmp + Number(document.status6.mp1.value);
+    var san = defsan + Number(document.status6.san1.value);
+    var idea = defidea + Number(document.status6.idea1.value);
+    var luck = defluck + Number(document.status6.luck1.value);
+    var know = defknow + Number(document.status6.know1.value);
+    document.status6.hp2.value = hp;
+    document.status6.mp2.value = mp;
+    document.status6.san2.value = san;
+    document.status6.idea2.value = idea;
+    document.status6.luck2.value = luck;
+    document.status6.know2.value = know;
 
     var dbnum = str+siz;
     var db;
@@ -77,26 +77,26 @@ function calc6(){
     }else{
         db = "0";
     }
-    document.status.db.value = db;
+    document.status6.db.value = db;
 
     var bp = edu*20;
     var ip = int*10;
     var sp = pow;
-    document.status.maxBP.value = bp;
-    document.status.maxIP.value = ip;
-    document.status.maxSP.value = sp;
+    document.status6.maxBP.value = bp;
+    document.status6.maxIP.value = ip;
+    document.status6.maxSP.value = sp;
 
-    var cursp = Number(document.status.power.value)
-                + Number(document.status.speed.value)
-                + Number(document.status.durability.value)
-                + Number(document.status.range.value)
-                + Number(document.status.accuracy.value);
-    document.status.curSP.value = cursp;
+    var cursp = Number(document.status6.power.value)
+                + Number(document.status6.speed.value)
+                + Number(document.status6.durability.value)
+                + Number(document.status6.range.value)
+                + Number(document.status6.accuracy.value);
+    document.status6.curSP.value = cursp;
 
-    document.status.defbattle2.value = dex*2;
-    document.status.tobattle2.value = dex*2;
-    document.status.defnegotiations4.value = edu*5;
-    document.status.tonegotiations4.value = edu*5;
+    document.status6.defbattle62.value = dex*2;
+    document.status6.tobattle62.value = dex*2;
+    document.status6.defnegotiations64.value = edu*5;
+    document.status6.tonegotiations64.value = edu*5;
 
     var corbattlestate;
     var coractionstate;
@@ -107,7 +107,7 @@ function calc6(){
     var deffences;
     var usemps;
 
-    switch(Number(document.status.accuracy.value)){
+    switch(Number(document.status6.accuracy.value)){
         case 1:
             corbattlestate = -20;
             coractionstate = -30;
@@ -139,7 +139,7 @@ function calc6(){
             abilityaccuracy = 0;
     }
 
-    switch(Number(document.status.speed.value)){
+    switch(Number(document.status6.speed.value)){
         case 1:
             dexs = 4;
             avoidance = 0;
@@ -165,7 +165,7 @@ function calc6(){
             avoidance = 0;
     }
 
-    switch(Number(document.status.power.value)){
+    switch(Number(document.status6.power.value)){
         case 1:
             dbs = "-1d6";
             deffences = "0";
@@ -191,7 +191,7 @@ function calc6(){
             deffences = "1d4";
     }
 
-    switch(Number(document.status.durability.value)){
+    switch(Number(document.status6.durability.value)){
         case 1:
             usemps = 4;
             break;
@@ -211,8 +211,8 @@ function calc6(){
             usemps = 2;
     }
 
-    const battle = document.getElementsByClassName("corstandbattle");
-    const action = document.getElementsByClassName("corstandaction");
+    const battle = document.getElementsByClassName("corstandbattle6");
+    const action = document.getElementsByClassName("corstandaction6");
     for(let i = 0; i < battle.length; i++){
         battle[i].value = corbattlestate;
     }
@@ -220,148 +220,148 @@ function calc6(){
         action[i].value = coractionstate;
     }
     
-    document.status.dexS.value = dexs;
-    document.status.dbS.value = dbs;
-    document.status.deffenceS.value = deffences;
-    document.status.usempS.value = usemps;
-    document.status.defstandabilitybattle2.value = avoidance;
-    document.status.corstandabilitybattle2.value = 0;
-    document.status.tostandabilitybattle2.value = avoidance;
-    document.status.defstandabilityaction0.value = abilityaccuracy;
-    document.status.tostandabilityaction0.value = abilityaccuracy;
-    document.status.corstandabilityaction0.value = 0;
+    document.status6.dexS.value = dexs;
+    document.status6.dbS.value = dbs;
+    document.status6.deffenceS.value = deffences;
+    document.status6.usempS.value = usemps;
+    document.status6.defstandabilitybattle62.value = avoidance;
+    document.status6.corstandabilitybattle62.value = 0;
+    document.status6.tostandabilitybattle62.value = avoidance;
+    document.status6.defstandabilityaction60.value = abilityaccuracy;
+    document.status6.tostandabilityaction60.value = abilityaccuracy;
+    document.status6.corstandabilityaction60.value = 0;
 
     calcstatus6();
 
 }
-
+//変数名変更中6
 function calcstatus6(){
-    var standabilitybattle = document.getElementById("standabilitybattle");
-    var standabilityaction = document.getElementById("standabilityaction");
-    var battle = document.getElementById("battle");
-    var search = document.getElementById("search");
-    var action = document.getElementById("action");
-    var negotiations = document.getElementById("negotiations");
-    var knowledge = document.getElementById("knowledge");
-    var etc = document.getElementById("etc");
+    var standabilitybattle = document.getElementById("standabilitybattle6");
+    var standabilityaction = document.getElementById("standabilityaction6");
+    var battle = document.getElementById("battle6");
+    var search = document.getElementById("search6");
+    var action = document.getElementById("action6");
+    var negotiations = document.getElementById("negotiations6");
+    var knowledge = document.getElementById("knowledge6");
+    var etc = document.getElementById("etc6");
     
     var allbp = 0;
     var allip = 0;
     
     for(let table = 0; table < standabilitybattle.rows.length-1; table++){
-        var def = Number(document.getElementsByName("defstandabilitybattle"+table)[0].value);
-        var cor = Number(document.getElementsByName("corstandabilitybattle"+table)[0].value);
-        var pl = Number(document.getElementsByName("plstandabilitybattle"+table)[0].value);
-        var add = Number(document.getElementsByName("addstandabilitybattle"+table)[0].value);
+        var def = Number(document.getElementsByName("defstandabilitybattle6"+table)[0].value);
+        var cor = Number(document.getElementsByName("corstandabilitybattle6"+table)[0].value);
+        var pl = Number(document.getElementsByName("plstandabilitybattle6"+table)[0].value);
+        var add = Number(document.getElementsByName("addstandabilitybattle6"+table)[0].value);
 
         var sum = def+cor+pl+add;
 
-        document.getElementsByName("tostandabilitybattle"+table)[0].value = sum;
+        document.getElementsByName("tostandabilitybattle6"+table)[0].value = sum;
     }
     
     for(let table = 0; table < standabilityaction.rows.length-1; table++){
-        var def = Number(document.getElementsByName("defstandabilityaction"+table)[0].value);
-        var cor = Number(document.getElementsByName("corstandabilityaction"+table)[0].value);
-        var pl = Number(document.getElementsByName("plstandabilityaction"+table)[0].value);
-        var add = Number(document.getElementsByName("addstandabilityaction"+table)[0].value);
+        var def = Number(document.getElementsByName("defstandabilityaction6"+table)[0].value);
+        var cor = Number(document.getElementsByName("corstandabilityaction6"+table)[0].value);
+        var pl = Number(document.getElementsByName("plstandabilityaction6"+table)[0].value);
+        var add = Number(document.getElementsByName("addstandabilityaction6"+table)[0].value);
 
         var sum = def+cor+pl+add;
 
-        document.getElementsByName("tostandabilityaction"+table)[0].value = sum;
+        document.getElementsByName("tostandabilityaction6"+table)[0].value = sum;
     }
 
     for(let table = 0; table < battle.rows.length-1; table++){
-        var def = Number(document.getElementsByName("defbattle"+table)[0].value);
-        var bp = Number(document.getElementsByName("bpbattle"+table)[0].value);
-        var ip = Number(document.getElementsByName("ipbattle"+table)[0].value);
-        var pl = Number(document.getElementsByName("plbattle"+table)[0].value);
-        var add = Number(document.getElementsByName("addbattle"+table)[0].value);
+        var def = Number(document.getElementsByName("defbattle6"+table)[0].value);
+        var bp = Number(document.getElementsByName("bpbattle6"+table)[0].value);
+        var ip = Number(document.getElementsByName("ipbattle6"+table)[0].value);
+        var pl = Number(document.getElementsByName("plbattle6"+table)[0].value);
+        var add = Number(document.getElementsByName("addbattle6"+table)[0].value);
 
         var sum = def+bp+ip+pl+add;
 
         allbp += bp;
         allip += ip;
 
-        document.getElementsByName("tobattle"+table)[0].value = sum;
+        document.getElementsByName("tobattle6"+table)[0].value = sum;
     }
 
     for(let table = 0; table < search.rows.length-1; table++){
-        var def = Number(document.getElementsByName("defsearch"+table)[0].value);
-        var bp = Number(document.getElementsByName("bpsearch"+table)[0].value);
-        var ip = Number(document.getElementsByName("ipsearch"+table)[0].value);
-        var pl = Number(document.getElementsByName("plsearch"+table)[0].value);
-        var add = Number(document.getElementsByName("addsearch"+table)[0].value);
+        var def = Number(document.getElementsByName("defsearch6"+table)[0].value);
+        var bp = Number(document.getElementsByName("bpsearch6"+table)[0].value);
+        var ip = Number(document.getElementsByName("ipsearch6"+table)[0].value);
+        var pl = Number(document.getElementsByName("plsearch6"+table)[0].value);
+        var add = Number(document.getElementsByName("addsearch6"+table)[0].value);
 
         var sum = def+bp+ip+pl+add;
 
         allbp += bp;
         allip += ip;
 
-        document.getElementsByName("tosearch"+table)[0].value = sum;
+        document.getElementsByName("tosearch6"+table)[0].value = sum;
     }
 
     for(let table = 0; table < action.rows.length-1; table++){
-        var def = Number(document.getElementsByName("defaction"+table)[0].value);
-        var bp = Number(document.getElementsByName("bpaction"+table)[0].value);
-        var ip = Number(document.getElementsByName("ipaction"+table)[0].value);
-        var pl = Number(document.getElementsByName("plaction"+table)[0].value);
-        var add = Number(document.getElementsByName("addaction"+table)[0].value);
+        var def = Number(document.getElementsByName("defaction6"+table)[0].value);
+        var bp = Number(document.getElementsByName("bpaction6"+table)[0].value);
+        var ip = Number(document.getElementsByName("ipaction6"+table)[0].value);
+        var pl = Number(document.getElementsByName("plaction6"+table)[0].value);
+        var add = Number(document.getElementsByName("addaction6"+table)[0].value);
 
         var sum = def+bp+ip+pl+add;
 
         allbp += bp;
         allip += ip;
 
-        document.getElementsByName("toaction"+table)[0].value = sum;
+        document.getElementsByName("toaction6"+table)[0].value = sum;
     }
 
     for(let table = 0; table < negotiations.rows.length-1; table++){
-        var def = Number(document.getElementsByName("defnegotiations"+table)[0].value);
-        var bp = Number(document.getElementsByName("bpnegotiations"+table)[0].value);
-        var ip = Number(document.getElementsByName("ipnegotiations"+table)[0].value);
-        var pl = Number(document.getElementsByName("plnegotiations"+table)[0].value);
-        var add = Number(document.getElementsByName("addnegotiations"+table)[0].value);
+        var def = Number(document.getElementsByName("defnegotiations6"+table)[0].value);
+        var bp = Number(document.getElementsByName("bpnegotiations6"+table)[0].value);
+        var ip = Number(document.getElementsByName("ipnegotiations6"+table)[0].value);
+        var pl = Number(document.getElementsByName("plnegotiations6"+table)[0].value);
+        var add = Number(document.getElementsByName("addnegotiations6"+table)[0].value);
 
         var sum = def+bp+ip+pl+add;
 
         allbp += bp;
         allip += ip;
 
-        document.getElementsByName("tonegotiations"+table)[0].value = sum;
+        document.getElementsByName("tonegotiations6"+table)[0].value = sum;
     }
 
     for(let table = 0; table < knowledge.rows.length-1; table++){
-        var def = Number(document.getElementsByName("defknowledge"+table)[0].value);
-        var bp = Number(document.getElementsByName("bpknowledge"+table)[0].value);
-        var ip = Number(document.getElementsByName("ipknowledge"+table)[0].value);
-        var pl = Number(document.getElementsByName("plknowledge"+table)[0].value);
-        var add = Number(document.getElementsByName("addknowledge"+table)[0].value);
+        var def = Number(document.getElementsByName("defknowledge6"+table)[0].value);
+        var bp = Number(document.getElementsByName("bpknowledge6"+table)[0].value);
+        var ip = Number(document.getElementsByName("ipknowledge6"+table)[0].value);
+        var pl = Number(document.getElementsByName("plknowledge6"+table)[0].value);
+        var add = Number(document.getElementsByName("addknowledge6"+table)[0].value);
 
         var sum = def+bp+ip+pl+add;
 
         allbp += bp;
         allip += ip;
 
-        document.getElementsByName("toknowledge"+table)[0].value = sum;
+        document.getElementsByName("toknowledge6"+table)[0].value = sum;
     }
 
     for(let table = 0; table < etc.rows.length-1; table++){
-        var def = Number(document.getElementsByName("defetc"+table)[0].value);
-        var bp = Number(document.getElementsByName("bpetc"+table)[0].value);
-        var ip = Number(document.getElementsByName("ipetc"+table)[0].value);
-        var pl = Number(document.getElementsByName("pletc"+table)[0].value);
-        var add = Number(document.getElementsByName("addetc"+table)[0].value);
+        var def = Number(document.getElementsByName("defetc6"+table)[0].value);
+        var bp = Number(document.getElementsByName("bpetc6"+table)[0].value);
+        var ip = Number(document.getElementsByName("ipetc6"+table)[0].value);
+        var pl = Number(document.getElementsByName("pletc6"+table)[0].value);
+        var add = Number(document.getElementsByName("addetc6"+table)[0].value);
 
         var sum = def+bp+ip+pl+add;
 
         allbp += bp;
         allip += ip;
 
-        document.getElementsByName("toetc"+table)[0].value = sum;
+        document.getElementsByName("toetc6"+table)[0].value = sum;
     }
 
-    document.status.curBP.value = allbp;
-    document.status.curIP.value = allip;
+    document.status6.curBP.value = allbp;
+    document.status6.curIP.value = allip;
 }
 
 function randomStatus6(){
@@ -373,20 +373,20 @@ function randomStatus6(){
     var siz = Math.floor(Math.random() * (12 - 2) + 2 + 6);
     var int = Math.floor(Math.random() * (12 - 2) + 2 + 6);
     var edu = Math.floor(Math.random() * (18 - 3) + 3 + 3);
-    document.status.str0.value = str;
-    document.status.con0.value = con;
-    if(document.status.usestand.value == "true"){
-        document.status.pow0.value = pow*2;
+    document.status6.str0.value = str;
+    document.status6.con0.value = con;
+    if(document.status6.usestand.value == "true"){
+        document.status6.pow0.value = pow*2;
 
     }else{
-        document.status.pow0.value = pow;
+        document.status6.pow0.value = pow;
     
     }
-    document.status.dex0.value = dex;
-    document.status.app0.value = app;
-    document.status.siz0.value = siz;
-    document.status.int0.value = int;
-    document.status.edu0.value = edu;
+    document.status6.dex0.value = dex;
+    document.status6.app0.value = app;
+    document.status6.siz0.value = siz;
+    document.status6.int0.value = int;
+    document.status6.edu0.value = edu;
     calc6();
 }
 
@@ -398,15 +398,15 @@ function save6(){
     var accuracy;
     var growth;
 
-    var standabilitybattle = document.getElementById("standabilitybattle");
-    var standabilityaction = document.getElementById("standabilityaction");
-    var battle = document.getElementById("battle");
-    var search = document.getElementById("search");
-    var action = document.getElementById("action");
-    var negotiations = document.getElementById("negotiations");
-    var knowledge = document.getElementById("knowledge");
-    var etc = document.getElementById("etc");
-    var items = document.getElementById("items");
+    var standabilitybattle = document.getElementById("standabilitybattle6");
+    var standabilityaction = document.getElementById("standabilityaction6");
+    var battle = document.getElementById("battle6");
+    var search = document.getElementById("search6");
+    var action = document.getElementById("action6");
+    var negotiations = document.getElementById("negotiations6");
+    var knowledge = document.getElementById("knowledge6");
+    var etc = document.getElementById("etc6");
+    var items = document.getElementById("items6");
 
     var pcstatusB = "";
     var pcstatusS = "";
@@ -426,149 +426,149 @@ function save6(){
             
             if(standabilitybattle.rows[table+1].cells[1].innerHTML.includes("input")){
                 standstatusB += standabilitybattle.rows[table+1].cells[1].innerText
-                + document.getElementsByName("standabilitybattlename"+table)[0].value + "- " 
-                + document.getElementsByName("tostandabilitybattle"+table)[0].value + "\n";
+                + document.getElementsByName("standabilitybattlename6"+table)[0].value + "- " 
+                + document.getElementsByName("tostandabilitybattle6"+table)[0].value + "\n";
             }else{
                 standstatusB += standabilitybattle.rows[table+1].cells[1].innerText + "- " 
-                + document.getElementsByName("tostandabilitybattle"+table)[0].value + "\n";
+                + document.getElementsByName("tostandabilitybattle6"+table)[0].value + "\n";
             }
             
             
         }else{
-            standstatusB += document.getElementsByName("standabilitybattlename"+table)[0].value + "- " 
-                            + document.getElementsByName("tostandabilitybattle"+table)[0].value + "\n";
+            standstatusB += document.getElementsByName("standabilitybattlename6"+table)[0].value + "- " 
+                            + document.getElementsByName("tostandabilitybattle6"+table)[0].value + "\n";
         }
     }
     for(let table = 0; table < standabilityaction.rows.length-1; table++){
         if(table < defstandactionnum){
             if(standabilityaction.rows[table+1].cells[1].innerHTML.includes("input")){
                 standstatusA += standabilityaction.rows[table+1].cells[1].innerText
-                + document.getElementsByName("standabilityactionname"+table)[0].value + "- " 
-                + document.getElementsByName("tostandabilityaction"+table)[0].value + "\n";
+                + document.getElementsByName("standabilityactionname6"+table)[0].value + "- " 
+                + document.getElementsByName("tostandabilityaction6"+table)[0].value + "\n";
             }else{
                 standstatusA += standabilityaction.rows[table+1].cells[1].innerText + "- " 
-                + document.getElementsByName("tostandabilityaction"+table)[0].value + "\n";
+                + document.getElementsByName("tostandabilityaction6"+table)[0].value + "\n";
             }
         
         }else{
-            standstatusA += document.getElementsByName("standabilityactionname"+table)[0].value + "- " 
-                            + document.getElementsByName("tostandabilityaction"+table)[0].value + "\n";
+            standstatusA += document.getElementsByName("standabilityactionname6"+table)[0].value + "- " 
+                            + document.getElementsByName("tostandabilityaction6"+table)[0].value + "\n";
         }
     }
     for(let table = 0; table < battle.rows.length-1; table++){
-        if(document.getElementsByName("tobattle"+table)[0].value
-            == document.getElementsByName("defbattle"+table)[0].value) isinitial = true;
+        if(document.getElementsByName("tobattle6"+table)[0].value
+            == document.getElementsByName("defbattle6"+table)[0].value) isinitial = true;
             else isinitial = false;
         if(table < defpcbattlenum && !isinitial){
             if(battle.rows[table+1].cells[1].innerHTML.includes("input")){
                 pcstatusB += battle.rows[table+1].cells[1].innerText
-                + document.getElementsByName("battlename"+table)[0].value + "- " 
-                + document.getElementsByName("tobattle"+table)[0].value + "\n";
+                + document.getElementsByName("battlename6"+table)[0].value + "- " 
+                + document.getElementsByName("tobattle6"+table)[0].value + "\n";
             }else{
                 pcstatusB += battle.rows[table+1].cells[1].innerText + "- " 
-                + document.getElementsByName("tobattle"+table)[0].value + "\n";
+                + document.getElementsByName("tobattle6"+table)[0].value + "\n";
             }
         
         }else if(!isinitial){
-            pcstatusB += document.getElementsByName("battlename"+table)[0].value + "- " 
-                            + document.getElementsByName("tobattle"+table)[0].value + "\n";
+            pcstatusB += document.getElementsByName("battlename6"+table)[0].value + "- " 
+                            + document.getElementsByName("tobattle6"+table)[0].value + "\n";
         }
     }
     for(let table = 0; table < search.rows.length-1; table++){
-        if(document.getElementsByName("tosearch"+table)[0].value
-            == document.getElementsByName("defsearch"+table)[0].value) isinitial = true;
+        if(document.getElementsByName("tosearch6"+table)[0].value
+            == document.getElementsByName("defsearch6"+table)[0].value) isinitial = true;
             else isinitial = false;
         if(table < defpcsearchnum && !isinitial){
             if(search.rows[table+1].cells[1].innerHTML.includes("input")){
                 pcstatusS += search.rows[table+1].cells[1].innerText
-                + document.getElementsByName("searchname"+table)[0].value + "- " 
-                + document.getElementsByName("tosearch"+table)[0].value + "\n";
+                + document.getElementsByName("searchname6"+table)[0].value + "- " 
+                + document.getElementsByName("tosearch6"+table)[0].value + "\n";
             }else{
                 pcstatusS += search.rows[table+1].cells[1].innerText + "- " 
-                + document.getElementsByName("tosearch"+table)[0].value + "\n";
+                + document.getElementsByName("tosearch6"+table)[0].value + "\n";
             }
         
         }else if(!isinitial){
-            pcstatusS += document.getElementsByName("searchname"+table)[0].value + "- " 
-                            + document.getElementsByName("tosearch"+table)[0].value + "\n";
+            pcstatusS += document.getElementsByName("searchname6"+table)[0].value + "- " 
+                            + document.getElementsByName("tosearch6"+table)[0].value + "\n";
         }
     }
     for(let table = 0; table < action.rows.length-1; table++){
-        if(document.getElementsByName("toaction"+table)[0].value
-            == document.getElementsByName("defaction"+table)[0].value) isinitial = true;
+        if(document.getElementsByName("toaction6"+table)[0].value
+            == document.getElementsByName("defaction6"+table)[0].value) isinitial = true;
             else isinitial = false;
         if(table < defpcactionnum && !isinitial){
             if(action.rows[table+1].cells[1].innerHTML.includes("input")){
                 
                 pcstatusA += action.rows[table+1].cells[1].innerText
-                + document.getElementsByName("actionname"+table)[0].value + "- " 
-                + document.getElementsByName("toaction"+table)[0].value + "\n";
+                + document.getElementsByName("actionname6"+table)[0].value + "- " 
+                + document.getElementsByName("toaction6"+table)[0].value + "\n";
             }else{
                 pcstatusA += action.rows[table+1].cells[1].innerText + "- " 
-                + document.getElementsByName("toaction"+table)[0].value + "\n";
+                + document.getElementsByName("toaction6"+table)[0].value + "\n";
             }
         
         }else if(!isinitial){
-            pcstatusA += document.getElementsByName("actionname"+table)[0].value + "- " 
-                            + document.getElementsByName("toaction"+table)[0].value + "\n";
+            pcstatusA += document.getElementsByName("actionname6"+table)[0].value + "- " 
+                            + document.getElementsByName("toaction6"+table)[0].value + "\n";
         }
     }
     for(let table = 0; table < negotiations.rows.length-1; table++){
-        if(document.getElementsByName("tonegotiations"+table)[0].value
-            == document.getElementsByName("defnegotiations"+table)[0].value) isinitial = true;
+        if(document.getElementsByName("tonegotiations6"+table)[0].value
+            == document.getElementsByName("defnegotiations6"+table)[0].value) isinitial = true;
             else isinitial = false;
         if(table < defpcnegotiationsnum && !isinitial){
             if(negotiations.rows[table+1].cells[1].innerHTML.includes("input")){
                 pcstatusN += negotiations.rows[table+1].cells[1].innerText
-                + document.getElementsByName("negotiationsname"+table)[0].value + "- " 
-                + document.getElementsByName("tonegotiations"+table)[0].value + "\n";
+                + document.getElementsByName("negotiationsname6"+table)[0].value + "- " 
+                + document.getElementsByName("tonegotiations6"+table)[0].value + "\n";
             }else{
                 pcstatusN += negotiations.rows[table+1].cells[1].innerText + "- " 
-                + document.getElementsByName("tonegotiations"+table)[0].value + "\n";
+                + document.getElementsByName("tonegotiations6"+table)[0].value + "\n";
             }
         
         }else if(!isinitial){
-            pcstatusN += document.getElementsByName("negotiationsname"+table)[0].value + "- " 
-                            + document.getElementsByName("tonegotiations"+table)[0].value + "\n";
+            pcstatusN += document.getElementsByName("negotiationsname6"+table)[0].value + "- " 
+                            + document.getElementsByName("tonegotiations6"+table)[0].value + "\n";
         }
     }
     for(let table = 0; table < knowledge.rows.length-1; table++){
-        if(document.getElementsByName("toknowledge"+table)[0].value
-            == document.getElementsByName("defknowledge"+table)[0].value) isinitial = true;
+        if(document.getElementsByName("toknowledge6"+table)[0].value
+            == document.getElementsByName("defknowledge6"+table)[0].value) isinitial = true;
             else isinitial = false;
         if(table < defpcknowledgenum && !isinitial){
             if(knowledge.rows[table+1].cells[1].innerHTML.includes("input")){
                 pcstatusK += knowledge.rows[table+1].cells[1].innerText
-                + document.getElementsByName("knowledgename"+table)[0].value + "- " 
-                + document.getElementsByName("toknowledge"+table)[0].value + "\n";
+                + document.getElementsByName("knowledgename6"+table)[0].value + "- " 
+                + document.getElementsByName("toknowledge6"+table)[0].value + "\n";
             }else{
                 pcstatusK += knowledge.rows[table+1].cells[1].innerText + "- " 
-                + document.getElementsByName("toknowledge"+table)[0].value + "\n";
+                + document.getElementsByName("toknowledge6"+table)[0].value + "\n";
             }
         
         }else if(!isinitial){
-            pcstatusK += document.getElementsByName("knowledgename"+table)[0].value + "- " 
-                            + document.getElementsByName("toknowledge"+table)[0].value + "\n";
+            pcstatusK += document.getElementsByName("knowledgename6"+table)[0].value + "- " 
+                            + document.getElementsByName("toknowledge6"+table)[0].value + "\n";
         }
     }
     for(let table = 0; table < etc.rows.length-1; table++){
-        if(document.getElementsByName("toetc"+table)[0].value
-            == document.getElementsByName("defetc"+table)[0].value) isinitial = true;
+        if(document.getElementsByName("toetc6"+table)[0].value
+            == document.getElementsByName("defetc6"+table)[0].value) isinitial = true;
             else isinitial = false;
         if(!isinitial){
-            pcstatusE += document.getElementsByName("etcname"+table)[0].value + "- " 
-                            + document.getElementsByName("toetc"+table)[0].value + "\n";
+            pcstatusE += document.getElementsByName("etcname6"+table)[0].value + "- " 
+                            + document.getElementsByName("toetc6"+table)[0].value + "\n";
         }
         
     }
     for(let table = 0; table < items.rows.length-1; table++){
-        itemsstr += document.getElementsByName("itemsname"+table)[0].value + " " 
-                    + document.getElementsByName("itemsnum"+table)[0].value + "\n"
-                    + document.getElementsByName("itemsdetail"+table)[0].value + "\n";
+        itemsstr += document.getElementsByName("itemsname6"+table)[0].value + " " 
+                    + document.getElementsByName("itemsnum6"+table)[0].value + "\n"
+                    + document.getElementsByName("itemsdetail6"+table)[0].value + "\n";
     
     }
 
-    switch(Number(document.status.power.value)){
+    switch(Number(document.status6.power.value)){
         case 1:
             power = "E";
             break;
@@ -593,7 +593,7 @@ function save6(){
             
     }
 
-    switch(Number(document.status.speed.value)){
+    switch(Number(document.status6.speed.value)){
         case 1:
             speed = "E";
             break;
@@ -618,7 +618,7 @@ function save6(){
             
     }
 
-    switch(Number(document.status.durability.value)){
+    switch(Number(document.status6.durability.value)){
         case 1:
             durability = "E";
             break;
@@ -643,7 +643,7 @@ function save6(){
             
     }
 
-    switch(Number(document.status.range.value)){
+    switch(Number(document.status6.range.value)){
         case 1:
             range = "E";
             break;
@@ -668,7 +668,7 @@ function save6(){
             
     }
 
-    switch(Number(document.status.accuracy.value)){
+    switch(Number(document.status6.accuracy.value)){
         case 1:
             accuracy = "E";
             break;
@@ -693,7 +693,7 @@ function save6(){
             
     }
 
-    switch(Number(document.status.growth.value)){
+    switch(Number(document.status6.growth.value)){
         case 1:
             growth = "E";
             break;
@@ -720,7 +720,7 @@ function save6(){
 
     var usestand = "";
     var isstandstr = false;
-    if(document.status.usestand.value == "true"){
+    if(document.status6.usestand.value == "true"){
         usestand = "(スタンド使い)";
         isstandstr = true;
     }else{
@@ -728,28 +728,29 @@ function save6(){
         isstandstr = false;
     }
 
-    var pcstr = "【名前】" + document.status.charaname.value + " " + usestand + "　【性別】" + document.status.sex.value + "\n"
-                + "【年齢】" + document.status.age.value + "歳　【身長】" + document.status.stature.value + "cm　【体重】" + document.status.weight.value + "kg\n"
-                + "【出身】" + document.status.from.value + "\n"
-                + "【髪の色】" + document.status.heir.value + "　【瞳の色】" + document.status.eye.value + "　【肌の色】" + document.status.skin.value + "\n"
-                + "【職業(配属先)】" + document.status.business.value + "\n"
+    var pcstr = "【名前】" + document.status6.charaname.value + " " + usestand + "　【性別】" + document.status6.sex.value + "\n"
+                + "【年齢】" + document.status6.age.value + "歳　【身長】" + document.status6.stature.value + "cm　【体重】" + document.status6.weight.value + "kg\n"
+                + "【出身】" + document.status6.from.value + "\n"
+                + "【髪の色】" + document.status6.heir.value + "　【瞳の色】" + document.status6.eye.value + "　【肌の色】" + document.status6.skin.value + "\n"
+                + "【職業(配属先)】" + document.status6.business.value + "\n"
                 + "【ステータス】\n"
-                + "STR- " + document.status.str2.value + "\n"
-                + "CON- " + document.status.con2.value + "\n"
-                + "POW- " + document.status.pow2.value + "\n"
-                + "DEX- " + document.status.dex2.value + "\n"
-                + "APP- " + document.status.app2.value + "\n"
-                + "SIZ- " + document.status.siz2.value + "\n"
-                + "INT- " + document.status.int2.value + "\n"
-                + "EDU- " + document.status.edu2.value + "\n"
-                + "HP- " + document.status.hp2.value + "\n"
-                + "MP- " + document.status.mp2.value + "\n"
-                + "SAN- " + document.status.san2.value + "\n"
-                + "アイデア- " + document.status.idea2.value + "\n"
-                + "幸運- " + document.status.luck2.value + "\n"
-                + "知識- " + document.status.know2.value + "\n"
+                + "STR- " + document.status6.str2.value + "\n"
+                + "CON- " + document.status6.con2.value + "\n"
+                + "POW- " + document.status6.pow2.value + "\n"
+                + "DEX- " + document.status6.dex2.value + "\n"
+                + "APP- " + document.status6.app2.value + "\n"
+                + "SIZ- " + document.status6.siz2.value + "\n"
+                + "INT- " + document.status6.int2.value + "\n"
+                + "EDU- " + document.status6.edu2.value + "\n"
+                + "HP- " + document.status6.hp2.value + "\n"
+                + "MP- " + document.status6.mp2.value + "\n"
+                + "SAN- " + document.status6.san2.value + "\n"
+                + "アイデア- " + document.status6.idea2.value + "\n"
+                + "幸運- " + document.status6.luck2.value + "\n"
+                + "知識- " + document.status6.know2.value + "\n"
+                + "ダメージボーナス- " + document.status6.db.value + "\n"
                 + "【詳細】\n"
-                + document.status.charadetail.value + "\n"
+                + document.status6.charadetail.value + "\n"
                 + "【所持品】\n"
                 + itemsstr + "\n"
                 + "【技能】\n"
@@ -766,16 +767,16 @@ function save6(){
                 + "『その他の技能』\n"
                 + pcstatusE + "\n";
 
-    var standstr = "【スタンド名】" + document.status.standname.value + "\n"
+    var standstr = "【スタンド名】" + document.status6.standname.value + "\n"
                 + "【パラメータ】\n"
                 + "破壊力-" + power + "　スピード-" + speed + "　持続力-" + durability + "\n"
                 + "射程距離-" + range + "　精密動作性-" + accuracy + "　成長性-" + growth + "\n"
-                + "TRPG的DEX-" + document.status.dexS.value + "\n"
-                + "ダメージボーナス-" + document.status.dbS.value + "\n"
-                + "防御可能量-" + document.status.deffenceS.value + "\n"
+                + "TRPG的DEX-" + document.status6.dexS.value + "\n"
+                + "ダメージボーナス- " + document.status6.dbS.value + "\n"
+                + "防御可能量-" + document.status6.deffenceS.value + "\n"
                 + "\n"
                 + "【スタンド詳細】\n"
-                + document.status.standdetail.value + "\n"
+                + document.status6.standdetail.value + "\n"
                 + "【技能】\n"
                 + "『戦闘技能』\n"
                 + standstatusB + "\n"
@@ -793,19 +794,19 @@ function save6(){
     let link = document.createElement("a");
     link.href = URL.createObjectURL(blob);
     //link.download = "test.txt";
-    link.download = document.status.charaname.value+".txt";
+    link.download = document.status6.charaname.value+".txt";
     link.click();
 }
 
 function chapare6(){
-    var standabilitybattle = document.getElementById("standabilitybattle");
-    var standabilityaction = document.getElementById("standabilityaction");
-    var battle = document.getElementById("battle");
-    var search = document.getElementById("search");
-    var action = document.getElementById("action");
-    var negotiations = document.getElementById("negotiations");
-    var knowledge = document.getElementById("knowledge");
-    var etc = document.getElementById("etc");
+    var standabilitybattle = document.getElementById("standabilitybattle6");
+    var standabilityaction = document.getElementById("standabilityaction6");
+    var battle = document.getElementById("battle6");
+    var search = document.getElementById("search6");
+    var action = document.getElementById("action6");
+    var negotiations = document.getElementById("negotiations6");
+    var knowledge = document.getElementById("knowledge6");
+    var etc = document.getElementById("etc6");
 
     var pcstatusB = "";
     var pcstatusS = "";
@@ -820,7 +821,7 @@ function chapare6(){
     var standstr = "";
 
     var isstandstr = false;
-    if(document.status.usestand.value == "true"){
+    if(document.status6.usestand.value == "true"){
         isstandstr = true;
     }else{
         isstandstr = false;
@@ -830,210 +831,210 @@ function chapare6(){
         if(table < defstandbattlenum){
             if(standabilitybattle.rows[table+1].cells[1].innerHTML.includes("input")){
                 //standstatusB += standabilitybattle.rows[table+1].cells[1].innerText
-                //+ document.getElementsByName("standabilitybattlename"+table)[0].value + "- " 
-                //+ document.getElementsByName("tostandabilitybattle"+table)[0].value + "\n";
+                //+ document.getElementsByName("standabilitybattlename6"+table)[0].value + "- " 
+                //+ document.getElementsByName("tostandabilitybattle6"+table)[0].value + "\n";
 
-                standstatusB += "CCB<=" + document.getElementsByName("tostandabilitybattle"+table)[0].value + " 【" 
+                standstatusB += "CCB<=" + document.getElementsByName("tostandabilitybattle6"+table)[0].value + " 【" 
                                 + standabilitybattle.rows[table+1].cells[1].innerText
-                                + document.getElementsByName("standabilitybattlename"+table)[0].value + "】\n";
+                                + document.getElementsByName("standabilitybattlename6"+table)[0].value + "】\n";
             }else{
                 //standstatusB += standabilitybattle.rows[table+1].cells[1].innerText + "- " 
-                //+ document.getElementsByName("tostandabilitybattle"+table)[0].value + "\n";
+                //+ document.getElementsByName("tostandabilitybattle6"+table)[0].value + "\n";
 
-                standstatusB += "CCB<=" + document.getElementsByName("tostandabilitybattle"+table)[0].value + " 【" 
+                standstatusB += "CCB<=" + document.getElementsByName("tostandabilitybattle6"+table)[0].value + " 【" 
                                 + standabilitybattle.rows[table+1].cells[1].innerText + "】\n";
             }
             
             
         }else{
-            //standstatusB += document.getElementsByName("standabilitybattlename"+table)[0].value + "- " 
-            //                + document.getElementsByName("tostandabilitybattle"+table)[0].value + "\n";
+            //standstatusB += document.getElementsByName("standabilitybattlename6"+table)[0].value + "- " 
+            //                + document.getElementsByName("tostandabilitybattle6"+table)[0].value + "\n";
 
-            standstatusB += "CCB<=" + document.getElementsByName("tostandabilitybattle"+table)[0].value + " 【" 
-            + document.getElementsByName("standabilitybattlename"+table)[0].value + "】\n";
+            standstatusB += "CCB<=" + document.getElementsByName("tostandabilitybattle6"+table)[0].value + " 【" 
+            + document.getElementsByName("standabilitybattlename6"+table)[0].value + "】\n";
         }
     }
     for(let table = 0; table < standabilityaction.rows.length-1; table++){
         if(table < defstandactionnum){
             if(standabilityaction.rows[table+1].cells[1].innerHTML.includes("input")){
                 //standstatusA += standabilityaction.rows[table+1].cells[1].innerText
-                //+ document.getElementsByName("standabilityactionname"+table)[0].value + "- " 
-                //+ document.getElementsByName("tostandabilityaction"+table)[0].value + "\n";
+                //+ document.getElementsByName("standabilityactionname6"+table)[0].value + "- " 
+                //+ document.getElementsByName("tostandabilityaction6"+table)[0].value + "\n";
 
-                standstatusA += "CCB<=" + document.getElementsByName("tostandabilityaction"+table)[0].value + " 【" 
+                standstatusA += "CCB<=" + document.getElementsByName("tostandabilityaction6"+table)[0].value + " 【" 
                                 + standabilityaction.rows[table+1].cells[1].innerText
-                                + document.getElementsByName("standabilityactionname"+table)[0].value + "】\n";
+                                + document.getElementsByName("standabilityactionname6"+table)[0].value + "】\n";
             }else{
                 //standstatusA += standabilityaction.rows[table+1].cells[1].innerText + "- " 
-                //+ document.getElementsByName("tostandabilityaction"+table)[0].value + "\n";
+                //+ document.getElementsByName("tostandabilityaction6"+table)[0].value + "\n";
 
-                standstatusA += "CCB<=" + document.getElementsByName("tostandabilityaction"+table)[0].value + " 【" 
+                standstatusA += "CCB<=" + document.getElementsByName("tostandabilityaction6"+table)[0].value + " 【" 
                                 + standabilityaction.rows[table+1].cells[1].innerText + "】\n";
             }
             
             
         }else{
-            //standstatusA += document.getElementsByName("standabilityactionname"+table)[0].value + "- " 
-            //                + document.getElementsByName("tostandabilityaction"+table)[0].value + "\n";
+            //standstatusA += document.getElementsByName("standabilityactionname6"+table)[0].value + "- " 
+            //                + document.getElementsByName("tostandabilityaction6"+table)[0].value + "\n";
 
-            standstatusA += "CCB<=" + document.getElementsByName("tostandabilityaction"+table)[0].value + " 【" 
-            + document.getElementsByName("standabilityactionname"+table)[0].value + "】\n";
+            standstatusA += "CCB<=" + document.getElementsByName("tostandabilityaction6"+table)[0].value + " 【" 
+            + document.getElementsByName("standabilityactionname6"+table)[0].value + "】\n";
         }
     }
     for(let table = 0; table < battle.rows.length-1; table++){
-        if(document.getElementsByName("tobattle"+table)[0].value
-            == document.getElementsByName("defbattle"+table)[0].value) isinitial = true;
+        if(document.getElementsByName("tobattle6"+table)[0].value
+            == document.getElementsByName("defbattle6"+table)[0].value) isinitial = true;
             else isinitial = false;
         if(table < defpcbattlenum && !isinitial){
             if(battle.rows[table+1].cells[1].innerHTML.includes("input")){
                 //pcstatusB += battle.rows[table+1].cells[1].innerText
-                //+ document.getElementsByName("battlename"+table)[0].value + "- " 
-                //+ document.getElementsByName("tobattle"+table)[0].value + "\n";
+                //+ document.getElementsByName("battlename6"+table)[0].value + "- " 
+                //+ document.getElementsByName("tobattle6"+table)[0].value + "\n";
 
-                pcstatusB += "CCB<=" + document.getElementsByName("tobattle"+table)[0].value + " 【"
+                pcstatusB += "CCB<=" + document.getElementsByName("tobattle6"+table)[0].value + " 【"
                             + battle.rows[table+1].cells[1].innerText
-                            + document.getElementsByName("battlename"+table)[0].value + "】\n";
+                            + document.getElementsByName("battlename6"+table)[0].value + "】\n";
             }else{
                 //pcstatusB += battle.rows[table+1].cells[1].innerText + "- " 
-                //+ document.getElementsByName("tobattle"+table)[0].value + "\n";
+                //+ document.getElementsByName("tobattle6"+table)[0].value + "\n";
 
-                pcstatusB += "CCB<=" + document.getElementsByName("tobattle"+table)[0].value + " 【"
+                pcstatusB += "CCB<=" + document.getElementsByName("tobattle6"+table)[0].value + " 【"
                             + battle.rows[table+1].cells[1].innerText + "】\n";
             }
         
         }else if(!isinitial){
-            //pcstatusB += document.getElementsByName("battlename"+table)[0].value + "- " 
-            //                + document.getElementsByName("tobattle"+table)[0].value + "\n";
+            //pcstatusB += document.getElementsByName("battlename6"+table)[0].value + "- " 
+            //                + document.getElementsByName("tobattle6"+table)[0].value + "\n";
 
-            pcstatusB += "CCB<=" + document.getElementsByName("tobattle"+table)[0].value + " 【"
-            + document.getElementsByName("battlename"+table)[0].value + "】\n";
+            pcstatusB += "CCB<=" + document.getElementsByName("tobattle6"+table)[0].value + " 【"
+            + document.getElementsByName("battlename6"+table)[0].value + "】\n";
         }
     }
     for(let table = 0; table < search.rows.length-1; table++){
-        if(document.getElementsByName("tosearch"+table)[0].value
-            == document.getElementsByName("defsearch"+table)[0].value) isinitial = true;
+        if(document.getElementsByName("tosearch6"+table)[0].value
+            == document.getElementsByName("defsearch6"+table)[0].value) isinitial = true;
             else isinitial = false;
         if(table < defpcsearchnum && !isinitial){
             if(search.rows[table+1].cells[1].innerHTML.includes("input")){
                 //pcstatusS += search.rows[table+1].cells[1].innerText
-                //+ document.getElementsByName("searchname"+table)[0].value + "- " 
-                //+ document.getElementsByName("tosearch"+table)[0].value + "\n";
+                //+ document.getElementsByName("searchname6"+table)[0].value + "- " 
+                //+ document.getElementsByName("tosearch6"+table)[0].value + "\n";
 
-                pcstatusS += "CCB<=" + document.getElementsByName("tosearch"+table)[0].value + " 【"
+                pcstatusS += "CCB<=" + document.getElementsByName("tosearch6"+table)[0].value + " 【"
                             + search.rows[table+1].cells[1].innerText
-                            + document.getElementsByName("searchname"+table)[0].value + "】\n";
+                            + document.getElementsByName("searchname6"+table)[0].value + "】\n";
             }else{
                 //pcstatusS += search.rows[table+1].cells[1].innerText + "- " 
-                //+ document.getElementsByName("tosearch"+table)[0].value + "\n";
+                //+ document.getElementsByName("tosearch6"+table)[0].value + "\n";
 
-                pcstatusS += "CCB<=" + document.getElementsByName("tosearch"+table)[0].value + " 【"
+                pcstatusS += "CCB<=" + document.getElementsByName("tosearch6"+table)[0].value + " 【"
                             + search.rows[table+1].cells[1].innerText + "】\n";
             }
         
         }else if(!isinitial){
-            //pcstatusS += document.getElementsByName("searchname"+table)[0].value + "- " 
-            //                + document.getElementsByName("tosearch"+table)[0].value + "\n";
+            //pcstatusS += document.getElementsByName("searchname6"+table)[0].value + "- " 
+            //                + document.getElementsByName("tosearch6"+table)[0].value + "\n";
 
-            pcstatusS += "CCB<=" + document.getElementsByName("tosearch"+table)[0].value + " 【"
-            + document.getElementsByName("searchname"+table)[0].value + "】\n";
+            pcstatusS += "CCB<=" + document.getElementsByName("tosearch6"+table)[0].value + " 【"
+            + document.getElementsByName("searchname6"+table)[0].value + "】\n";
         }
     }
     for(let table = 0; table < action.rows.length-1; table++){
-        if(document.getElementsByName("toaction"+table)[0].value
-            == document.getElementsByName("defaction"+table)[0].value) isinitial = true;
+        if(document.getElementsByName("toaction6"+table)[0].value
+            == document.getElementsByName("defaction6"+table)[0].value) isinitial = true;
             else isinitial = false;
         if(table < defpcactionnum && !isinitial){
             if(action.rows[table+1].cells[1].innerHTML.includes("input")){
                 //pcstatusA += action.rows[table+1].cells[1].innerText
-                //+ document.getElementsByName("actionname"+table)[0].value + "- " 
-                //+ document.getElementsByName("toaction"+table)[0].value + "\n";
+                //+ document.getElementsByName("actionname6"+table)[0].value + "- " 
+                //+ document.getElementsByName("toaction6"+table)[0].value + "\n";
 
-                pcstatusA += "CCB<=" + document.getElementsByName("toaction"+table)[0].value + " 【"
+                pcstatusA += "CCB<=" + document.getElementsByName("toaction6"+table)[0].value + " 【"
                             + action.rows[table+1].cells[1].innerText
-                            + document.getElementsByName("actionname"+table)[0].value + "】\n";
+                            + document.getElementsByName("actionname6"+table)[0].value + "】\n";
             }else{
                 //pcstatusA += action.rows[table+1].cells[1].innerText + "- " 
-                //+ document.getElementsByName("toaction"+table)[0].value + "\n";
+                //+ document.getElementsByName("toaction6"+table)[0].value + "\n";
 
-                pcstatusA += "CCB<=" + document.getElementsByName("toaction"+table)[0].value + " 【"
+                pcstatusA += "CCB<=" + document.getElementsByName("toaction6"+table)[0].value + " 【"
                             + action.rows[table+1].cells[1].innerText + "】\n";
             }
         
         }else if(!isinitial){
-            //pcstatusA += document.getElementsByName("actionname"+table)[0].value + "- " 
-            //                + document.getElementsByName("toaction"+table)[0].value + "\n";
+            //pcstatusA += document.getElementsByName("actionname6"+table)[0].value + "- " 
+            //                + document.getElementsByName("toaction6"+table)[0].value + "\n";
 
-            pcstatusA += "CCB<=" + document.getElementsByName("toaction"+table)[0].value + " 【"
-            + document.getElementsByName("actionname"+table)[0].value + "】\n";
+            pcstatusA += "CCB<=" + document.getElementsByName("toaction6"+table)[0].value + " 【"
+            + document.getElementsByName("actionname6"+table)[0].value + "】\n";
         }
     }
     for(let table = 0; table < negotiations.rows.length-1; table++){
-        if(document.getElementsByName("tonegotiations"+table)[0].value
-            == document.getElementsByName("defnegotiations"+table)[0].value) isinitial = true;
+        if(document.getElementsByName("tonegotiations6"+table)[0].value
+            == document.getElementsByName("defnegotiations6"+table)[0].value) isinitial = true;
             else isinitial = false;
         if(table < defpcnegotiationsnum && !isinitial){
             if(negotiations.rows[table+1].cells[1].innerHTML.includes("input")){
                 //pcstatusN += negotiations.rows[table+1].cells[1].innerText
-                //+ document.getElementsByName("negotiationsname"+table)[0].value + "- " 
-                //+ document.getElementsByName("tonegotiations"+table)[0].value + "\n";
+                //+ document.getElementsByName("negotiationsname6"+table)[0].value + "- " 
+                //+ document.getElementsByName("tonegotiations6"+table)[0].value + "\n";
 
-                pcstatusN += "CCB<=" + document.getElementsByName("tonegotiations"+table)[0].value + " 【"
+                pcstatusN += "CCB<=" + document.getElementsByName("tonegotiations6"+table)[0].value + " 【"
                             + negotiations.rows[table+1].cells[1].innerText
-                            + document.getElementsByName("negotiationsname"+table)[0].value + "】\n";
+                            + document.getElementsByName("negotiationsname6"+table)[0].value + "】\n";
             }else{
                 //pcstatusN += negotiations.rows[table+1].cells[1].innerText + "- " 
-                //+ document.getElementsByName("tonegotiations"+table)[0].value + "\n";
+                //+ document.getElementsByName("tonegotiations6"+table)[0].value + "\n";
 
-                pcstatusN += "CCB<=" + document.getElementsByName("tonegotiations"+table)[0].value + " 【"
+                pcstatusN += "CCB<=" + document.getElementsByName("tonegotiations6"+table)[0].value + " 【"
                             + negotiations.rows[table+1].cells[1].innerText + "】\n";
             }
         
         }else if(!isinitial){
-            //pcstatusN += document.getElementsByName("negotiationsname"+table)[0].value + "- " 
-            //                + document.getElementsByName("tonegotiations"+table)[0].value + "\n";
+            //pcstatusN += document.getElementsByName("negotiationsname6"+table)[0].value + "- " 
+            //                + document.getElementsByName("tonegotiations6"+table)[0].value + "\n";
 
-            pcstatusN += "CCB<=" + document.getElementsByName("tonegotiations"+table)[0].value + " 【"
-            + document.getElementsByName("negotiationsname"+table)[0].value + "】\n";
+            pcstatusN += "CCB<=" + document.getElementsByName("tonegotiations6"+table)[0].value + " 【"
+            + document.getElementsByName("negotiationsname6"+table)[0].value + "】\n";
         }
     }
     for(let table = 0; table < knowledge.rows.length-1; table++){
-        if(document.getElementsByName("toknowledge"+table)[0].value
-            == document.getElementsByName("defknowledge"+table)[0].value) isinitial = true;
+        if(document.getElementsByName("toknowledge6"+table)[0].value
+            == document.getElementsByName("defknowledge6"+table)[0].value) isinitial = true;
             else isinitial = false;
         if(table < defpcknowledgenum && !isinitial){
             if(knowledge.rows[table+1].cells[1].innerHTML.includes("input")){
                 //pcstatusK += knowledge.rows[table+1].cells[1].innerText
-                //+ document.getElementsByName("knowledgename"+table)[0].value + "- " 
-                //+ document.getElementsByName("toknowledge"+table)[0].value + "\n";
+                //+ document.getElementsByName("knowledgename6"+table)[0].value + "- " 
+                //+ document.getElementsByName("toknowledge6"+table)[0].value + "\n";
 
-                pcstatusK += "CCB<=" + document.getElementsByName("toknowledge"+table)[0].value + " 【"
+                pcstatusK += "CCB<=" + document.getElementsByName("toknowledge6"+table)[0].value + " 【"
                             + knowledge.rows[table+1].cells[1].innerText
-                            + document.getElementsByName("knowledgename"+table)[0].value + "】\n";
+                            + document.getElementsByName("knowledgename6"+table)[0].value + "】\n";
             }else{
                 //pcstatusK += knowledge.rows[table+1].cells[1].innerText + "- " 
-                //+ document.getElementsByName("toknowledge"+table)[0].value + "\n";
+                //+ document.getElementsByName("toknowledge6"+table)[0].value + "\n";
 
-                pcstatusK += "CCB<=" + document.getElementsByName("toknowledge"+table)[0].value + " 【"
+                pcstatusK += "CCB<=" + document.getElementsByName("toknowledge6"+table)[0].value + " 【"
                             + knowledge.rows[table+1].cells[1].innerText + "】\n";
             }
         
         }else if(!isinitial){
-            //pcstatusK += document.getElementsByName("knowledgename"+table)[0].value + "- " 
-            //                + document.getElementsByName("toknowledge"+table)[0].value + "\n";
+            //pcstatusK += document.getElementsByName("knowledgename6"+table)[0].value + "- " 
+            //                + document.getElementsByName("toknowledge6"+table)[0].value + "\n";
 
-            pcstatusK += "CCB<=" + document.getElementsByName("toknowledge"+table)[0].value + " 【"
-            + document.getElementsByName("knowledgename"+table)[0].value + "】\n";
+            pcstatusK += "CCB<=" + document.getElementsByName("toknowledge6"+table)[0].value + " 【"
+            + document.getElementsByName("knowledgename6"+table)[0].value + "】\n";
         }
     }
     for(let table = 0; table < etc.rows.length-1; table++){
-        if(document.getElementsByName("toetc"+table)[0].value
-            == document.getElementsByName("defetc"+table)[0].value) isinitial = true;
+        if(document.getElementsByName("toetc6"+table)[0].value
+            == document.getElementsByName("defetc6"+table)[0].value) isinitial = true;
             else isinitial = false;
-        //pcstatusE += document.getElementsByName("etcname"+table)[0].value + "- " 
-        //                + document.getElementsByName("toetc"+table)[0].value + "\n";
+        //pcstatusE += document.getElementsByName("etcname6"+table)[0].value + "- " 
+        //                + document.getElementsByName("toetc6"+table)[0].value + "\n";
         if(!isinitial){
-            pcstatusE += "CCB<=" + document.getElementsByName("toetc"+table)[0].value + " 【"
-            + document.getElementsByName("etcname"+table)[0].value + "】\n";
+            pcstatusE += "CCB<=" + document.getElementsByName("toetc6"+table)[0].value + " 【"
+            + document.getElementsByName("etcname6"+table)[0].value + "】\n";
         }
     }
 
@@ -1073,36 +1074,36 @@ function chapare6(){
     let link = document.createElement("a");
     link.href = URL.createObjectURL(blob);
     //link.download = "test.txt";
-    link.download = document.status.charaname.value + "のチャパレ.txt";
+    link.download = document.status6.charaname.value + "のチャパレ.txt";
     link.click();
 }
 
 function calc7(){
-    var str = Number(document.status.str0.value) + Number(document.status.str1.value);
-    var con = Number(document.status.con0.value) + Number(document.status.con1.value);
-    var pow = Number(document.status.pow0.value) + Number(document.status.pow1.value);
-    var dex = Number(document.status.dex0.value) + Number(document.status.dex1.value);
-    var app = Number(document.status.app0.value) + Number(document.status.app1.value);
-    var siz = Number(document.status.siz0.value) + Number(document.status.siz1.value);
-    var int = Number(document.status.int0.value) + Number(document.status.int1.value);
-    var edu = Number(document.status.edu0.value) + Number(document.status.edu1.value);
-    document.status.str2.value = str;
-    document.status.con2.value = con;
-    document.status.pow2.value = pow;
-    document.status.dex2.value = dex;
-    document.status.app2.value = app;
-    document.status.siz2.value = siz;
-    document.status.int2.value = int;
-    document.status.edu2.value = edu;
+    var str = Number(document.status6.str0.value) + Number(document.status6.str1.value);
+    var con = Number(document.status6.con0.value) + Number(document.status6.con1.value);
+    var pow = Number(document.status6.pow0.value) + Number(document.status6.pow1.value);
+    var dex = Number(document.status6.dex0.value) + Number(document.status6.dex1.value);
+    var app = Number(document.status6.app0.value) + Number(document.status6.app1.value);
+    var siz = Number(document.status6.siz0.value) + Number(document.status6.siz1.value);
+    var int = Number(document.status6.int0.value) + Number(document.status6.int1.value);
+    var edu = Number(document.status6.edu0.value) + Number(document.status6.edu1.value);
+    document.status6.str2.value = str;
+    document.status6.con2.value = con;
+    document.status6.pow2.value = pow;
+    document.status6.dex2.value = dex;
+    document.status6.app2.value = app;
+    document.status6.siz2.value = siz;
+    document.status6.int2.value = int;
+    document.status6.edu2.value = edu;
 
-    var defstr = Number(document.status.str0.value);
-    var defcon = Number(document.status.con0.value);
-    var defpow = Number(document.status.pow0.value);
-    var defdex = Number(document.status.dex0.value);
-    var defapp = Number(document.status.app0.value);
-    var defsiz = Number(document.status.siz0.value);
-    var defint = Number(document.status.int0.value);
-    var defedu = Number(document.status.edu0.value);
+    var defstr = Number(document.status6.str0.value);
+    var defcon = Number(document.status6.con0.value);
+    var defpow = Number(document.status6.pow0.value);
+    var defdex = Number(document.status6.dex0.value);
+    var defapp = Number(document.status6.app0.value);
+    var defsiz = Number(document.status6.siz0.value);
+    var defint = Number(document.status6.int0.value);
+    var defedu = Number(document.status6.edu0.value);
 
     var defhp = Math.ceil((defcon+defsiz)/2);
     var defmp = defpow;
@@ -1110,25 +1111,25 @@ function calc7(){
     var defidea = defint*5;
     var defluck = defpow*5;
     var defknow = defedu*5;
-    document.status.hp0.value = defhp;
-    document.status.mp0.value = defmp;
-    document.status.san0.value = defsan;
-    document.status.idea0.value = defidea;
-    document.status.luck0.value = defluck;
-    document.status.know0.value = defknow;
+    document.status6.hp0.value = defhp;
+    document.status6.mp0.value = defmp;
+    document.status6.san0.value = defsan;
+    document.status6.idea0.value = defidea;
+    document.status6.luck0.value = defluck;
+    document.status6.know0.value = defknow;
 
-    var hp = defhp + Number(document.status.hp1.value);
-    var mp = defmp + Number(document.status.mp1.value);
-    var san = defsan + Number(document.status.san1.value);
-    var idea = defidea + Number(document.status.idea1.value);
-    var luck = defluck + Number(document.status.luck1.value);
-    var know = defknow + Number(document.status.know1.value);
-    document.status.hp2.value = hp;
-    document.status.mp2.value = mp;
-    document.status.san2.value = san;
-    document.status.idea2.value = idea;
-    document.status.luck2.value = luck;
-    document.status.know2.value = know;
+    var hp = defhp + Number(document.status6.hp1.value);
+    var mp = defmp + Number(document.status6.mp1.value);
+    var san = defsan + Number(document.status6.san1.value);
+    var idea = defidea + Number(document.status6.idea1.value);
+    var luck = defluck + Number(document.status6.luck1.value);
+    var know = defknow + Number(document.status6.know1.value);
+    document.status6.hp2.value = hp;
+    document.status6.mp2.value = mp;
+    document.status6.san2.value = san;
+    document.status6.idea2.value = idea;
+    document.status6.luck2.value = luck;
+    document.status6.know2.value = know;
 
     var dbnum = str+siz;
     var db;
@@ -1143,7 +1144,7 @@ function calc7(){
     }else{
         db = "0";
     }
-    document.status.db.value = db;
+    document.status6.db.value = db;
 }
 
 function randomStatus7(){
@@ -1155,13 +1156,13 @@ function randomStatus7(){
     var siz = Math.floor(Math.random() * (12 - 2) + 2 + 6);
     var int = Math.floor(Math.random() * (12 - 2) + 2 + 6);
     var edu = Math.floor(Math.random() * (18 - 3) + 3 + 3);
-    document.status.str0.value = str;
-    document.status.con0.value = con;
-    document.status.pow0.value = pow;
-    document.status.dex0.value = dex;
-    document.status.app0.value = app;
-    document.status.siz0.value = siz;
-    document.status.int0.value = int;
-    document.status.edu0.value = edu;
+    document.status6.str0.value = str;
+    document.status6.con0.value = con;
+    document.status6.pow0.value = pow;
+    document.status6.dex0.value = dex;
+    document.status6.app0.value = app;
+    document.status6.siz0.value = siz;
+    document.status6.int0.value = int;
+    document.status6.edu0.value = edu;
     calc7();
 }
