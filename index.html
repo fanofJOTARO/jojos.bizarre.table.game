@@ -3,25 +3,27 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>ジョジョ卓キャラシート作成所Ver1.0.1</title>
+        <title>ジョジョ卓キャラシート作成所Ver2.0.0</title>
         <link rel="stylesheet" href="main.css" type="text/css">
-        <script type="text/javascript" src="js/main.js"></script>
+        <script type="text/javascript" src="js/main6.js"></script>
+        <script type="text/javascript" src="js/main7.js"></script>
         <script type="text/javascript" src="js/table.js"></script>
         <link rel="shortcut icon" href="images/favicon.ico">
     </head>
 
     <body>
         
-        <h1>ジョジョ卓キャラシート作成所[Ver1.0.1]</h1>
-        <h2 style="padding-left: 15px;">サイトの説明</h2>
-        <p style="padding-left: 15px;">
-            このサイトは<a title="ジョジョ卓回し隊！" href="https://line.me/ti/g2/d9Rnn7YQqPNGVVZ0FI9QbzCEATMaONzUf2aJMw?utm_source=invitation&utm_medium=link_copy&utm_campaign=default">ジョジョ卓のオープンチャット</a>で使うためのキャラシートを作るための個人サイトです。<br>
+        <h1>ジョジョ卓キャラシート作成所[Ver2.0.0]</h1>
+        <h2 style="padding-left: 15px; margin-left: 20px; margin-right: 20px; -webkit-text-stroke: 5%; -webkit-text-stroke-color: white;">サイトの説明</h2>
+        <p style="-webkit-text-stroke: 5%; -webkit-text-stroke-color: white; margin-left: 20px; margin-right: 20px;">
+            このサイトは<a title="ジョジョ卓回し隊！" href="https://line.me/ti/g2/d9Rnn7YQqPNGVVZ0FI9QbzCEATMaONzUf2aJMw">ジョジョ卓のオープンチャット</a>で使うためのキャラシートを作るための個人サイトです。<br>
             もし他で使いたい場合でもいい感じに利用してくださって構いません。<br>
             でも出来ればオープンチャットに入っていただけるとありがたいです。<br>
             <br>
-            <b style="color: red;">
-                ※途中で保存して後から入力し直すことはできません！！<br>
-                ※必ずリロードを挟まずに作成しきり不備が無いか確認してから完成としてください！！
+            <b style="color: rgb(255, 0, 0);">
+                ※リロードすると入力中のデータは消えてしまいます！！<br>
+                ※必ずデータ保存ボタンでファイルに保存してください！！<br>
+                ※データを読み込む際は必ずリロードしてからにしてください！！
             </b><br>
             <b style="color: blue;">
                 ※ページ内のタブ移動でデータが消えることはありません。<br>
@@ -29,7 +31,7 @@
             
         </p>
         
-        <p id="tabcontrol">
+        <p id="tabcontrol" style="margin-left: 50px;">
             <a href="#coc6">CoC6版</a>
             <a href="#coc7">CoC7版</a>
             <a href="#howtostatus6">ジョジョ卓ルルブ6版</a>
@@ -38,20 +40,26 @@
         <div id="tabbody">
             <div id="coc6">
                 
-                <h2>保存</h2>
+                <h2>保存&読み込み(6版)</h2>
                 <p>
                     最低限キャラ名だけは埋めてください。<br>
                     入力したキャラの名前が保存されるテキストのファイル名になります。<br>
                     <br>
+                    PCの方は「PC」が書かれてる方のボタンでJSONファイルの保存及び読み込みをしてください。<br>
+                    スマホの方は「スマホ」が書かれてる方のボタンでクリップボードに保存及び読み込みをして各自メモアプリに張り付けて保存してください。<br>
+                    <br>
                     <b style="color: red;">
-                        ※途中で保存して後から入力し直すことはできません！！<br>
-                        ※必ずリロードを挟まずに作成しきり不備が無いか確認してから完成としてください！！
+                        ※リロードすると入力中のデータは消えてしまいます！！<br>
+                        ※必ずデータ保存ボタンでファイルに保存してください！！<br>
+                        ※データを読み込む際は必ずリロードしてからにしてください！！
                     </b><br>
                     <b style="color: blue;">
                         ※ページ内のタブ移動でデータが消えることはありません。<br>
                     </b>
                 </p>
-                <button type="button" onclick="save6()">キャラシ保存</button> <button type="button" onclick="chapare6()">チャパレ保存</button>
+                <button type="button" onclick="save6()">キャラシ保存(.txt)</button>　<button id="coco6" type="button" onclick="chapare6()">ココフォリア出力</button><br><br>
+                <button type="button" onclick="savepage6()">データ保存(PC)</button>　<input id="load6" type="file" onchange="loadpage6(this)" style="display: none; background-color: white; border: 0px;"><label for="load6" style="border: 2px solid black;">データ読み込み(PC)</label><br><br>
+                <button id="saveS6" type="button" onclick="savepageS6()">データ保存(スマホ)</button>　<button id="loadS6" type="button" onclick="loadpageS6()">データ読み込み(スマホ)</button>
                 <form name="status6">
                     <h2>プロフィール</h2>
                     <table>
@@ -113,9 +121,9 @@
                         <th>詳細</th>
                         
                     </table>
-                    <button type="button" onclick="add6('items')">行追加</button>
-                    <button type="button" onclick="del6('items')">行削除</button>
-                    <h2>ステータス<button type="button" onclick="randomStatus6()"><img src="images/dice.png" width="50" height="50"/></button></h2>
+                    <button type="button" onclick="additem(6)">行追加</button>
+                    <button type="button" onclick="del(6, 'items')">行削除</button>
+                    <h2>ステータス<button title="ランダムステータス" type="button" onclick="randomStatus6()"><img src="images/dice.png" width="50" height="50"/></button></h2>
                     <table>
                         <th></th>
                         <th>STR</th>
@@ -220,6 +228,7 @@
                         <tr>
                             <td>
                                 <select name="power" onchange="calc6()">
+                                    <option value="0">なし</option>
                                     <option value="1">E</option>
                                     <option value="2">D</option>
                                     <option value="3">C</option>
@@ -229,6 +238,7 @@
                             </td>
                             <td>
                                 <select name="speed" onchange="calc6()">
+                                    <option value="0">なし</option>
                                     <option value="1">E</option>
                                     <option value="2">D</option>
                                     <option value="3">C</option>
@@ -238,6 +248,7 @@
                             </td>
                             <td>
                                 <select name="durability" onchange="calc6()">
+                                    <option value="0">なし</option>
                                     <option value="1">E</option>
                                     <option value="2">D</option>
                                     <option value="3">C</option>
@@ -247,6 +258,7 @@
                             </td>
                             <td>
                                 <select name="range" onchange="calc6()">
+                                    <option value="0">なし</option>
                                     <option value="1">E</option>
                                     <option value="2">D</option>
                                     <option value="3">C</option>
@@ -256,6 +268,7 @@
                             </td>
                             <td>
                                 <select name="accuracy" onchange="calc6()">
+                                    <option value="0">なし</option>
                                     <option value="1">E</option>
                                     <option value="2">D</option>
                                     <option value="3">C</option>
@@ -265,6 +278,7 @@
                             </td>
                             <td>
                                 <select name="growth">
+                                    <option value="0">なし</option>
                                     <option value="1">E</option>
                                     <option value="2">D</option>
                                     <option value="3">C</option>
@@ -303,8 +317,8 @@
                         <th>追加P</th>
                         <th>合計</th>
                     </table>
-                    <button type="button" onclick="add6('standabilitybattle')">行追加</button>
-                    <button type="button" onclick="del6('standabilitybattle')">行削除</button>
+                    <button type="button" onclick="addstand(6, 'battle')">行追加</button>
+                    <button type="button" onclick="del(6, 'standabilitybattle')">行削除</button>
 
                     <br>
                     <h3>技能値(行動)</h3>
@@ -317,8 +331,8 @@
                         <th>追加P</th>
                         <th>合計</th>
                     </table>
-                    <button type="button" onclick="add6('standabilityaction')">行追加</button>
-                    <button type="button" onclick="del6('standabilityaction')">行削除</button>
+                    <button type="button" onclick="addstand(6, 'action')">行追加</button>
+                    <button type="button" onclick="del(6, 'standabilityaction')">行削除</button>
 
                     <br>
                     <h2>技能</h2>
@@ -334,8 +348,8 @@
                         <th>合計</th>
                         
                     </table>
-                    <button type="button" onclick="add6('battle')">行追加</button>
-                    <button type="button" onclick="del6('battle')">行削除</button>
+                    <button type="button" onclick="addpc(6, 'battle')">行追加</button>
+                    <button type="button" onclick="del(6, 'battle')">行削除</button>
                     
                     <br>
                     <br>
@@ -351,8 +365,8 @@
                         <th>合計</th>
                         
                     </table>
-                    <button type="button" onclick="add6('search')">行追加</button>
-                    <button type="button" onclick="del6('search')">行削除</button>
+                    <button type="button" onclick="addpc(6, 'search')">行追加</button>
+                    <button type="button" onclick="del(6, 'search')">行削除</button>
 
                     <br>
                     <br>
@@ -368,8 +382,8 @@
                         <th>合計</th>
                         
                     </table>
-                    <button type="button" onclick="add6('action')">行追加</button>
-                    <button type="button" onclick="del6('action')">行削除</button>
+                    <button type="button" onclick="addpc(6, 'action')">行追加</button>
+                    <button type="button" onclick="del(6, 'action')">行削除</button>
 
                     <br>
                     <br>
@@ -385,8 +399,8 @@
                         <th>合計</th>
                         
                     </table>
-                    <button type="button" onclick="add6('negotiations')">行追加</button>
-                    <button type="button" onclick="del6('negotiations')">行削除</button>
+                    <button type="button" onclick="addpc(6, 'negotiations')">行追加</button>
+                    <button type="button" onclick="del(6, 'negotiations')">行削除</button>
 
                     <br>
                     <br>
@@ -402,8 +416,8 @@
                         <th>合計</th>
                         
                     </table>
-                    <button type="button" onclick="add6('knowledge')">行追加</button>
-                    <button type="button" onclick="del6('knowledge')">行削除</button>
+                    <button type="button" onclick="addpc(6, 'knowledge')">行追加</button>
+                    <button type="button" onclick="del(6, 'knowledge')">行削除</button>
 
                     <br>
                     <br>
@@ -419,8 +433,8 @@
                         <th>合計</th>
                         
                     </table>
-                    <button type="button" onclick="add6('etc')">行追加</button>
-                    <button type="button" onclick="del6('etc')">行削除</button>
+                    <button type="button" onclick="addpc(6, 'etc')">行追加</button>
+                    <button type="button" onclick="del(6, 'etc')">行削除</button>
 
                     <script type="text/javascript">
                         create6();
@@ -429,11 +443,443 @@
                 
             </div>
             <div id="coc7">
-                <b style="padding-left: 15px; color: red;">ただいま考え中……</b>
-                
+                <h2>保存&読み込み(7版)</h2>
+                <p>
+                    最低限キャラ名だけは埋めてください。<br>
+                    入力したキャラの名前が保存されるテキストのファイル名になります。<br>
+                    <br>
+                    PCの方は「PC」が書かれてる方のボタンでJSONファイルの保存及び読み込みをしてください。<br>
+                    スマホの方は「スマホ」が書かれてる方のボタンでクリップボードに保存及び読み込みをして各自メモアプリに張り付けて保存してください。<br>
+                    <br>
+                    <b style="color: red;">
+                        ※リロードすると入力中のデータは消えてしまいます！！<br>
+                        ※必ずデータ保存ボタンでファイルに保存してください！！<br>
+                        ※データを読み込む際は必ずリロードしてからにしてください！！
+                    </b><br>
+                    <b style="color: blue;">
+                        ※ページ内のタブ移動でデータが消えることはありません。<br>
+                    </b>
+                </p>
+                <button type="button" onclick="save7()">キャラシ保存</button>　<button id="coco7" type="button" onclick="chapare7()">ココフォリア出力</button><br><br>
+                <button type="button" onclick="savepage7()">データ保存(PC)</button>　<input id="load7" type="file" onchange="loadpage7(this)" style="display: none; background-color: white; border: 0px;"><label for="load6" style="border: 2px solid black;">データ読み込み(PC)</label><br><br>
+                <button id="saveS7" type="button" onclick="savepageS7()">データ保存(スマホ)</button>　<button id="loadS7" type="button" onclick="loadpageS7()">データ読み込み(スマホ)</button>
+                <form name="status7">
+                    <h2>プロフィール</h2>
+                    <table>
+                        <tr>
+                            <td>スタンド使い？</td>
+                            <td>
+                                <input type="radio" name="usestand" id="yes7" value="true" checked><label for="yes">YES! YES! YES!</label>
+                                <br>
+                                <input type="radio" name="usestand" id="no7" value="false"><label for="no">NO! NO! NO!</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>キャラ名</td>
+                            <td><input type="text" name="charaname" size="30"/></td>
+                        </tr>
+                        <tr>
+                            <td>性別</td>
+                            <td>
+                                <input type="radio" name="sex" id="man7" value="男" checked><label for="man">男</label>
+                                <input type="radio" name="sex" id="woman7" value="女"><label for="woman">女</label>
+                                <input type="radio" name="sex" id="other7" value="その他"><label for="other">その他</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>年齢/身長/体重</td>
+                            <td><input type="text" name="age" size="2"/> 歳 / <input type="text" name="stature" size="2"/> cm / <input type="text" name="weight" size="2"/> kg</td>
+                        </tr>
+                        <tr>
+                            <td>出身</td>
+                            <td><input type="text" name="from" size="30"/></td>
+                        </tr>
+                        <tr>
+                            <td>髪の色<br>瞳の色<br>肌の色</td>
+                            <td><input type="text" name="heir" size="30"/><br><input type="text" name="eye" size="30"/><br><input type="text" name="skin" size="30"/></td>
+                        </tr>
+                        <tr>
+                            <td>スタンド名</td>
+                            <td><input type="text" name="standname" size="30"/></td>
+                        </tr>
+                        <tr>
+                            <td>職業(配属先)</td>
+                            <td><input name="business" size="30"/></td>
+                        </tr>
+                        <tr>
+                            <td>キャラ詳細</td>
+                            <td><textarea name="charadetail" rows="10" cols="35"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td>スタンド詳細</td>
+                            <td><textarea name="standdetail" rows="10" cols="35"></textarea></td>
+                        </tr>
+                    </table>
+                    <br>
+                    <h2>その他情報</h2>
+                    <h3>所持品</h3>
+                    <table id="items7">
+                        <th>名称</th>
+                        <th>個数</th>
+                        <th>詳細</th>
+                        
+                    </table>
+                    <button type="button" onclick="additem(7)">行追加</button>
+                    <button type="button" onclick="del(7, 'items')">行削除</button>
+                    <h2>ステータス<button title="ランダムステータス" type="button" onclick="randomStatus7()"><img src="images/dice.png" width="50" height="50"/></button></h2>
+                    <table>
+                        <th></th>
+                        <th>STR</th>
+                        <th>CON</th>
+                        <th>POW</th>
+                        <th>DEX</th>
+                        <th>APP</th>
+                        <th>SIZ</th>
+                        <th>INT</th>
+                        <th>EDU</th>
+                        <th>LUK</th>
+                        <th>SAN</th>
+                        <th>IDA</th>
+                        <th>KNOW</th>
+                        <th>HP</th>
+                        <th>MP</th>
+        
+                        <tr>
+                            <td>能力値</td>
+                            <td><input type="text" name="str0" value="0" required size="2" onchange="calc7()"/></td>
+                            <td><input type="text" name="con0" value="0" required size="2" onchange="calc7()"/></td>
+                            <td><input type="text" name="pow0" value="0" required size="2" onchange="calc7()"/></td>
+                            <td><input type="text" name="dex0" value="0" required size="2" onchange="calc7()"/></td>
+                            <td><input type="text" name="app0" value="0" required size="2" onchange="calc7()"/></td>
+                            <td><input type="text" name="siz0" value="0" required size="2" onchange="calc7()"/></td>
+                            <td><input type="text" name="int0" value="0" required size="2" onchange="calc7()"/></td>
+                            <td><input type="text" name="edu0" value="0" required size="2" onchange="calc7()"/></td>
+                            <td><input type="text" name="luck0" value="0" required size="2" onchange="calc7()"/></td>
+                            <td><input type="text" name="san0" value="0" required size="2" readonly/></td>
+                            <td><input type="text" name="idea0" value="0" required size="2" readonly/></td>
+                            <td><input type="text" name="know0" value="0" required size="2" readonly/></td>
+                            <td><input type="text" name="hp0" value="0" required size="2" readonly/></td>
+                            <td><input type="text" name="mp0" value="0" required size="2" readonly/></td>
+                        </tr>
+                        <tr>
+                            <td>修正値</td>
+                            <td><input type="text" name="str1" value="0" size="2" onchange="calc7()"/></td>
+                            <td><input type="text" name="con1" value="0" size="2" onchange="calc7()"/></td>
+                            <td><input type="text" name="pow1" value="0" size="2" onchange="calc7()"/></td>
+                            <td><input type="text" name="dex1" value="0" size="2" onchange="calc7()"/></td>
+                            <td><input type="text" name="app1" value="0" size="2" onchange="calc7()"/></td>
+                            <td><input type="text" name="siz1" value="0" size="2" onchange="calc7()"/></td>
+                            <td><input type="text" name="int1" value="0" size="2" onchange="calc7()"/></td>
+                            <td><input type="text" name="edu1" value="0" size="2" onchange="calc7()"/></td>
+                            <td><input type="text" name="luck1" value="0" size="2" onchange="calc7()"/></td>
+                            <td><input type="text" name="san1" value="0" size="2" onchange="calc7()"/></td>
+                            <td><input type="text" name="idea1" value="0" size="2" onchange="calc7()"/></td>
+                            <td><input type="text" name="know1" value="0" size="2" onchange="calc7()"/></td>
+                            <td><input type="text" name="hp1" value="0" size="2" onchange="calc7()"/></td>
+                            <td><input type="text" name="mp1" value="0" size="2" onchange="calc7()"/></td>
+                        </tr>
+                        <tr>
+                            <td>合計</td>
+                            <td><input type="text" name="str2" value="0" size="2" readonly/></td>
+                            <td><input type="text" name="con2" value="0" size="2" readonly/></td>
+                            <td><input type="text" name="pow2" value="0" size="2" readonly/></td>
+                            <td><input type="text" name="dex2" value="0" size="2" readonly/></td>
+                            <td><input type="text" name="app2" value="0" size="2" readonly/></td>
+                            <td><input type="text" name="siz2" value="0" size="2" readonly/></td>
+                            <td><input type="text" name="int2" value="0" size="2" readonly/></td>
+                            <td><input type="text" name="edu2" value="0" size="2" readonly/></td>
+                            <td><input type="text" name="luck2" value="0" size="2" readonly/></td>
+                            <td><input type="text" name="san2" value="0" size="2" readonly/></td>
+                            <td><input type="text" name="idea2" value="0" size="2" readonly/></td>
+                            <td><input type="text" name="know2" value="0" size="2" readonly/></td>
+                            <td><input type="text" name="hp2" value="0" size="2" readonly/></td>
+                            <td><input type="text" name="mp2" value="0" size="2" readonly/></td>
+                        </tr>
+                        <tr>
+                            <td>1/2合計</td>
+                            <td><input type="text" name="str3" value="0" size="2" readonly/></td>
+                            <td><input type="text" name="con3" value="0" size="2" readonly/></td>
+                            <td><input type="text" name="pow3" value="0" size="2" readonly/></td>
+                            <td><input type="text" name="dex3" value="0" size="2" readonly/></td>
+                            <td><input type="text" name="app3" value="0" size="2" readonly/></td>
+                            <td><input type="text" name="siz3" value="0" size="2" readonly/></td>
+                            <td><input type="text" name="int3" value="0" size="2" readonly/></td>
+                            <td><input type="text" name="edu3" value="0" size="2" readonly/></td>
+                        </tr>
+                        <tr>
+                            <td>1/5合計</td>
+                            <td><input type="text" name="str4" value="0" size="2" readonly/></td>
+                            <td><input type="text" name="con4" value="0" size="2" readonly/></td>
+                            <td><input type="text" name="pow4" value="0" size="2" readonly/></td>
+                            <td><input type="text" name="dex4" value="0" size="2" readonly/></td>
+                            <td><input type="text" name="app4" value="0" size="2" readonly/></td>
+                            <td><input type="text" name="siz4" value="0" size="2" readonly/></td>
+                            <td><input type="text" name="int4" value="0" size="2" readonly/></td>
+                            <td><input type="text" name="edu4" value="0" size="2" readonly/></td>
+                        </tr>
+                    </table>
+                    <br>
+                    <h2>その他のデータ</h2>
+                    <table>
+                        <tr>
+                            <td>ダメージボーナス</td>
+                            <td><input type="text" name="db" value="0" size="3" readonly/></td>
+                        </tr>
+                        <tr>
+                            <td>MOV</td>
+                            <td><input type="text" name="mov" value="0" required size="2" readonly/></td>
+                        </tr>
+                        <tr>
+                            <td>BLD</td>
+                            <td><input type="text" name="bld" value="0" required size="2" readonly/></td>
+                        </tr>
+                        <tr>
+                            <td>職業P</td>
+                            <td><input type="text" name="curBP" value="0" size="2" readonly/> / <input type="text" name="maxBP" value="0" size="2"/></td>
+                        </tr>
+                        <tr>
+                            <td>興味P</td>
+                            <td><input type="text" name="curIP" value="0" size="2" readonly/> / <input type="text" name="maxIP" value="0" size="2" readonly/></td>
+                        </tr>
+                        <tr>
+                            <td>スタンドP</td>
+                            <td><input type="text" name="curSP" value="0" size="2" readonly/> / <input type="text" name="maxSP" value="0" size="2" readonly/></td>
+                        </tr>
+                    </table>
+                    <br>
+                    <h2>スタンドパラメータ</h2>
+                    <h3>基礎ステータス</h3>
+                    <table>
+                        <th>破壊力</th>
+                        <th>スピード</th>
+                        <th>持続力</th>
+                        <th>射程距離</th>
+                        <th>精密動作性</th>
+                        <th>成長性</th>
+                        <th>DEXS</th>
+                        <th>DEXS<br>1/2</th>
+                        <th>DEXS<br>1/5</th>
+
+                        <tr>
+                            <td>
+                                <select name="power" onchange="calc7()">
+                                    <option value="0">なし</option>
+                                    <option value="1">E</option>
+                                    <option value="2">D</option>
+                                    <option value="3">C</option>
+                                    <option value="4">B</option>
+                                    <option value="5">A</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select name="speed" onchange="calc7()">
+                                    <option value="0">なし</option>
+                                    <option value="1">E</option>
+                                    <option value="2">D</option>
+                                    <option value="3">C</option>
+                                    <option value="4">B</option>
+                                    <option value="5">A</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select name="durability" onchange="calc7()">
+                                    <option value="0">なし</option>
+                                    <option value="1">E</option>
+                                    <option value="2">D</option>
+                                    <option value="3">C</option>
+                                    <option value="4">B</option>
+                                    <option value="5">A</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select name="range" onchange="calc7()">
+                                    <option value="0">なし</option>
+                                    <option value="1">E</option>
+                                    <option value="2">D</option>
+                                    <option value="3">C</option>
+                                    <option value="4">B</option>
+                                    <option value="5">A</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select name="accuracy" onchange="calc7()">
+                                    <option value="0">なし</option>
+                                    <option value="1">E</option>
+                                    <option value="2">D</option>
+                                    <option value="3">C</option>
+                                    <option value="4">B</option>
+                                    <option value="5">A</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select name="growth">
+                                    <option value="0">なし</option>
+                                    <option value="1">E</option>
+                                    <option value="2">D</option>
+                                    <option value="3">C</option>
+                                    <option value="4">B</option>
+                                    <option value="5">A</option>
+                                </select>
+                            </td>
+                            <td><input type="text" name="dexS0" value="0" size="2" readonly></td>
+                            <td><input type="text" name="dexS1" value="0" size="2" readonly></td>
+                            <td><input type="text" name="dexS2" value="0" size="2" readonly></td>
+                        </tr>
+                    </table>
+                    <br>
+                    <h3>その他ステータス</h3>
+                    <table>
+                        <tr>
+                            <td>ダメージボーナス</td>
+                            <td><input type="text" name="dbS" value="0" size="3" readonly/></td>
+                        </tr>
+                        <tr>
+                            <td>防御可能量</td>
+                            <td><input type="text" name="deffenceS" value="0" size="3" readonly/></td>
+                        </tr>
+                        <tr>
+                            <td>能力消費MP</td>
+                            <td><input type="text" name="usempS" value="0" size="3" readonly/></td>
+                        </tr>
+                    </table>
+                    <br>
+                    <br>
+                    <h3>技能値(戦闘)</h3>
+                    <table id="standabilitybattle7">
+                        <th>成長C</th>
+                        <th>技能S</th>
+                        <th>初期値</th>
+                        <th>補正値</th>
+                        <th>成長分</th>
+                        <th>追加P</th>
+                        <th>合計</th>
+                    </table>
+                    <button type="button" onclick="addstand(7, 'battle')">行追加</button>
+                    <button type="button" onclick="del(7, 'standabilitybattle')">行削除</button>
+
+                    <br>
+                    <h3>技能値(行動)</h3>
+                    <table id="standabilityaction7">
+                        <th>成長C</th>
+                        <th>技能S</th>
+                        <th>初期値</th>
+                        <th>補正値</th>
+                        <th>成長分</th>
+                        <th>追加P</th>
+                        <th>合計</th>
+                    </table>
+                    <button type="button" onclick="addstand(7, 'action')">行追加</button>
+                    <button type="button" onclick="del(7, 'standabilityaction')">行削除</button>
+
+                    <br>
+                    <h2>技能</h2>
+                    <h3>戦闘技能</h3>
+                    <table id="battle7">
+                        <th>成長C</th>
+                        <th>技能</th>
+                        <th>初期値</th>
+                        <th>職業P</th>
+                        <th>興味P</th>
+                        <th>成長分</th>
+                        <th>追加P</th>
+                        <th>合計</th>
+                        
+                    </table>
+                    <button type="button" onclick="addpc(7, 'battle')">行追加</button>
+                    <button type="button" onclick="del(7, 'battle')">行削除</button>
+                    
+                    <br>
+                    <br>
+                    <h3>探索技能</h3>
+                    <table id="search7">
+                        <th>成長C</th>
+                        <th>技能</th>
+                        <th>初期値</th>
+                        <th>職業P</th>
+                        <th>興味P</th>
+                        <th>成長分</th>
+                        <th>追加P</th>
+                        <th>合計</th>
+                        
+                    </table>
+                    <button type="button" onclick="addpc(7, 'search')">行追加</button>
+                    <button type="button" onclick="del(7, 'search')">行削除</button>
+
+                    <br>
+                    <br>
+                    <h3>行動技能</h3>
+                    <table id="action7">
+                        <th>成長C</th>
+                        <th>技能</th>
+                        <th>初期値</th>
+                        <th>職業P</th>
+                        <th>興味P</th>
+                        <th>成長分</th>
+                        <th>追加P</th>
+                        <th>合計</th>
+                        
+                    </table>
+                    <button type="button" onclick="addpc(7, 'action')">行追加</button>
+                    <button type="button" onclick="del(7, 'action')">行削除</button>
+
+                    <br>
+                    <br>
+                    <h3>交渉技能</h3>
+                    <table id="negotiations7">
+                        <th>成長C</th>
+                        <th>技能</th>
+                        <th>初期値</th>
+                        <th>職業P</th>
+                        <th>興味P</th>
+                        <th>成長分</th>
+                        <th>追加P</th>
+                        <th>合計</th>
+                        
+                    </table>
+                    <button type="button" onclick="addpc(7, 'negotiations')">行追加</button>
+                    <button type="button" onclick="del(7, 'negotiations')">行削除</button>
+
+                    <br>
+                    <br>
+                    <h3>知識技能</h3>
+                    <table id="knowledge7">
+                        <th>成長C</th>
+                        <th>技能</th>
+                        <th>初期値</th>
+                        <th>職業P</th>
+                        <th>興味P</th>
+                        <th>成長分</th>
+                        <th>追加P</th>
+                        <th>合計</th>
+                        
+                    </table>
+                    <button type="button" onclick="addpc(7, 'knowledge')">行追加</button>
+                    <button type="button" onclick="del(7, 'knowledge')">行削除</button>
+
+                    <br>
+                    <br>
+                    <h3>その他の技能</h3>
+                    <table id="etc7">
+                        <th>成長C</th>
+                        <th>技能</th>
+                        <th>初期値</th>
+                        <th>職業P</th>
+                        <th>興味P</th>
+                        <th>成長分</th>
+                        <th>追加P</th>
+                        <th>合計</th>
+                        
+                    </table>
+                    <button type="button" onclick="addpc(7, 'etc')">行追加</button>
+                    <button type="button" onclick="del(7, 'etc')">行削除</button>
+
+                    <script type="text/javascript">
+                        create7();
+                    </script>
+                </form>
             </div>
             <div id="howtostatus6">
-                <p style="padding-left: 15px;">
+                <p>
                     参考にしたサイト<a title="ジョジョ卓手引き" href="https://seesaawiki.jp/trpgyarouzu/d/%A5%B8%A5%E7%A5%B8%A5%E7%C2%EE%BC%EA%B0%FA%A4%AD">ジョジョ卓手引き</a><br><br>
                     <b>スタンド使いにしたときの補正</b><br>
                     プロフィールの「スタンド使い？」のチェックをYES!にすることで得られるプラス補正がこちら
@@ -444,7 +890,7 @@
                     <li>投擲、登攀、跳躍の初期値が50になる</li>
                     <li>HPの自然回復が1週間に一度ではなく1日に一度となる</li>
                 </ul>
-                <p style="padding-left: 15px;">
+                <p>
                     <b>スタンド使いのステ振り</b><br>
                     主に特殊なステ振りはスタンドのパラメータのみ。<br>
                     パラメータによるスタンドの性能補正は例として以下を示すが、ハウスルール等でいくらでもやりやすいように改変していただいて構わない。
@@ -458,20 +904,20 @@
                         防御可能量とは、攻撃に対し攻撃で返した際にカットできるダメージ量であり、書かれたダイスを振って出た目の数だけダメージを軽減することができる。<br>
                         <li>スピード</li>
                         読んで字のごとくスタンドの素早さなので、スタンド自体のDEXと回避技能にあてはめられる。<br>
-                        DEXは最小が4、パラメータが1つ上がるごとに4づつプラスされていくため最大が20(変更する可能性あり)<br>
+                        DEXは最小が0、パラメータが1つ上がるごとに4づつプラスされていくため最大が20(変更する可能性あり)<br>
                         回避技能は最小で0、パラメータが1つ上がるごとに15づつプラスされていくため最大が60(変更する可能性あり)<br>
                         ラッシュ攻撃のこぶしの数にも影響する
                         <li>持続力</li>
                         ここではスタンドのビジョンを出すのにかかるコスト量として考える。<br>
                         コストはMPで換算し持続力が高ければ高いほど消費MPが少なくなる。<br>
-                        最小は0、最大は4
+                        最小は0、最大は5
                         <li>射程距離</li>
                         今のところ特にステータスに補正は無いが、本体からどのくらいの距離を離れられるか。<br>
                         ただ具体的な距離はサイトによってまちまちだったためハウスルールで決めるといいかもしれない。
                         <li>精密動作性</li>
                         スタンドがどれくらい精密な動作を行えるのか。<br>
                         細かい補正をどんどんつけていくとキリがないので、ここではスタンドの持つ技能を戦闘系と動作系に分けてそれぞれに補正値をプラスすることにした。<br>
-                        戦闘は最小-20、最大+20。動作系(行動系)は最小-30、最大+30とする。
+                        戦闘は最小-30、最大+20。動作系(行動系)は最小-45、最大+30とする。
                         <li>成長性</li>
                         特に補正も振り分けポイント消費もなし。<br>
                         設定を詰め込んだり成長していくスタンドにする場合は高めに設定しておくとフレーバーが濃くなる。
@@ -479,7 +925,7 @@
                     <li>スタンドの技能は必要だと思ったものは好きに増やして構わないが、職業Pや興味Pで上乗せすることは出来ない。</li>
                     <li>ただし、クリティカルやスペシャル判定での成長ロールは振ることができる。あとはハウスルールで。</li>
                 </ul>
-                <p style="padding-left: 15px;">
+                <p>
                     <b>ラッシュ</b><br>
                     ラッシュ攻撃をする場合、まずスタンドのタイプが近距離パワー型であることが必要になる。<br>
                     一方的にラッシュする場合はスタンドのDEX発のパンチ、もしくはキックになるため、その数だけこぶしかキックのダイスロールを行う<br>
@@ -513,7 +959,7 @@
                     相手に装甲がある場合は前述と同じように当たった数×装甲の分÷2だけダメージから引かれる。<br>
                     対抗ロールに失敗した場合は相手が上記と同じ処理でダメージを与えてくる。
                 </p>
-                <p style="padding-left: 15px;">
+                <p>
                     <b>吸血鬼について</b><br>
                     クトゥルフにデフォルトでいる吸血鬼や屍生人はジョジョ卓だと全然雑魚なので独自の補正を行う。<br>
                 </p>
@@ -524,19 +970,19 @@
                     <li>こぶしを当てることで吸血可能</li>
                     <li>現在のHPが最大値より低い場合1時間に1ポイント回復する</li>
                 </ul>
-                <p style="padding-left: 15px;">
+                <p>
                     <b>波紋について</b><br>
                     波紋は一応武道・仙道の部類に入るが、これはジョジョ卓専用キャラシ作成所なので波紋という一つの技能として換算することにする。<br>
                     原作の波紋は治療に使ったりもできるためその事もここに記載しておく。<br>
                     この場合例として私独自のポイントの振り方を記載しておくことにする。<br>
                     <br>
                     正攻法で取得した際の成功率初期値は<br>
-                    <b>(CON+SIZ)*波紋を修行した期間(月)/15 (小数点切り上げ)</b><br>
+                    <b>(CON+SIZ)*波紋を修行した期間(月)/10 (小数点切り上げ)</b><br>
                     例:CONが10、SIZが14で修業期間が36ヶ月(3年)の場合<br>
-                    (10+14)*36/15 = 24*36/15<br>
-                    = 864/15<br>
-                    = 57.6<br>
-                    = 57 → 波紋の成功率初期値は57<br>
+                    (10+14)*36/10 = 24*36/10<br>
+                    = 864/10<br>
+                    = 86.4<br>
+                    = 87 → 波紋の成功率初期値は87<br>
                     <br>
                     特定の師匠にスパルタ指導で修行してもらい取得した場合の成功率初期値は<br>
                     <b>(CON+SIZ)*波紋を修行した期間(日)/5 (小数点切り上げ)</b><br>
@@ -544,7 +990,7 @@
                     (10+14)*14/5 = 24*14/5<br>
                     = 336/5<br>
                     = 67.2<br>
-                    = 67 → 波紋の成功率初期値は67<br>
+                    = 68 → 波紋の成功率初期値は68<br>
                     <br>
                     その他プレイ中に波紋技能成長に当たるイベント
                 </p>
@@ -553,7 +999,7 @@
                     <li>クリティカル(+1d10+5)</li>
                     <li>スペシャル(+1d6+3)</li>
                 </ul>
-                <p style="padding-left: 15px;">
+                <p>
                     <b>波紋を使った技の判定</b><br>
                     波紋は武道に当たるので成功すればこぶしやキックにダメージボーナスをつけることができる。<br>
                     波紋の判定に成功すればダイス一つ追加、3ポイントの波紋ダメージを加えることができる。(2d3+3+db)<br>
@@ -575,7 +1021,67 @@
                 </p>
             </div>
             <div id="howtostatus7">
-                <b style="padding-left: 15px; color: red;">ただいま考え中……</b>
+                <p>
+                    ほとんど6版と変わらないため、変更がある部分だけを記載。<br>
+                    <br>
+                    <b>スタンド使いにしたときの補正</b><br>
+                    プロフィールの「スタンド使い？」のチェックをYES!にすることで得られるプラス補正がこちら
+                </p>
+                <ul>
+                    <li>HPの値が2倍</li>
+                    <li>投擲、登攀、跳躍の初期値が50になる</li>
+                    <li>HPの自然回復が1週間に一度ではなく1日に一度となる</li>
+                </ul>
+                <p>
+                    <b>スタンド使いのステ振り</b><br>
+                    主に特殊なステ振りはスタンドのパラメータのみ。<br>
+                    パラメータによるスタンドの性能補正は例として以下を示すが、ハウスルール等でいくらでもやりやすいように改変していただいて構わない。
+                </p>
+                <ul>
+                    <li>POW*1.8の値をスタンドPとし成長性以外の5つのパラメータに振り分ける(最大消費Pは160)</li>
+                    <li>パラメータによって補正がもらえる</li>
+                    <ul>
+                        <li>破壊力</li>
+                        高ければ高いほどスタンドのダメージボーナスと防御可能量が上がる<br>
+                        防御可能量とは、攻撃に対し攻撃で返した際にカットできるダメージ量であり、書かれたダイスを振って出た目の数だけダメージを軽減することができる。<br>
+                        <li>スピード</li>
+                        読んで字のごとくスタンドの素早さなので、スタンド自体のDEXと回避技能にあてはめられる。<br>
+                        DEXは最小が0、パラメータが1つ上がるごとに20づつプラスされていくため最大が100(変更する可能性あり)<br>
+                        ハードで半分、エクストリームで5分の1の値になる。<br>
+                        回避技能は最小で0、パラメータが1つ上がるごとに15づつプラスされていくため最大が60(変更する可能性あり)<br>
+                        ラッシュ攻撃のこぶしの数にも影響する
+                        <li>持続力</li>
+                        ここではスタンドのビジョンを出すのにかかるコスト量として考える。<br>
+                        コストはMPで換算し持続力が高ければ高いほど消費MPが少なくなる。<br>
+                        最小は0、最大は5
+                        <li>射程距離</li>
+                        今のところ特にステータスに補正は無いが、本体からどのくらいの距離を離れられるか。<br>
+                        ただ具体的な距離はサイトによってまちまちだったためハウスルールで決めるといいかもしれない。
+                        <li>精密動作性</li>
+                        スタンドがどれくらい精密な動作を行えるのか。<br>
+                        細かい補正をどんどんつけていくとキリがないので、ここではスタンドの持つ技能を戦闘系と動作系に分けてそれぞれに補正値をプラスすることにした。<br>
+                        戦闘は最小-30、最大+20。動作系(行動系)は最小-45、最大+30とする。
+                        <li>成長性</li>
+                        特に補正も振り分けポイント消費もなし。<br>
+                        設定を詰め込んだり成長していくスタンドにする場合は高めに設定しておくとフレーバーが濃くなる。
+                    </ul>
+                    <li>スタンドの技能は必要だと思ったものは好きに増やして構わないが、職業Pや興味Pで上乗せすることは出来ない。</li>
+                    <li>ただし、クリティカルやスペシャル判定での成長ロールは振ることができる。あとはハウスルールで。</li>
+                </ul>
+                <p>
+                    <b>ラッシュ</b><br>
+                    6版のラッシュ計算と全く一緒だが、攻撃には近接戦闘Sを使い攻撃の数はエクストリームのスタンドのDEXで行う。<br>
+                    そうしないと神格がラッシュ一回で沈むことになってしまう……<br>
+                    <br>
+                    <b>吸血鬼</b><br>
+                    基礎ステータスの補正を少し変更。<br>
+                    CONとSTRをプラス50として計算する。<br>
+
+                </p>
+                <p>
+                    <b>波紋について</b><br>
+                    計算式は変わらず、エクストリームで計算する。<br>
+                </p>
             </div>
         </div>
         <script type="text/javascript" src="js/tab.js"></script>

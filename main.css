@@ -1,17 +1,19 @@
 @charset "utf-8";
+body{
+    background-image: url("images/background.png");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center 50px;
+    background-color: #C0C0C0;
+    margin: 0;
+}
 h1{
     font-size: 30px;
     background-color: #3e1ba0;
     color: #ffffff;
     padding: 8px 14px;
-
+    margin: 0;
 }
-/**
-ol{
-    border: 2px solid #F3F3F3;
-    padding: 14px 14px 14px 32px;
-}
-**/
 table, table td, table th{
     border-collapse: collapse;
     border: 2px #000 solid;
@@ -26,6 +28,7 @@ input{
 }
 input[type=checkbox]{
     transform: scale(1.5);
+    margin-left: 20px;
 }
 select{
     font-size: 15px;
@@ -55,8 +58,17 @@ button{
 #tabbody div {
     border: 2px solid #646464; /* 枠線：黒色の実線を1pxの太さで引く */
     margin-top: -16px;        /* 上側にあるタブと1pxだけ重ねるために「-1px」を指定 */
-    padding: 1em;            /* 内側の余白量 */
+    padding: 3em;            /* 内側の余白量 */
+    padding-top: 1em;            /* 内側の余白量 */
     background-color: white; /* 背景色：白色 */
     position: relative;      /* z-indexを調整するために必要 */
     z-index: 0;              /* 重なり順序を「最も背面」にするため */
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+p{
+    padding-left: 15px;
+    margin-left: 8px;
+    margin-right: 8px;
 }
