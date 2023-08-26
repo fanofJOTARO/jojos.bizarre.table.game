@@ -1,93 +1,105 @@
-let defpcbattlenum = 0;
-let defpcsearchnum = 0;
-let defpcactionnum = 0;
-let defpcnegotiationsnum = 0;
-let defpcknowledgenum = 0;
-let defpcetcnum = 0;
-let defpcitemsnum = 0;
-let defstandbattlenum = 0;
-let defstandactionnum = 0;
+let defpcbattlenum6 = 0;
+let defpcsearchnum6 = 0;
+let defpcactionnum6 = 0;
+let defpcnegotiationsnum6 = 0;
+let defpcknowledgenum6 = 0;
+let defpcetcnum6 = 0;
+let defpcitemsnum6 = 0;
+let defstandbattlenum6 = 0;
+let defstandactionnum6 = 0;
+
+let defpcbattlenum7 = 0;
+let defpcsearchnum7 = 0;
+let defpcactionnum7 = 0;
+let defpcnegotiationsnum7 = 0;
+let defpcknowledgenum7 = 0;
+let defpcetcnum7 = 0;
+let defpcitemsnum7 = 0;
+let defstandbattlenum7 = 0;
+let defstandactionnum7 = 0;
 
 function create6(){
-    adddef6("battle", "波紋", "0");
-    adddef6("battle", "こぶし", "50");
-    adddef6("battle", "回避", Number(document.status6.dex2.value)*2);
-    adddef6("battle", "キック", "25");
-    adddef6("battle", "頭突き", "10");
-    adddef6("battle", "組みつき", "25");
-    adddef6("battle", "投擲", "25");
-    adddef6("battle", "マーシャルアーツ", "1");
-    adddef6("battle", "拳銃", "20");
-    adddef6("battle", "サブマシンガン", "15");
-    adddef6("battle", "ショットガン", "30");
-    adddef6("battle", "マシンガン", "15");
-    adddef6("battle", "ライフル", "25");
+    var num = 6;
+    adddefpc(num, "battle", "波紋", "0");
+    adddefpc(num, "battle", "こぶし", "50");
+    adddefpc(num, "battle", "回避", "0");
+    adddefpc(num, "battle", "キック", "25");
+    adddefpc(num, "battle", "頭突き", "10");
+    adddefpc(num, "battle", "組みつき", "25");
+    adddefpc(num, "battle", "投擲", "25");
+    adddefpc(num, "battle", "マーシャルアーツ", "1");
+    adddefpc(num, "battle", "拳銃", "20");
+    adddefpc(num, "battle", "サブマシンガン", "15");
+    adddefpc(num, "battle", "ショットガン", "30");
+    adddefpc(num, "battle", "マシンガン", "15");
+    adddefpc(num, "battle", "ライフル", "25");
 
-    adddef6("search", "応急処置", "30", false);
-    adddef6("search", "鍵開け", "1", false);
-    adddef6("search", "隠す", "15", false);
-    adddef6("search", "隠れる", "10", false);
-    adddef6("search", "聞き耳", "25", false);
-    adddef6("search", "忍び歩き", "10", false);
-    adddef6("search", "写真術", "10", false);
-    adddef6("search", "精神分析", "1", false);
-    adddef6("search", "追跡", "10", false);
-    adddef6("search", "登攀", "40", false);
-    adddef6("search", "図書館", "25", false);
-    adddef6("search", "目星", "25", false);
+    adddefpc(num, "search", "応急処置", "30", false);
+    adddefpc(num, "search", "鍵開け", "1", false);
+    adddefpc(num, "search", "隠す", "15", false);
+    adddefpc(num, "search", "隠れる", "10", false);
+    adddefpc(num, "search", "聞き耳", "25", false);
+    adddefpc(num, "search", "忍び歩き", "10", false);
+    adddefpc(num, "search", "写真術", "10", false);
+    adddefpc(num, "search", "精神分析", "1", false);
+    adddefpc(num, "search", "追跡", "10", false);
+    adddefpc(num, "search", "登攀", "40", false);
+    adddefpc(num, "search", "図書館", "25", false);
+    adddefpc(num, "search", "目星", "25", false);
 
-    adddef6("action", "運転", "20", true, "drive");
-    adddef6("action", "修理", "20", false);
-    adddef6("action", "重機械操作", "1", false);
-    adddef6("action", "乗馬", "5", false);
-    adddef6("action", "水泳", "25", false);
-    adddef6("action", "製作", "5", true, "makes");
-    adddef6("action", "電気修理", "10", false);
-    adddef6("action", "機械操作", "1", true, "ride");
-    adddef6("action", "跳躍", "25", false);
-    adddef6("action", "ナビゲート", "10", false);
-    adddef6("action", "変装", "1", false);
+    adddefpc(num, "action", "運転", "20", true);
+    adddefpc(num, "action", "修理", "20", false);
+    adddefpc(num, "action", "重機械操作", "1", false);
+    adddefpc(num, "action", "乗馬", "5", false);
+    adddefpc(num, "action", "水泳", "25", false);
+    adddefpc(num, "action", "製作", "5", true);
+    adddefpc(num, "action", "電気修理", "10", false);
+    adddefpc(num, "action", "機械操作", "1", true);
+    adddefpc(num, "action", "跳躍", "25", false);
+    adddefpc(num, "action", "ナビゲート", "10", false);
+    adddefpc(num, "action", "変装", "1", false);
 
-    adddef6("negotiations", "言いくるめ", "5", false);
-    adddef6("negotiations", "信用", "15", false);
-    adddef6("negotiations", "説得", "15", false);
-    adddef6("negotiations", "値切り交渉", "5", false);
-    adddef6("negotiations", "母国語", "20", true, "native");
+    adddefpc(num, "negotiations", "言いくるめ", "5", false);
+    adddefpc(num, "negotiations", "信用", "15", false);
+    adddefpc(num, "negotiations", "説得", "15", false);
+    adddefpc(num, "negotiations", "値切り交渉", "5", false);
+    adddefpc(num, "negotiations", "母国語", "20", true);
 
-    adddef6("knowledge", "医学", "5", false);
-    adddef6("knowledge", "オカルト", "5", false);
-    adddef6("knowledge", "化学", "5", false);
-    adddef6("knowledge", "クトゥルフ神話知識", "0", false);
-    adddef6("knowledge", "芸術", "5", true, "arts");
-    adddef6("knowledge", "経理", "10", false);
-    adddef6("knowledge", "考古学", "1", false);
-    adddef6("knowledge", "コンピューター", "1", false);
-    adddef6("knowledge", "心理学", "5", false);
-    adddef6("knowledge", "人類学", "1", false);
-    adddef6("knowledge", "生物学", "1", false);
-    adddef6("knowledge", "地質学", "1", false);
-    adddef6("knowledge", "電子工学", "1", false);
-    adddef6("knowledge", "天文学", "1", false);
-    adddef6("knowledge", "博物学", "10", false);
-    adddef6("knowledge", "物理学", "1", false);
-    adddef6("knowledge", "海洋学", "1", false);
-    adddef6("knowledge", "言語学", "1", false);
-    adddef6("knowledge", "法律", "5", false);
-    adddef6("knowledge", "薬学", "1", false);
-    adddef6("knowledge", "歴史", "20", false);
+    adddefpc(num, "knowledge", "医学", "5", false);
+    adddefpc(num, "knowledge", "オカルト", "5", false);
+    adddefpc(num, "knowledge", "化学", "5", false);
+    adddefpc(num, "knowledge", "クトゥルフ神話知識", "0", false);
+    adddefpc(num, "knowledge", "芸術", "5", true, "arts");
+    adddefpc(num, "knowledge", "経理", "10", false);
+    adddefpc(num, "knowledge", "考古学", "1", false);
+    adddefpc(num, "knowledge", "コンピューター", "1", false);
+    adddefpc(num, "knowledge", "心理学", "5", false);
+    adddefpc(num, "knowledge", "人類学", "1", false);
+    adddefpc(num, "knowledge", "生物学", "1", false);
+    adddefpc(num, "knowledge", "地質学", "1", false);
+    adddefpc(num, "knowledge", "電子工学", "1", false);
+    adddefpc(num, "knowledge", "天文学", "1", false);
+    adddefpc(num, "knowledge", "博物学", "10", false);
+    adddefpc(num, "knowledge", "物理学", "1", false);
+    adddefpc(num, "knowledge", "海洋学", "1", false);
+    adddefpc(num, "knowledge", "言語学", "1", false);
+    adddefpc(num, "knowledge", "法律", "5", false);
+    adddefpc(num, "knowledge", "薬学", "1", false);
+    adddefpc(num, "knowledge", "歴史", "20", false);
 
-    adddef6("standabilitybattle", "こぶしS", "50", false);
-    adddef6("standabilitybattle", "キックS", "25", false);
-    adddef6("standabilitybattle", "回避S", "0", false);
-    adddef6("standabilitybattle", "組みつきS", "25", false);
-    adddef6("standabilitybattle", "投擲S", "50", false);
+    adddefstand(num, "battle", "こぶしS", "50", false);
+    adddefstand(num, "battle", "キックS", "25", false);
+    adddefstand(num, "battle", "回避S", "0", false);
+    adddefstand(num, "battle", "組みつきS", "25", false);
+    adddefstand(num, "battle", "投擲S", "50", false);
     
-    adddef6("standabilityaction", "スタンド能力", "0", false);
-    adddef6("standabilityaction", "目星S", "25", false);
-    adddef6("standabilityaction", "聞き耳S", "25", false);
-    adddef6("standabilityaction", "登攀S", "50", false);
-    adddef6("standabilityaction", "水泳S", "25", false);
-    if(document.status6.usestand.value == true){
+    adddefstand(num, "action", "スタンド能力", "0", false);
+    adddefstand(num, "action", "目星S", "25", false);
+    adddefstand(num, "action", "聞き耳S", "25", false);
+    adddefstand(num, "action", "登攀S", "50", false);
+    adddefstand(num, "action", "水泳S", "25", false);
+
+    if(document.status6.usestand.value == "true"){
         document.status6.defbattle66.value = 50;
         document.status6.defsearch69.value = 50;
         document.status6.defaction68.value = 50;
@@ -96,1279 +108,872 @@ function create6(){
         document.status6.defsearch69.value = 40;
         document.status6.defaction68.value = 25;
     }
-    reset6();
+    
+    reset(num);
 }
 
-function reset6(){
-    var standabilitybattle = document.getElementById("standabilitybattle6");
-    var standabilityaction = document.getElementById("standabilityaction6");
-    var battle = document.getElementById("battle6");
-    var search = document.getElementById("search6");
-    var action = document.getElementById("action6");
-    var negotiations = document.getElementById("negotiations6");
-    var knowledge = document.getElementById("knowledge6");
+function create7(){
+    var num = 7;
+    adddefpc(num, "battle", "波紋", "0", false);
+    adddefpc(num, "battle", "回避", "0", false);
+    adddefpc(num, "battle", "近接戦闘", "0", true);
+    adddefpc(num, "battle", "投擲", "20", false);
+    adddefpc(num, "battle", "射撃", "0", true);
+
+    adddefpc(num, "search", "応急手当", "30", false);
+    adddefpc(num, "search", "鍵開け", "1", false);
+    adddefpc(num, "search", "手さばき", "10", false);
+    adddefpc(num, "search", "聞き耳", "20", false);
+    adddefpc(num, "search", "隠密", "20", false);
+    adddefpc(num, "search", "精神分析", "1", false);
+    adddefpc(num, "search", "追跡", "10", false);
+    adddefpc(num, "search", "登攀", "20", false);
+    adddefpc(num, "search", "図書館", "20", false);
+    adddefpc(num, "search", "目星", "25", false);
+    adddefpc(num, "search", "鑑定", "5", false);
+
+    adddefpc(num, "action", "運転", "20", true);
+    adddefpc(num, "action", "機械修理", "10", false);
+    adddefpc(num, "action", "重機械操作", "1", false);
+    adddefpc(num, "action", "乗馬", "5", false);
+    adddefpc(num, "action", "水泳", "20", false);
+    adddefpc(num, "action", "製作", "5", true);
+    adddefpc(num, "action", "操縦", "1", true);
+    adddefpc(num, "action", "跳躍", "20", false);
+    adddefpc(num, "action", "電気修理", "10", false);
+    adddefpc(num, "action", "ナビゲート", "10", false);
+    adddefpc(num, "action", "変装", "5", false);
+
+    adddefpc(num, "negotiations", "言いくるめ", "5", false);
+    adddefpc(num, "negotiations", "信用", "0", false);
+    adddefpc(num, "negotiations", "説得", "10", false);
+    adddefpc(num, "negotiations", "母国語", "0", true);
+    adddefpc(num, "negotiations", "威圧", "15", false);
+    adddefpc(num, "negotiations", "魅惑", "15", false);
+    adddefpc(num, "negotiations", "他の言語", "1", true);
+
+    adddefpc(num, "knowledge", "医学", "1", false);
+    adddefpc(num, "knowledge", "オカルト", "5", false);
+    adddefpc(num, "knowledge", "クトゥルフ神話", "0", false);
+    adddefpc(num, "knowledge", "芸術", "5", true);
+    adddefpc(num, "knowledge", "経理", "5", false);
+    adddefpc(num, "knowledge", "考古学", "1", false);
+    adddefpc(num, "knowledge", "コンピューター", "5", false);
+    adddefpc(num, "knowledge", "科学", "1", true);
+    adddefpc(num, "knowledge", "心理学", "10", false);
+    adddefpc(num, "knowledge", "人類学", "1", false);
+    adddefpc(num, "knowledge", "電子工学", "1", false);
+    adddefpc(num, "knowledge", "海洋学", "1", false);
+    adddefpc(num, "knowledge", "自然", "10", false);
+    adddefpc(num, "knowledge", "法律", "5", false);
+    adddefpc(num, "knowledge", "歴史", "5", false);
+    adddefpc(num, "knowledge", "サバイバル", "10", true);
+
+    adddefstand(num, "battle", "近接戦闘S", "0", true);
+    adddefstand(num, "battle", "回避S", "0", false);
+    adddefstand(num, "battle", "投擲S", "50", false);
+
+    adddefstand(num, "action", "スタンド能力", "0", false);
+    adddefstand(num, "action", "目星S", "25", false);
+    adddefstand(num, "action", "聞き耳S", "20", false);
+    adddefstand(num, "action", "登攀S", "50", false);
+    adddefstand(num, "action", "水泳S", "25", false);
+
+    if(document.status7.usestand.value == "true"){
+        document.status7.defbattle73.value = 50;
+        document.status7.defsearch77.value = 50;
+        document.status7.defaction77.value = 50;
+    }else{
+        document.status7.defbattle73.value = 20;
+        document.status7.defsearch77.value = 20;
+        document.status7.defaction77.value = 20;
+    }
+    reset(7);
+}
+
+function reset(numb){
+    var standabilitybattle = document.getElementById("standabilitybattle"+numb);
+    var standabilityaction = document.getElementById("standabilityaction"+numb);
+    var battle = document.getElementById("battle"+numb);
+    var search = document.getElementById("search"+numb);
+    var action = document.getElementById("action"+numb);
+    var negotiations = document.getElementById("negotiations"+numb);
+    var knowledge = document.getElementById("knowledge"+numb);
     
     for(let table = 0; table < standabilitybattle.rows.length-1; table++){
-        var def = Number(document.getElementsByName("defstandabilitybattle6"+table)[0].value);
-        var cor = Number(document.getElementsByName("corstandabilitybattle6"+table)[0].value);
+        var def = Number(document.getElementsByName("defstandabilitybattle"+numb+table)[0].value);
+        var cor = Number(document.getElementsByName("corstandabilitybattle"+numb+table)[0].value);
         var pl = 0;
         var add = 0;
 
         var sum = def+cor+pl+add;
-        document.getElementsByName("plstandabilitybattle6"+table)[0].value = pl;
-        document.getElementsByName("addstandabilitybattle6"+table)[0].value = add;
-        document.getElementsByName("tostandabilitybattle6"+table)[0].value = sum;
+        document.getElementsByName("plstandabilitybattle"+numb+table)[0].value = pl;
+        document.getElementsByName("addstandabilitybattle"+numb+table)[0].value = add;
+        document.getElementsByName("tostandabilitybattle"+numb+table)[0].value = sum;
     }
     
     for(let table = 0; table < standabilityaction.rows.length-1; table++){
-        var def = Number(document.getElementsByName("defstandabilityaction6"+table)[0].value);
-        var cor = Number(document.getElementsByName("corstandabilityaction6"+table)[0].value);
+        var def = Number(document.getElementsByName("defstandabilityaction"+numb+table)[0].value);
+        var cor = Number(document.getElementsByName("corstandabilityaction"+numb+table)[0].value);
         var pl = 0;
         var add = 0;
         
         var sum = def+cor+pl+add;
 
-        document.getElementsByName("plstandabilityaction6"+table)[0].value = 0;
-        document.getElementsByName("addstandabilityaction6"+table)[0].value = 0;
-        document.getElementsByName("tostandabilityaction6"+table)[0].value = sum;
+        document.getElementsByName("plstandabilityaction"+numb+table)[0].value = 0;
+        document.getElementsByName("addstandabilityaction"+numb+table)[0].value = 0;
+        document.getElementsByName("tostandabilityaction"+numb+table)[0].value = sum;
     }
 
     for(let table = 0; table < battle.rows.length-1; table++){
-        var def = Number(document.getElementsByName("defbattle6"+table)[0].value);
-        //var bp = Number(document.getElementsByName("bpbattle"+table)[0].value);
-        //var ip = Number(document.getElementsByName("ipbattle"+table)[0].value);
-        //var pl = Number(document.getElementsByName("plbattle"+table)[0].value);
-        //var add = Number(document.getElementsByName("addbattle"+table)[0].value);
+        var def = Number(document.getElementsByName("defbattle"+numb+table)[0].value);
 
         var sum = def;
 
-        document.getElementsByName("bpbattle6"+table)[0].value = 0;
-        document.getElementsByName("ipbattle6"+table)[0].value = 0;
-        document.getElementsByName("plbattle6"+table)[0].value = 0;
-        document.getElementsByName("addbattle6"+table)[0].value = 0;
-        document.getElementsByName("tobattle6"+table)[0].value = sum;
+        document.getElementsByName("bpbattle"+numb+table)[0].value = 0;
+        document.getElementsByName("ipbattle"+numb+table)[0].value = 0;
+        document.getElementsByName("plbattle"+numb+table)[0].value = 0;
+        document.getElementsByName("addbattle"+numb+table)[0].value = 0;
+        document.getElementsByName("tobattle"+numb+table)[0].value = sum;
     }
 
     for(let table = 0; table < search.rows.length-1; table++){
-        var def = Number(document.getElementsByName("defsearch6"+table)[0].value);
-        //var bp = Number(document.getElementsByName("bpsearch"+table)[0].value);
-        //var ip = Number(document.getElementsByName("ipsearch"+table)[0].value);
-        //var pl = Number(document.getElementsByName("plsearch"+table)[0].value);
-        //var add = Number(document.getElementsByName("addsearch"+table)[0].value);
+        var def = Number(document.getElementsByName("defsearch"+numb+table)[0].value);
 
         var sum = def;
 
-        document.getElementsByName("bpsearch6"+table)[0].value = 0;
-        document.getElementsByName("ipsearch6"+table)[0].value = 0;
-        document.getElementsByName("plsearch6"+table)[0].value = 0;
-        document.getElementsByName("addsearch6"+table)[0].value = 0;
-        document.getElementsByName("tosearch6"+table)[0].value = sum;
+        document.getElementsByName("bpsearch"+numb+table)[0].value = 0;
+        document.getElementsByName("ipsearch"+numb+table)[0].value = 0;
+        document.getElementsByName("plsearch"+numb+table)[0].value = 0;
+        document.getElementsByName("addsearch"+numb+table)[0].value = 0;
+        document.getElementsByName("tosearch"+numb+table)[0].value = sum;
     }
 
     for(let table = 0; table < action.rows.length-1; table++){
-        var def = Number(document.getElementsByName("defaction6"+table)[0].value);
-        //var bp = Number(document.getElementsByName("bpaction"+table)[0].value);
-        //var ip = Number(document.getElementsByName("ipaction"+table)[0].value);
-        //var pl = Number(document.getElementsByName("plaction"+table)[0].value);
-        //var add = Number(document.getElementsByName("addaction"+table)[0].value);
+        var def = Number(document.getElementsByName("defaction"+numb+table)[0].value);
 
         var sum = def;
 
-        document.getElementsByName("bpaction6"+table)[0].value = 0;
-        document.getElementsByName("ipaction6"+table)[0].value = 0;
-        document.getElementsByName("plaction6"+table)[0].value = 0;
-        document.getElementsByName("addaction6"+table)[0].value = 0;
-        document.getElementsByName("toaction6"+table)[0].value = sum;
+        document.getElementsByName("bpaction"+numb+table)[0].value = 0;
+        document.getElementsByName("ipaction"+numb+table)[0].value = 0;
+        document.getElementsByName("plaction"+numb+table)[0].value = 0;
+        document.getElementsByName("addaction"+numb+table)[0].value = 0;
+        document.getElementsByName("toaction"+numb+table)[0].value = sum;
     }
 
     for(let table = 0; table < negotiations.rows.length-1; table++){
-        var def = Number(document.getElementsByName("defnegotiations6"+table)[0].value);
-        //var bp = Number(document.getElementsByName("bpnegotiations"+table)[0].value);
-        //var ip = Number(document.getElementsByName("ipnegotiations"+table)[0].value);
-        //var pl = Number(document.getElementsByName("plnegotiations"+table)[0].value);
-        //var add = Number(document.getElementsByName("addnegotiations"+table)[0].value);
+        var def = Number(document.getElementsByName("defnegotiations"+numb+table)[0].value);
 
         var sum = def;
 
-        document.getElementsByName("bpnegotiations6"+table)[0].value = 0;
-        document.getElementsByName("ipnegotiations6"+table)[0].value = 0;
-        document.getElementsByName("plnegotiations6"+table)[0].value = 0;
-        document.getElementsByName("addnegotiations6"+table)[0].value = 0;
-        document.getElementsByName("tonegotiations6"+table)[0].value = sum;
+        document.getElementsByName("bpnegotiations"+numb+table)[0].value = 0;
+        document.getElementsByName("ipnegotiations"+numb+table)[0].value = 0;
+        document.getElementsByName("plnegotiations"+numb+table)[0].value = 0;
+        document.getElementsByName("addnegotiations"+numb+table)[0].value = 0;
+        document.getElementsByName("tonegotiations"+numb+table)[0].value = sum;
     }
 
     for(let table = 0; table < knowledge.rows.length-1; table++){
-        var def = Number(document.getElementsByName("defknowledge6"+table)[0].value);
-        //var bp = Number(document.getElementsByName("bpknowledge"+table)[0].value);
-        //var ip = Number(document.getElementsByName("ipknowledge"+table)[0].value);
-        //var pl = Number(document.getElementsByName("plknowledge"+table)[0].value);
-        //var add = Number(document.getElementsByName("addknowledge"+table)[0].value);
+        var def = Number(document.getElementsByName("defknowledge"+numb+table)[0].value);
 
         var sum = def;
 
-        document.getElementsByName("bpknowledge6"+table)[0].value = 0;
-        document.getElementsByName("ipknowledge6"+table)[0].value = 0;
-        document.getElementsByName("plknowledge6"+table)[0].value = 0;
-        document.getElementsByName("addknowledge6"+table)[0].value = 0;
-        document.getElementsByName("toknowledge6"+table)[0].value = sum;
+        document.getElementsByName("bpknowledge"+numb+table)[0].value = 0;
+        document.getElementsByName("ipknowledge"+numb+table)[0].value = 0;
+        document.getElementsByName("plknowledge"+numb+table)[0].value = 0;
+        document.getElementsByName("addknowledge"+numb+table)[0].value = 0;
+        document.getElementsByName("toknowledge"+numb+table)[0].value = sum;
+    }
+
+    document.getElementsByName("defbattle"+numb+"0")[0].readOnly = "";
+    if(numb == 7){
+        document.getElementsByName("defbattle"+numb+"2")[0].readOnly = "";
+        document.getElementsByName("defbattle"+numb+"4")[0].readOnly = "";
+        document.getElementsByName("defstandabilitybattle"+numb+"0")[0].readOnly = "";
+        calc7();
+    }else if(numb == 6){
+        calc6();
     }
 }
 
-function adddef6(name, names, defval, intext, intexttag){
+function adddefstand(numb, name, names, defval, intext){
     let tr = document.createElement("tr");
-    if(name == "battle"){
-        defpcbattlenum++;
-        var row = document.getElementById("battle6").rows.length - 1;
-        const td = [];
-        for(let i = 0; i < 8; i++){
-            td.push(document.createElement("td"));
+    if(numb == 6){
+        if(name == "battle"){
+            defstandbattlenum6++;
+        }else if(name == "action"){
+            defstandactionnum6++;
         }
-
-        let ch = document.createElement("input");
-        ch.type = "checkbox";
-        td[0].appendChild(ch);
-
-        if(intext){
-            let name = document.createTextNode(names);
-            let inp = document.createElement("input");
-            inp.type = "text";
-            inp.size = "10";
-            inp.name = "battlename6"+row;
-            inp.className = "intext";
-            inp.value = "()";
-            name.name = intexttag;
-            td[1].appendChild(name);
-            td[1].appendChild(inp);
-        }else{
-            let name = document.createTextNode(names);
-            name.name = "battlename6"+row;
-            td[1].appendChild(name);
+    }else if(numb == 7){
+        if(name == "battle"){
+            defstandbattlenum7++;
+        }else if(name == "action"){
+            defstandactionnum7++;
         }
-        
-
-        let def = document.createElement("input");
-        def.type = "text";
-        def.name = "defbattle6"+row;
-        def.size = "2";
-        def.readOnly = "readonly";
-        def.value = defval;
-        td[2].appendChild(def);
-
-        let bp = document.createElement("input");
-        bp.type = "text";
-        bp.name = "bpbattle6"+row;
-        bp.size = "2";
-        bp.addEventListener("change", (event) => {calcstatus6()});
-        td[3].appendChild(bp);
-        
-        let ip = document.createElement("input");
-        ip.type = "text";
-        ip.name = "ipbattle6"+row;
-        ip.size = "2";
-        ip.addEventListener("change", (event) => {calcstatus6()});
-        td[4].appendChild(ip);
-
-        let pl = document.createElement("input");
-        pl.type = "text";
-        pl.name = "plbattle6"+row;
-        pl.size = "2";
-        pl.addEventListener("change", (event) => {calcstatus6()});
-        td[5].appendChild(pl);
-
-        let add = document.createElement("input");
-        add.type = "text";
-        add.name = "addbattle6"+row;
-        add.size = "2";
-        add.addEventListener("change", (event) => {calcstatus6()});
-        td[6].appendChild(add);
-
-        let to = document.createElement("input");
-        to.type = "text";
-        to.name = "tobattle6"+row;
-        to.size = "2";
-        to.value = defval;
-        to.readOnly = "readonly";
-        td[7].appendChild(to);
-
-        for(let i = 0; i < 8; i++){
-            tr.appendChild(td[i]);
-        }
-        document.getElementById("battle6").appendChild(tr);
-
-    }else if(name == "search"){
-        defpcsearchnum++;
-        var row = document.getElementById("search6").rows.length - 1;
-        const td = [];
-        for(let i = 0; i < 8; i++){
-            td.push(document.createElement("td"));
-        }
-
-        let ch = document.createElement("input");
-        ch.type = "checkbox";
-        td[0].appendChild(ch);
-
-        if(intext){
-            let name = document.createTextNode(names);
-            let inp = document.createElement("input");
-            inp.type = "text";
-            inp.size = "10";
-            inp.name = "searchname6"+row;
-            inp.className = "intext";
-            inp.value = "()";
-            name.name = intexttag;
-            td[1].appendChild(name);
-            td[1].appendChild(inp);
-        }else{
-            let name = document.createTextNode(names);
-            name.name = "searchname6"+row;
-            td[1].appendChild(name);
-        }
-        
-
-        let def = document.createElement("input");
-        def.type = "text";
-        def.name = "defsearch6"+row;
-        def.size = "2";
-        def.readOnly = "readonly";
-        def.value = defval;
-        td[2].appendChild(def);
-
-        let bp = document.createElement("input");
-        bp.type = "text";
-        bp.name = "bpsearch6"+row;
-        bp.size = "2";
-        bp.addEventListener("change", (event) => {calcstatus6()});
-        td[3].appendChild(bp);
-        
-        let ip = document.createElement("input");
-        ip.type = "text";
-        ip.name = "ipsearch6"+row;
-        ip.size = "2";
-        ip.addEventListener("change", (event) => {calcstatus6()});
-        td[4].appendChild(ip);
-
-        let pl = document.createElement("input");
-        pl.type = "text";
-        pl.name = "plsearch6"+row;
-        pl.size = "2";
-        pl.addEventListener("change", (event) => {calcstatus6()});
-        td[5].appendChild(pl);
-
-        let add = document.createElement("input");
-        add.type = "text";
-        add.name = "addsearch6"+row;
-        add.size = "2";
-        add.addEventListener("change", (event) => {calcstatus6()});
-        td[6].appendChild(add);
-
-        let to = document.createElement("input");
-        to.type = "text";
-        to.name = "tosearch6"+row;
-        to.size = "2";
-        to.value = defval;
-        to.readOnly = "readonly";
-        td[7].appendChild(to);
-
-        for(let i = 0; i < 8; i++){
-            tr.appendChild(td[i]);
-        }
-        document.getElementById("search6").appendChild(tr);
-        
-    }else if(name == "action"){
-        defpcactionnum++;
-        var row = document.getElementById("action6").rows.length - 1;
-        const td = [];
-        for(let i = 0; i < 8; i++){
-            td.push(document.createElement("td"));
-        }
-
-        let ch = document.createElement("input");
-        ch.type = "checkbox";
-        td[0].appendChild(ch);
-
-        if(intext){
-            let name = document.createTextNode(names);
-            let inp = document.createElement("input");
-            inp.type = "text";
-            inp.size = "10";
-            inp.name = "actionname6"+row;
-            inp.className = "intext";
-            inp.value = "()";
-            name.name = intexttag;
-            td[1].appendChild(name);
-            td[1].appendChild(inp);
-        }else{
-            let name = document.createTextNode(names);
-            name.name = "actionname6"+row;
-            td[1].appendChild(name);
-        }
-        
-
-        let def = document.createElement("input");
-        def.type = "text";
-        def.name = "defaction6"+row;
-        def.size = "2";
-        def.readOnly = "readonly";
-        def.value = defval;
-        td[2].appendChild(def);
-
-        let bp = document.createElement("input");
-        bp.type = "text";
-        bp.name = "bpaction6"+row;
-        bp.size = "2";
-        bp.addEventListener("change", (event) => {calcstatus6()});
-        td[3].appendChild(bp);
-        
-        let ip = document.createElement("input");
-        ip.type = "text";
-        ip.name = "ipaction6"+row;
-        ip.size = "2";
-        ip.addEventListener("change", (event) => {calcstatus6()});
-        td[4].appendChild(ip);
-
-        let pl = document.createElement("input");
-        pl.type = "text";
-        pl.name = "plaction6"+row;
-        pl.size = "2";
-        pl.addEventListener("change", (event) => {calcstatus6()});
-        td[5].appendChild(pl);
-
-        let add = document.createElement("input");
-        add.type = "text";
-        add.name = "addaction6"+row;
-        add.size = "2";
-        add.addEventListener("change", (event) => {calcstatus6()});
-        td[6].appendChild(add);
-
-        let to = document.createElement("input");
-        to.type = "text";
-        to.name = "toaction6"+row;
-        to.size = "2";
-        to.value = defval;
-        to.readOnly = "readonly";
-        td[7].appendChild(to);
-
-        for(let i = 0; i < 8; i++){
-            tr.appendChild(td[i]);
-        }
-        document.getElementById("action6").appendChild(tr);
-        
-    }else if(name == "negotiations"){
-        defpcnegotiationsnum++;
-        var row = document.getElementById("negotiations6").rows.length - 1;
-        const td = [];
-        for(let i = 0; i < 8; i++){
-            td.push(document.createElement("td"));
-        }
-
-        let ch = document.createElement("input");
-        ch.type = "checkbox";
-        td[0].appendChild(ch);
-
-        if(intext){
-            let name = document.createTextNode(names);
-            let inp = document.createElement("input");
-            inp.type = "text";
-            inp.size = "10";
-            inp.name = "negotiationsname6"+row;
-            inp.className = "intext";
-            inp.value = "()";
-            name.name = intexttag;
-            td[1].appendChild(name);
-            td[1].appendChild(inp);
-        }else{
-            let name = document.createTextNode(names);
-            name.name = "negotiationsname6"+row;
-            td[1].appendChild(name);
-        }
-        
-
-        let def = document.createElement("input");
-        def.type = "text";
-        def.name = "defnegotiations6"+row;
-        def.size = "2";
-        def.readOnly = "readonly";
-        def.value = defval;
-        td[2].appendChild(def);
-
-        let bp = document.createElement("input");
-        bp.type = "text";
-        bp.name = "bpnegotiations6"+row;
-        bp.size = "2";
-        bp.addEventListener("change", (event) => {calcstatus6()});
-        td[3].appendChild(bp);
-        
-        let ip = document.createElement("input");
-        ip.type = "text";
-        ip.name = "ipnegotiations6"+row;
-        ip.size = "2";
-        ip.addEventListener("change", (event) => {calcstatus6()});
-        td[4].appendChild(ip);
-
-        let pl = document.createElement("input");
-        pl.type = "text";
-        pl.name = "plnegotiations6"+row;
-        pl.size = "2";
-        pl.addEventListener("change", (event) => {calcstatus6()});
-        td[5].appendChild(pl);
-
-        let add = document.createElement("input");
-        add.type = "text";
-        add.name = "addnegotiations6"+row;
-        add.size = "2";
-        add.addEventListener("change", (event) => {calcstatus6()});
-        td[6].appendChild(add);
-
-        let to = document.createElement("input");
-        to.type = "text";
-        to.name = "tonegotiations6"+row;
-        to.size = "2";
-        to.value = defval;
-        to.readOnly = "readonly";
-        td[7].appendChild(to);
-
-        for(let i = 0; i < 8; i++){
-            tr.appendChild(td[i]);
-        }
-        document.getElementById("negotiations6").appendChild(tr);
-        
-    }else if(name == "knowledge"){
-        defpcknowledgenum++;
-        var row = document.getElementById("knowledge6").rows.length - 1;
-        const td = [];
-        for(let i = 0; i < 8; i++){
-            td.push(document.createElement("td"));
-        }
-
-        let ch = document.createElement("input");
-        ch.type = "checkbox";
-        td[0].appendChild(ch);
-
-        if(intext){
-            let name = document.createTextNode(names);
-            let inp = document.createElement("input");
-            inp.type = "text";
-            inp.size = "10";
-            inp.name = "knowledgename6"+row;
-            inp.className = "intext";
-            inp.value = "()";
-            name.name = intexttag;
-            td[1].appendChild(name);
-            td[1].appendChild(inp);
-        }else{
-            let name = document.createTextNode(names);
-            name.name = "knowledgename6"+row;
-            td[1].appendChild(name);
-        }
-        
-
-        let def = document.createElement("input");
-        def.type = "text";
-        def.name = "defknowledge6"+row;
-        def.size = "2";
-        def.readOnly = "readonly";
-        def.value = defval;
-        td[2].appendChild(def);
-
-        let bp = document.createElement("input");
-        bp.type = "text";
-        bp.name = "bpknowledge6"+row;
-        bp.size = "2";
-        bp.addEventListener("change", (event) => {calcstatus6()});
-        td[3].appendChild(bp);
-        
-        let ip = document.createElement("input");
-        ip.type = "text";
-        ip.name = "ipknowledge6"+row;
-        ip.size = "2";
-        ip.addEventListener("change", (event) => {calcstatus6()});
-        td[4].appendChild(ip);
-
-        let pl = document.createElement("input");
-        pl.type = "text";
-        pl.name = "plknowledge6"+row;
-        pl.size = "2";
-        pl.addEventListener("change", (event) => {calcstatus6()});
-        td[5].appendChild(pl);
-
-        let add = document.createElement("input");
-        add.type = "text";
-        add.name = "addknowledge6"+row;
-        add.size = "2";
-        add.addEventListener("change", (event) => {calcstatus6()});
-        td[6].appendChild(add);
-
-        let to = document.createElement("input");
-        to.type = "text";
-        to.name = "toknowledge6"+row;
-        to.size = "2";
-        to.value = defval;
-        to.readOnly = "readonly";
-        td[7].appendChild(to);
-
-        for(let i = 0; i < 8; i++){
-            tr.appendChild(td[i]);
-        }
-        document.getElementById("knowledge6").appendChild(tr);
-        
-    }else if(name == "standabilitybattle"){
-        defstandbattlenum++;
-        var row = document.getElementById("standabilitybattle6").rows.length - 1;
-        const td = [];
-        for(let i = 0; i < 7; i++){
-            td.push(document.createElement("td"));
-        }
-
-        let ch = document.createElement("input");
-        ch.type = "checkbox";
-        td[0].appendChild(ch);
-
-        if(intext){
-            let name = document.createTextNode(names);
-            let inp = document.createElement("input");
-            inp.type = "text";
-            inp.size = "10";
-            inp.name = "standabilitybattlename6"+row;
-            inp.className = "intext";
-            inp.value = "()";
-            name.name = intexttag;
-            td[1].appendChild(name);
-            td[1].appendChild(inp);
-        }else{
-            let name = document.createTextNode(names);
-            name.name = "standabilitybattlename6"+row;
-            td[1].appendChild(name);
-        }
-        
-
-        let def = document.createElement("input");
-        def.type = "text";
-        def.name = "defstandabilitybattle6"+row;
-        def.size = "2";
-        def.readOnly = "readonly";
-        def.value = defval;
-        td[2].appendChild(def);
-
-        let cor = document.createElement("input");
-        cor.type = "text";
-        cor.name = "corstandabilitybattle6"+row;
-        cor.className = "corstandbattle6";
-        cor.size = "2";
-        cor.readOnly = "readonly";
-        cor.value = "0";
-        td[3].appendChild(cor);
-
-        let pl = document.createElement("input");
-        pl.type = "text";
-        pl.name = "plstandabilitybattle6"+row;
-        pl.size = "2";
-        pl.addEventListener("change", (event) => {calcstatus6()});
-        td[4].appendChild(pl);
-
-        let add = document.createElement("input");
-        add.type = "text";
-        add.name = "addstandabilitybattle6"+row;
-        add.size = "2";
-        add.addEventListener("change", (event) => {calcstatus6()});
-        td[5].appendChild(add);
-
-        let to = document.createElement("input");
-        to.type = "text";
-        to.name = "tostandabilitybattle6"+row;
-        to.size = "2";
-        to.value = defval;
-        to.readOnly = "readonly";
-        td[6].appendChild(to);
-
-        for(let i = 0; i < 7; i++){
-            tr.appendChild(td[i]);
-        }
-        document.getElementById("standabilitybattle6").appendChild(tr);
-        
-    }else if(name == "standabilityaction"){
-        defstandactionnum++;
-        var row = document.getElementById("standabilityaction6").rows.length - 1;
-        const td = [];
-        for(let i = 0; i < 7; i++){
-            td.push(document.createElement("td"));
-        }
-
-        let ch = document.createElement("input");
-        ch.type = "checkbox";
-        td[0].appendChild(ch);
-
-        if(intext){
-            let name = document.createTextNode(names);
-            let inp = document.createElement("input");
-            inp.type = "text";
-            inp.size = "10";
-            inp.name = "standabilityactionname6"+row;
-            inp.className = "intext";
-            inp.value = "()";
-            name.name = intexttag;
-            td[1].appendChild(name);
-            td[1].appendChild(inp);
-        }else{
-            let name = document.createTextNode(names);
-            name.name = "standabilityactionname6"+row;
-            td[1].appendChild(name);
-        }
-        
-
-        let def = document.createElement("input");
-        def.type = "text";
-        def.name = "defstandabilityaction6"+row;
-        def.size = "2";
-        def.readOnly = "readonly";
-        def.value = defval;
-        td[2].appendChild(def);
-
-        let cor = document.createElement("input");
-        cor.type = "text";
-        cor.name = "corstandabilityaction6"+row;
-        cor.className = "corstandaction6";
-        cor.size = "2";
-        cor.readOnly = "readonly";
-        cor.value = "0";
-        td[3].appendChild(cor);
-
-        let pl = document.createElement("input");
-        pl.type = "text";
-        pl.name = "plstandabilityaction6"+row;
-        pl.size = "2";
-        pl.addEventListener("change", (event) => {calcstatus6()});
-        td[4].appendChild(pl);
-
-        let add = document.createElement("input");
-        add.type = "text";
-        add.name = "addstandabilityaction6"+row;
-        add.size = "2";
-        add.addEventListener("change", (event) => {calcstatus6()});
-        td[5].appendChild(add);
-
-        let to = document.createElement("input");
-        to.type = "text";
-        to.name = "tostandabilityaction6"+row;
-        to.size = "2";
-        to.value = defval;
-        to.readOnly = "readonly";
-        td[6].appendChild(to);
-
-        for(let i = 0; i < 7; i++){
-            tr.appendChild(td[i]);
-        }
-        document.getElementById("standabilityaction6").appendChild(tr);
-        
     }
+    
+    var row = document.getElementById("standability"+name+numb).rows.length - 1;
+    const td = [];
+    for(let i = 0; i < 7; i++){
+        td.push(document.createElement("td"));
+    }
+
+    let ch = document.createElement("input");
+    ch.type = "checkbox";
+    ch.name = "chstandability"+name+numb+row;
+    td[0].appendChild(ch);
+
+    if(intext){
+        let namess = document.createTextNode(names);
+        let inp = document.createElement("input");
+        inp.type = "text";
+        inp.size = "10";
+        inp.name = "standability"+name+"name"+numb+row;
+        inp.className = "intext";
+        inp.value = "()";
+        td[1].appendChild(namess);
+        td[1].appendChild(inp);
+    }else{
+        let namess = document.createTextNode(names);
+        namess.name = "standability"+name+"name"+numb+row;
+        td[1].appendChild(namess);
+    }
+    
+
+    let def = document.createElement("input");
+    def.type = "text";
+    def.name = "defstandability"+name+numb+row;
+    def.size = "2";
+    def.readOnly = "readonly";
+    def.value = defval;
+    td[2].appendChild(def);
+
+    let cor = document.createElement("input");
+    cor.type = "text";
+    cor.name = "corstandability"+name+numb+row;
+    cor.className = "corstand"+name+numb;
+    cor.size = "2";
+    cor.readOnly = "readonly";
+    cor.value = "0";
+    td[3].appendChild(cor);
+
+    let pl = document.createElement("input");
+    pl.type = "text";
+    pl.name = "plstandability"+name+numb+row;
+    pl.size = "2";
+    pl.addEventListener("change", (event) => {calcstatus6()});
+    td[4].appendChild(pl);
+
+    let add = document.createElement("input");
+    add.type = "text";
+    add.name = "addstandability"+name+numb+row;
+    add.size = "2";
+    add.addEventListener("change", (event) => {calcstatus6()});
+    td[5].appendChild(add);
+
+    let to = document.createElement("input");
+    to.type = "text";
+    to.name = "tostandability"+name+numb+row;
+    to.size = "2";
+    to.value = defval;
+    to.readOnly = "readonly";
+    td[6].appendChild(to);
+
+    for(let i = 0; i < 7; i++){
+        tr.appendChild(td[i]);
+    }
+    document.getElementById("standability"+name+numb).appendChild(tr);
 }
 
-function add6(name){
+function adddefpc(numb, name, names, defval, intext){
     let tr = document.createElement("tr");
-    if(name == "battle"){
-        var row = document.getElementById("battle6").rows.length - 1;
-        const td = [];
-        for(let i = 0; i < 8; i++){
-            td.push(document.createElement("td"));
+    var row = document.getElementById(name + numb).rows.length - 1;
+    const td = [];
+    for(let i = 0; i < 8; i++){
+        td.push(document.createElement("td"));
+    }
+    if(numb == 6){
+        if(name == "battle"){
+            defpcbattlenum6++;
+        }else if(name == "search"){
+            defpcsearchnum6++;
+        }else if(name == "action"){
+            defpcactionnum6++;
+        }else if(name == "negotiations"){
+            defpcnegotiationsnum6++;
+        }else if(name == "knowledge"){
+            defpcknowledgenum6++;
         }
-
-        let ch = document.createElement("input");
-        ch.type = "checkbox";
-        td[0].appendChild(ch);
-
-        let name = document.createElement("input");
-        name.type = "text";
-        name.name = "battlename6"+row;
-        name.size = "16";
-        td[1].appendChild(name);
-
-        let def = document.createElement("input");
-        def.type = "text";
-        def.name = "defbattle6"+row;
-        def.size = "2";
-        def.value = 0;
-        def.addEventListener("change", (event) => {calcstatus6()});
-        td[2].appendChild(def);
-
-        let bp = document.createElement("input");
-        bp.type = "text";
-        bp.name = "bpbattle6"+row;
-        bp.size = "2";
-        bp.value = 0;
-        bp.addEventListener("change", (event) => {calcstatus6()});
-        td[3].appendChild(bp);
-        
-        let ip = document.createElement("input");
-        ip.type = "text";
-        ip.name = "ipbattle6"+row;
-        ip.size = "2";
-        ip.value = 0;
-        ip.addEventListener("change", (event) => {calcstatus6()});
-        td[4].appendChild(ip);
-
-        let pl = document.createElement("input");
-        pl.type = "text";
-        pl.name = "plbattle6"+row;
-        pl.size = "2";
-        pl.value = 0;
-        pl.addEventListener("change", (event) => {calcstatus6()});
-        td[5].appendChild(pl);
-
-        let add = document.createElement("input");
-        add.type = "text";
-        add.name = "addbattle6"+row;
-        add.size = "2";
-        add.value = 0;
-        add.addEventListener("change", (event) => {calcstatus6()});
-        td[6].appendChild(add);
-
-        let to = document.createElement("input");
-        to.type = "text";
-        to.name = "tobattle6"+row;
-        to.size = "2";
-        to.value = 0;
-        to.readOnly = "readonly";
-        td[7].appendChild(to);
-
-        for(let i = 0; i < 8; i++){
-            tr.appendChild(td[i]);
+    }else if(numb == 7){
+        if(name == "battle"){
+            defpcbattlenum7++;
+        }else if(name == "search"){
+            defpcsearchnum7++;
+        }else if(name == "action"){
+            defpcactionnum7++;
+        }else if(name == "negotiations"){
+            defpcnegotiationsnum7++;
+        }else if(name == "knowledge"){
+            defpcknowledgenum7++;
         }
-        document.getElementById("battle6").appendChild(tr);
-    }else if(name == "search"){
-        var row = document.getElementById("search6").rows.length - 1;
-        const td = [];
-        for(let i = 0; i < 8; i++){
-            td.push(document.createElement("td"));
+    }
+    
+    let ch = document.createElement("input");
+    ch.type = "checkbox";
+    ch.name = "ch"+name+numb+row;
+    td[0].appendChild(ch);
+
+    if(intext){
+        let namess = document.createTextNode(names);
+        let inp = document.createElement("input");
+        inp.type = "text";
+        inp.size = "10";
+        inp.name = name + "name"+numb+row;
+        inp.className = "intext";
+        inp.value = "()";
+        td[1].appendChild(namess);
+        td[1].appendChild(inp);
+    }else{
+        let namess = document.createTextNode(names);
+        namess.name = name + "name"+numb+row;
+        td[1].appendChild(namess);
+    }
+    
+
+    let def = document.createElement("input");
+    def.type = "text";
+    def.name = "def" + name + numb +row;
+    def.size = "2";
+    def.readOnly = "readonly";
+    def.value = defval;
+    td[2].appendChild(def);
+
+    let bp = document.createElement("input");
+    bp.type = "text";
+    bp.name = "bp" + name + numb+row;
+    bp.size = "2";
+    bp.addEventListener("change", (event) => {calcstatus6()});
+    td[3].appendChild(bp);
+    
+    let ip = document.createElement("input");
+    ip.type = "text";
+    ip.name = "ip" + name + numb+row;
+    ip.size = "2";
+    ip.addEventListener("change", (event) => {calcstatus6()});
+    td[4].appendChild(ip);
+
+    let pl = document.createElement("input");
+    pl.type = "text";
+    pl.name = "pl" + name + numb+row;
+    pl.size = "2";
+    pl.addEventListener("change", (event) => {calcstatus6()});
+    td[5].appendChild(pl);
+
+    let add = document.createElement("input");
+    add.type = "text";
+    add.name = "add" + name + numb+row;
+    add.size = "2";
+    add.addEventListener("change", (event) => {calcstatus6()});
+    td[6].appendChild(add);
+
+    let to = document.createElement("input");
+    to.type = "text";
+    to.name = "to" + name + numb+row;
+    to.size = "2";
+    to.value = defval;
+    to.readOnly = "readonly";
+    td[7].appendChild(to);
+
+    for(let i = 0; i < 8; i++){
+        tr.appendChild(td[i]);
+    }
+    document.getElementById(name + numb).appendChild(tr);
+}
+
+function additem(numb){
+    let tr = document.createElement("tr");
+    var row = document.getElementById("items"+numb).rows.length - 1;
+    const td = [];
+    for(let i = 0; i < 3; i++){
+        td.push(document.createElement("td"));
+    }
+
+    let name = document.createElement("input");
+    name.type = "text";
+    name.name = "itemsname"+numb+row;
+    td[0].appendChild(name);
+
+    let num = document.createElement("input");
+    num.type = "text";
+    num.name = "itemsnum"+numb+row;
+    num.size = "2";
+    td[1].appendChild(num);
+
+    let detail = document.createElement("input");
+    detail.type = "text";
+    detail.name = "itemsdetail"+numb+row;
+    detail.size = "30";
+    td[2].appendChild(detail);
+
+    for(let i = 0; i < 3; i++){
+        tr.appendChild(td[i]);
+    }
+    document.getElementById("items"+numb).appendChild(tr);
+    if(numb == 6) calc6();
+}
+
+function addstand(numb, name){
+    let tr = document.createElement("tr");
+    var row = document.getElementById("standability"+name+numb).rows.length - 1;
+    const td = [];
+    for(let i = 0; i < 7; i++){
+        td.push(document.createElement("td"));
+    }
+
+    let ch = document.createElement("input");
+    ch.type = "checkbox";
+    ch.name = "chstandability"+name+numb+row;
+    td[0].appendChild(ch);
+
+    let names = document.createElement("input");
+    names.type = "text";
+    names.name = "standability"+name+"name"+numb+row;
+    names.size = "16";
+    td[1].appendChild(names);
+
+    let def = document.createElement("input");
+    def.type = "text";
+    def.name = "defstandability"+name+numb+row;
+    def.size = "2";
+    def.value = 0;
+    def.addEventListener("change", (event) => {calcstatus6()});
+    td[2].appendChild(def);
+
+    let cor = document.createElement("input");
+    cor.type = "text";
+    cor.name = "corstandability"+name+numb+row;
+    cor.className = "corstand"+name+numb;
+    cor.size = "2";
+    cor.readOnly = "readonly";
+    td[3].appendChild(cor);
+
+    let pl = document.createElement("input");
+    pl.type = "text";
+    pl.name = "plstandability"+name+numb+row;
+    pl.size = "2";
+    pl.value = 0;
+    pl.addEventListener("change", (event) => {calcstatus6()});
+    td[4].appendChild(pl);
+
+    let add = document.createElement("input");
+    add.type = "text";
+    add.name = "addstandability"+name+numb+row;
+    add.size = "2";
+    add.value = 0;
+    add.addEventListener("change", (event) => {calcstatus6()});
+    td[5].appendChild(add);
+
+    let to = document.createElement("input");
+    to.type = "text";
+    to.name = "tostandability"+name+numb+row;
+    to.size = "2";
+    to.readOnly = "readonly";
+    td[6].appendChild(to);
+
+    for(let i = 0; i < 7; i++){
+        tr.appendChild(td[i]);
+    }
+    document.getElementById("standability"+name+numb).appendChild(tr);
+    if(numb == 6) calc6();
+}
+
+function addpc(numb, name){
+    let tr = document.createElement("tr");
+    var row = document.getElementById(name + numb).rows.length - 1;
+    const td = [];
+    for(let i = 0; i < 8; i++){
+        td.push(document.createElement("td"));
+    }
+
+    let ch = document.createElement("input");
+    ch.type = "checkbox";
+    ch.name = "ch"+name+numb+row;
+    td[0].appendChild(ch);
+
+    let names = document.createElement("input");
+    names.type = "text";
+    names.name = name + "name"+numb+row;
+    names.size = "16";
+    td[1].appendChild(names);
+
+    let def = document.createElement("input");
+    def.type = "text";
+    def.name = "def"+name+numb+row;
+    def.size = "2";
+    def.value = 0;
+    def.addEventListener("change", (event) => {calcstatus6()});
+    td[2].appendChild(def);
+
+    let bp = document.createElement("input");
+    bp.type = "text";
+    bp.name = "bp"+name+numb+row;
+    bp.size = "2";
+    bp.value = 0;
+    bp.addEventListener("change", (event) => {calcstatus6()});
+    td[3].appendChild(bp);
+    
+    let ip = document.createElement("input");
+    ip.type = "text";
+    ip.name = "ip"+name+numb+row;
+    ip.size = "2";
+    ip.value = 0;
+    ip.addEventListener("change", (event) => {calcstatus6()});
+    td[4].appendChild(ip);
+
+    let pl = document.createElement("input");
+    pl.type = "text";
+    pl.name = "pl"+name+numb+row;
+    pl.size = "2";
+    pl.value = 0;
+    pl.addEventListener("change", (event) => {calcstatus6()});
+    td[5].appendChild(pl);
+
+    let add = document.createElement("input");
+    add.type = "text";
+    add.name = "add"+name+numb+row;
+    add.size = "2";
+    add.value = 0;
+    add.addEventListener("change", (event) => {calcstatus6()});
+    td[6].appendChild(add);
+
+    let to = document.createElement("input");
+    to.type = "text";
+    to.name = "to"+name+numb+row;
+    to.size = "2";
+    to.value = 0;
+    to.readOnly = "readonly";
+    td[7].appendChild(to);
+
+    for(let i = 0; i < 8; i++){
+        tr.appendChild(td[i]);
+    }
+    document.getElementById(name+numb).appendChild(tr);
+    if(numb == 6) calc6();
+}
+
+function del(numb, name){
+    var rowscount = 1;
+    if(numb == 6){
+        if(name == "battle"){
+            rowscount = defpcbattlenum6+1;
+        }else if(name == "search"){
+            rowscount = defpcsearchnum6+1;
+        }else if(name == "action"){
+            rowscount = defpcactionnum6+1;
+        }else if(name == "negotiations"){
+            rowscount = defpcnegotiationsnum6+1;
+        }else if(name == "knowledge"){
+            rowscount = defpcknowledgenum6+1;
+        }else if(name == "etc"){
+            rowscount = defpcetcnum6+1;
+        }else if(name == "standabilitybattle"){
+            rowscount = defstandbattlenum6+1;
+        }else if(name == "standabilityaction"){
+            rowscount = defstandactionnum6+1;
+        }else if(name == "items"){
+            rowscount = defpcitemsnum6+1;
         }
-
-        let ch = document.createElement("input");
-        ch.type = "checkbox";
-        td[0].appendChild(ch);
-
-        let name = document.createElement("input");
-        name.type = "text";
-        name.name = "searchname6"+row;
-        name.size = "16";
-        td[1].appendChild(name);
-
-        let def = document.createElement("input");
-        def.type = "text";
-        def.name = "defsearch6"+row;
-        def.size = "2";
-        def.value = 0;
-        def.addEventListener("change", (event) => {calcstatus6()});
-        td[2].appendChild(def);
-
-        let bp = document.createElement("input");
-        bp.type = "text";
-        bp.name = "bpsearch6"+row;
-        bp.size = "2";
-        bp.value = 0;
-        bp.addEventListener("change", (event) => {calcstatus6()});
-        td[3].appendChild(bp);
-        
-        let ip = document.createElement("input");
-        ip.type = "text";
-        ip.name = "ipsearch6"+row;
-        ip.size = "2";
-        ip.value = 0;
-        ip.addEventListener("change", (event) => {calcstatus6()});
-        td[4].appendChild(ip);
-
-        let pl = document.createElement("input");
-        pl.type = "text";
-        pl.name = "plsearch6"+row;
-        pl.size = "2";
-        pl.value = 0;
-        pl.addEventListener("change", (event) => {calcstatus6()});
-        td[5].appendChild(pl);
-
-        let add = document.createElement("input");
-        add.type = "text";
-        add.name = "addsearch6"+row;
-        add.size = "2";
-        add.value = 0;
-        add.addEventListener("change", (event) => {calcstatus6()});
-        td[6].appendChild(add);
-
-        let to = document.createElement("input");
-        to.type = "text";
-        to.name = "tosearch6"+row;
-        to.size = "2";
-        to.readOnly = "readonly";
-        to.value = 0;
-        td[7].appendChild(to);
-
-        for(let i = 0; i < 8; i++){
-            tr.appendChild(td[i]);
+    }else if(numb == 7){
+        if(name == "battle"){
+            rowscount = defpcbattlenum7+1;
+        }else if(name == "search"){
+            rowscount = defpcsearchnum7+1;
+        }else if(name == "action"){
+            rowscount = defpcactionnum7+1;
+        }else if(name == "negotiations"){
+            rowscount = defpcnegotiationsnum7+1;
+        }else if(name == "knowledge"){
+            rowscount = defpcknowledgenum7+1;
+        }else if(name == "etc"){
+            rowscount = defpcetcnum7+1;
+        }else if(name == "standabilitybattle"){
+            rowscount = defstandbattlenum7+1;
+        }else if(name == "standabilityaction"){
+            rowscount = defstandactionnum7+1;
+        }else if(name == "items"){
+            rowscount = defpcitemsnum7+1;
         }
-        document.getElementById("search6").appendChild(tr);
-    }else if(name == "action"){
-        var row = document.getElementById("action6").rows.length - 1;
-        const td = [];
-        for(let i = 0; i < 8; i++){
-            td.push(document.createElement("td"));
+    }
+    
+    if(document.getElementById(name+numb).rows.length > rowscount){
+        document.getElementById(name+numb).deleteRow(document.getElementById(name+numb).rows.length - 1);
+    }
+    
+}
+
+function addpcload(numb, name, data){
+    let tr = document.createElement("tr");
+    var row = document.getElementById(name + numb).rows.length - 1;
+    const td = [];
+    for(let i = 0; i < 8; i++){
+        td.push(document.createElement("td"));
+    }
+
+    let ch = document.createElement("input");
+    ch.type = "checkbox";
+    ch.name = "ch"+name+numb+row;
+    ch.checked = data.isgrowth;
+    td[0].appendChild(ch);
+
+    let namess = document.createElement("input");
+    namess.type = "text";
+    namess.name = name + "name"+numb+row;
+    namess.size = "16";
+    namess.value = data.name;
+    td[1].appendChild(namess);
+
+    let def = document.createElement("input");
+    def.type = "text";
+    def.name = "def"+name+numb+row;
+    def.size = "2";
+    def.value = data.num[0];
+    def.addEventListener("change", (event) => {calcstatus6()});
+    td[2].appendChild(def);
+
+    let bp = document.createElement("input");
+    bp.type = "text";
+    bp.name = "bp"+name+numb+row;
+    bp.size = "2";
+    bp.value = data.num[1];
+    bp.addEventListener("change", (event) => {calcstatus6()});
+    td[3].appendChild(bp);
+    
+    let ip = document.createElement("input");
+    ip.type = "text";
+    ip.name = "ip"+name+numb+row;
+    ip.size = "2";
+    ip.value = data.num[2];
+    ip.addEventListener("change", (event) => {calcstatus6()});
+    td[4].appendChild(ip);
+
+    let pl = document.createElement("input");
+    pl.type = "text";
+    pl.name = "pl"+name+numb+row;
+    pl.size = "2";
+    pl.value = data.num[3];
+    pl.addEventListener("change", (event) => {calcstatus6()});
+    td[5].appendChild(pl);
+
+    let add = document.createElement("input");
+    add.type = "text";
+    add.name = "add"+name+numb+row;
+    add.size = "2";
+    add.value = data.num[4];
+    add.addEventListener("change", (event) => {calcstatus6()});
+    td[6].appendChild(add);
+
+    let to = document.createElement("input");
+    to.type = "text";
+    to.name = "to"+name+numb+row;
+    to.size = "2";
+    to.value = data.num[5];
+    to.readOnly = "readonly";
+    td[7].appendChild(to);
+
+    for(let i = 0; i < 8; i++){
+        tr.appendChild(td[i]);
+    }
+    document.getElementById(name + numb).appendChild(tr);
+}
+
+function loadaddpc(numb, name, data){
+    let status = data;
+    let tag = name;
+    let defrow = 0;
+
+    if(numb == 6){
+        if(tag == "battle"){
+            defrow = defpcbattlenum6;
+        }else if(tag == "search"){
+            defrow = defpcsearchnum6;
+        }else if(tag == "action"){
+            defrow = defpcactionnum6;
+        }else if(tag == "negotiations"){
+            defrow = defpcnegotiationsnum6;
+        }else if(tag == "knowledge"){
+            defrow = defpcknowledgenum6;
         }
-
-        let ch = document.createElement("input");
-        ch.type = "checkbox";
-        td[0].appendChild(ch);
-
-        let name = document.createElement("input");
-        name.type = "text";
-        name.name = "actionname6"+row;
-        name.size = "16";
-        td[1].appendChild(name);
-
-        let def = document.createElement("input");
-        def.type = "text";
-        def.name = "defaction6"+row;
-        def.size = "2";
-        def.value = 0;
-        def.addEventListener("change", (event) => {calcstatus6()});
-        td[2].appendChild(def);
-
-        let bp = document.createElement("input");
-        bp.type = "text";
-        bp.name = "bpaction6"+row;
-        bp.size = "2";
-        bp.value = 0;
-        bp.addEventListener("change", (event) => {calcstatus6()});
-        td[3].appendChild(bp);
-        
-        let ip = document.createElement("input");
-        ip.type = "text";
-        ip.name = "ipaction6"+row;
-        ip.size = "2";
-        ip.value = 0;
-        ip.addEventListener("change", (event) => {calcstatus6()});
-        td[4].appendChild(ip);
-
-        let pl = document.createElement("input");
-        pl.type = "text";
-        pl.name = "plaction6"+row;
-        pl.size = "2";
-        pl.value = 0;
-        pl.addEventListener("change", (event) => {calcstatus6()});
-        td[5].appendChild(pl);
-
-        let add = document.createElement("input");
-        add.type = "text";
-        add.name = "addaction6"+row;
-        add.size = "2";
-        add.value = 0;
-        add.addEventListener("change", (event) => {calcstatus6()});
-        td[6].appendChild(add);
-
-        let to = document.createElement("input");
-        to.type = "text";
-        to.name = "toaction6"+row;
-        to.size = "2";
-        to.readOnly = "readonly";
-        to.value = 0;
-        td[7].appendChild(to);
-
-        for(let i = 0; i < 8; i++){
-            tr.appendChild(td[i]);
+    }else if(numb == 7){
+        if(tag == "battle"){
+            defrow = defpcbattlenum7;
+        }else if(tag == "search"){
+            defrow = defpcsearchnum7;
+        }else if(tag == "action"){
+            defrow = defpcactionnum7;
+        }else if(tag == "negotiations"){
+            defrow = defpcnegotiationsnum7;
+        }else if(tag == "knowledge"){
+            defrow = defpcknowledgenum7;
         }
-        document.getElementById("action6").appendChild(tr);
-    }else if(name == "negotiations"){
-        var row = document.getElementById("negotiations6").rows.length - 1;
-        const td = [];
-        for(let i = 0; i < 8; i++){
-            td.push(document.createElement("td"));
+    }
+
+    for(let table = 0; table < status.length; table++){
+        if(table < defrow){
+            document.getElementsByName("ch"+tag+numb+table)[0].checked = status[table].growth;
+            if(status[table].isinput) document.getElementsByName(tag+"name"+numb+table)[0].value = status[table].inputname;
+            document.getElementsByName("def"+tag+numb+table)[0].value = status[table].num[0];
+            document.getElementsByName("bp"+tag+numb+table)[0].value = status[table].num[1];
+            document.getElementsByName("ip"+tag+numb+table)[0].value = status[table].num[2];
+            document.getElementsByName("pl"+tag+numb+table)[0].value = status[table].num[3];
+            document.getElementsByName("add"+tag+numb+table)[0].value = status[table].num[4];
+            document.getElementsByName("to"+tag+numb+table)[0].value = status[table].num[5];
+        }else{
+            addpcload(numb, tag, status[table]);
         }
+    }
+    
+    
+}
 
-        let ch = document.createElement("input");
-        ch.type = "checkbox";
-        td[0].appendChild(ch);
+function addstandload(numb, name, data){
+    let tr = document.createElement("tr");
+    var row = document.getElementById(name + numb).rows.length - 1;
+    const td = [];
+    for(let i = 0; i < 7; i++){
+        td.push(document.createElement("td"));
+    }
 
-        let name = document.createElement("input");
-        name.type = "text";
-        name.name = "negotiationsname6"+row;
-        name.size = "16";
-        td[1].appendChild(name);
+    let ch = document.createElement("input");
+    ch.type = "checkbox";
+    ch.name = "ch"+name+numb+row;
+    ch.checked = data.isgrowth;
+    td[0].appendChild(ch);
 
-        let def = document.createElement("input");
-        def.type = "text";
-        def.name = "defnegotiations6"+row;
-        def.size = "2";
-        def.value = 0;
-        def.addEventListener("change", (event) => {calcstatus6()});
-        td[2].appendChild(def);
+    let namess = document.createElement("input");
+    namess.type = "text";
+    namess.name = name + "name"+numb+row;
+    namess.size = "16";
+    namess.value = data.name;
+    td[1].appendChild(namess);
 
-        let bp = document.createElement("input");
-        bp.type = "text";
-        bp.name = "bpnegotiations6"+row;
-        bp.size = "2";
-        bp.value = 0;
-        bp.addEventListener("change", (event) => {calcstatus6()});
-        td[3].appendChild(bp);
-        
-        let ip = document.createElement("input");
-        ip.type = "text";
-        ip.name = "ipnegotiations6"+row;
-        ip.size = "2";
-        ip.value = 0;
-        ip.addEventListener("change", (event) => {calcstatus6()});
-        td[4].appendChild(ip);
+    let def = document.createElement("input");
+    def.type = "text";
+    def.name = "def"+name+numb+row;
+    def.size = "2";
+    def.value = data.num[0];
+    def.addEventListener("change", (event) => {calcstatus6()});
+    td[2].appendChild(def);
 
-        let pl = document.createElement("input");
-        pl.type = "text";
-        pl.name = "plnegotiations6"+row;
-        pl.size = "2";
-        pl.value = 0;
-        pl.addEventListener("change", (event) => {calcstatus6()});
-        td[5].appendChild(pl);
+    let cor = document.createElement("input");
+    cor.type = "text";
+    cor.name = "cor"+name+numb+row;
+    cor.size = "2";
+    cor.value = data.num[1];
+    cor.addEventListener("change", (event) => {calcstatus6()});
+    td[3].appendChild(cor);
 
-        let add = document.createElement("input");
-        add.type = "text";
-        add.name = "addnegotiations6"+row;
-        add.size = "2";
-        add.value = 0;
-        add.addEventListener("change", (event) => {calcstatus6()});
-        td[6].appendChild(add);
+    let pl = document.createElement("input");
+    pl.type = "text";
+    pl.name = "pl"+name+numb+row;
+    pl.size = "2";
+    pl.value = data.num[2];
+    pl.addEventListener("change", (event) => {calcstatus6()});
+    td[4].appendChild(pl);
 
-        let to = document.createElement("input");
-        to.type = "text";
-        to.name = "tonegotiations6"+row;
-        to.size = "2";
-        to.value = 0;
-        to.readOnly = "readonly";
-        td[7].appendChild(to);
+    let add = document.createElement("input");
+    add.type = "text";
+    add.name = "add"+name+numb+row;
+    add.size = "2";
+    add.value = data.num[3];
+    add.addEventListener("change", (event) => {calcstatus6()});
+    td[5].appendChild(add);
 
-        for(let i = 0; i < 8; i++){
-            tr.appendChild(td[i]);
+    let to = document.createElement("input");
+    to.type = "text";
+    to.name = "to"+name+numb+row;
+    to.size = "2";
+    to.value = data.num[4];
+    to.readOnly = "readonly";
+    td[6].appendChild(to);
+
+    for(let i = 0; i < 7; i++){
+        tr.appendChild(td[i]);
+    }
+    document.getElementById(name + numb).appendChild(tr);
+}
+
+function loadaddstand(numb, name, data){
+    let status = data;
+    let tag = "standability" + name;
+    let defrow = 0;
+
+    if(numb == 6){
+        if(name == "battle"){
+            defrow = defstandbattlenum6;
+        }else if(name == "action"){
+            defrow = defstandactionnum6;
         }
-        document.getElementById("negotiations6").appendChild(tr);
-    }else if(name == "knowledge"){
-        var row = document.getElementById("knowledge6").rows.length - 1;
-        const td = [];
-        for(let i = 0; i < 8; i++){
-            td.push(document.createElement("td"));
+    }else if(numb == 7){
+        if(name == "battle"){
+            defrow = defstandbattlenum7;
+        }else if(name == "action"){
+            defrow = defstandactionnum7;
         }
+    }
 
-        let ch = document.createElement("input");
-        ch.type = "checkbox";
-        td[0].appendChild(ch);
-
-        let name = document.createElement("input");
-        name.type = "text";
-        name.name = "knowledgename6"+row;
-        name.size = "16";
-        td[1].appendChild(name);
-
-        let def = document.createElement("input");
-        def.type = "text";
-        def.name = "defknowledge6"+row;
-        def.size = "2";
-        def.value = 0;
-        def.addEventListener("change", (event) => {calcstatus6()});
-        td[2].appendChild(def);
-
-        let bp = document.createElement("input");
-        bp.type = "text";
-        bp.name = "bpknowledge6"+row;
-        bp.size = "2";
-        bp.value = 0;
-        bp.addEventListener("change", (event) => {calcstatus6()});
-        td[3].appendChild(bp);
-        
-        let ip = document.createElement("input");
-        ip.type = "text";
-        ip.name = "ipknowledge6"+row;
-        ip.size = "2";
-        ip.value = 0;
-        ip.addEventListener("change", (event) => {calcstatus6()});
-        td[4].appendChild(ip);
-
-        let pl = document.createElement("input");
-        pl.type = "text";
-        pl.name = "plknowledge6"+row;
-        pl.size = "2";
-        pl.value = 0;
-        pl.addEventListener("change", (event) => {calcstatus6()});
-        td[5].appendChild(pl);
-
-        let add = document.createElement("input");
-        add.type = "text";
-        add.name = "addknowledge6"+row;
-        add.size = "2";
-        add.value = 0;
-        add.addEventListener("change", (event) => {calcstatus6()});
-        td[6].appendChild(add);
-
-        let to = document.createElement("input");
-        to.type = "text";
-        to.name = "toknowledge6"+row;
-        to.size = "2";
-        to.value = 0;
-        to.readOnly = "readonly";
-        td[7].appendChild(to);
-
-        for(let i = 0; i < 8; i++){
-            tr.appendChild(td[i]);
+    for(let table = 0; table < status.length; table++){
+        if(table < defrow){
+            document.getElementsByName("ch"+tag+numb+table)[0].checked = status[table].growth;
+            if(status[table].isinput) document.getElementsByName(tag+"name"+numb+table)[0].value = status[table].inputname;
+            document.getElementsByName("def"+tag+numb+table)[0].value = status[table].num[0];
+            document.getElementsByName("cor"+tag+numb+table)[0].value = status[table].num[1];
+            document.getElementsByName("pl"+tag+numb+table)[0].value = status[table].num[2];
+            document.getElementsByName("add"+tag+numb+table)[0].value = status[table].num[3];
+            document.getElementsByName("to"+tag+numb+table)[0].value = status[table].num[4];
+        }else{
+            addstandload(numb, tag, status[table]);
         }
-        document.getElementById("knowledge6").appendChild(tr);
-    }else if(name == "etc"){
-        var row = document.getElementById("etc6").rows.length - 1;
-        const td = [];
-        for(let i = 0; i < 8; i++){
-            td.push(document.createElement("td"));
-        }
-
-        let ch = document.createElement("input");
-        ch.type = "checkbox";
-        td[0].appendChild(ch);
-
-        let name = document.createElement("input");
-        name.type = "text";
-        name.name = "etcname6"+row;
-        name.size = "16";
-        td[1].appendChild(name);
-
-        let def = document.createElement("input");
-        def.type = "text";
-        def.name = "defetc6"+row;
-        def.size = "2";
-        def.value = 0;
-        def.addEventListener("change", (event) => {calcstatus6()});
-        td[2].appendChild(def);
-
-        let bp = document.createElement("input");
-        bp.type = "text";
-        bp.name = "bpetc6"+row;
-        bp.size = "2";
-        bp.value = 0;
-        bp.addEventListener("change", (event) => {calcstatus6()});
-        td[3].appendChild(bp);
-        
-        let ip = document.createElement("input");
-        ip.type = "text";
-        ip.name = "ipetc6"+row;
-        ip.size = "2";
-        ip.value = 0;
-        ip.addEventListener("change", (event) => {calcstatus6()});
-        td[4].appendChild(ip);
-
-        let pl = document.createElement("input");
-        pl.type = "text";
-        pl.name = "pletc6"+row;
-        pl.size = "2";
-        pl.value = 0;
-        pl.addEventListener("change", (event) => {calcstatus6()});
-        td[5].appendChild(pl);
-
-        let add = document.createElement("input");
-        add.type = "text";
-        add.name = "addetc6"+row;
-        add.size = "2";
-        add.value = 0;
-        add.addEventListener("change", (event) => {calcstatus6()});
-        td[6].appendChild(add);
-
-        let to = document.createElement("input");
-        to.type = "text";
-        to.name = "toetc6"+row;
-        to.size = "2";
-        to.value = 0;
-        to.readOnly = "readonly";
-        td[7].appendChild(to);
-
-        for(let i = 0; i < 8; i++){
-            tr.appendChild(td[i]);
-        }
-        document.getElementById("etc6").appendChild(tr);
-    }else if(name == "standabilitybattle"){
-        var row = document.getElementById("standabilitybattle6").rows.length - 1;
-        const td = [];
-        for(let i = 0; i < 7; i++){
-            td.push(document.createElement("td"));
-        }
-
-        let ch = document.createElement("input");
-        ch.type = "checkbox";
-        td[0].appendChild(ch);
-
-        let name = document.createElement("input");
-        name.type = "text";
-        name.name = "standabilitybattlename6"+row;
-        name.size = "16";
-        td[1].appendChild(name);
-
-        let def = document.createElement("input");
-        def.type = "text";
-        def.name = "defstandabilitybattle6"+row;
-        def.size = "2";
-        def.value = 0;
-        def.addEventListener("change", (event) => {calcstatus6()});
-        td[2].appendChild(def);
-
-        let cor = document.createElement("input");
-        cor.type = "text";
-        cor.name = "corstandabilitybattle6"+row;
-        cor.className = "corstandbattle6";
-        cor.size = "2";
-        cor.readOnly = "readonly";
-        td[3].appendChild(cor);
-
-        let pl = document.createElement("input");
-        pl.type = "text";
-        pl.name = "plstandabilitybattle6"+row;
-        pl.size = "2";
-        pl.value = 0;
-        pl.addEventListener("change", (event) => {calcstatus6()});
-        td[4].appendChild(pl);
-
-        let add = document.createElement("input");
-        add.type = "text";
-        add.name = "addstandabilitybattle6"+row;
-        add.size = "2";
-        add.value = 0;
-        add.addEventListener("change", (event) => {calcstatus6()});
-        td[5].appendChild(add);
-
-        let to = document.createElement("input");
-        to.type = "text";
-        to.name = "tostandabilitybattle6"+row;
-        to.size = "2";
-        to.readOnly = "readonly";
-        td[6].appendChild(to);
-
-        for(let i = 0; i < 7; i++){
-            tr.appendChild(td[i]);
-        }
-        document.getElementById("standabilitybattle6").appendChild(tr);
-        calc6();
-    }else if(name == "standabilityaction"){
-        var row = document.getElementById("standabilityaction6").rows.length - 1;
-        const td = [];
-        for(let i = 0; i < 7; i++){
-            td.push(document.createElement("td"));
-        }
-
-        let ch = document.createElement("input");
-        ch.type = "checkbox";
-        td[0].appendChild(ch);
-
-        let name = document.createElement("input");
-        name.type = "text";
-        name.name = "standabilityactionname6"+row;
-        name.size = "16";
-        td[1].appendChild(name);
-
-        let def = document.createElement("input");
-        def.type = "text";
-        def.name = "defstandabilityaction6"+row;
-        def.size = "2";
-        def.value = 0;
-        def.addEventListener("change", (event) => {calcstatus6()});
-        td[2].appendChild(def);
-
-        let cor = document.createElement("input");
-        cor.type = "text";
-        cor.name = "corstandabilityaction6"+row;
-        cor.className = "corstandaction6";
-        cor.size = "2";
-        cor.readOnly = "readonly";
-        td[3].appendChild(cor);
-
-        let pl = document.createElement("input");
-        pl.type = "text";
-        pl.name = "plstandabilityaction6"+row;
-        pl.size = "2";
-        pl.value = 0;
-        pl.addEventListener("change", (event) => {calcstatus6()});
-        td[4].appendChild(pl);
-
-        let add = document.createElement("input");
-        add.type = "text";
-        add.name = "addstandabilityaction6"+row;
-        add.size = "2";
-        add.value = 0;
-        add.addEventListener("change", (event) => {calcstatus6()});
-        td[5].appendChild(add);
-
-        let to = document.createElement("input");
-        to.type = "text";
-        to.name = "tostandabilityaction6"+row;
-        to.size = "2";
-        to.readOnly = "readonly";
-        td[6].appendChild(to);
-
-        for(let i = 0; i < 7; i++){
-            tr.appendChild(td[i]);
-        }
-        document.getElementById("standabilityaction6").appendChild(tr);
-        calc6();
-    }else if(name == "items"){
-        
-        var row = document.getElementById("items6").rows.length - 1;
-        const td = [];
-        for(let i = 0; i < 3; i++){
-            td.push(document.createElement("td"));
-        }
-
-        let name = document.createElement("input");
-        name.type = "text";
-        name.name = "itemsname6"+row;
-        td[0].appendChild(name);
-
-        let num = document.createElement("input");
-        num.type = "text";
-        num.name = "itemsnum6"+row;
-        num.size = "2";
-        td[1].appendChild(num);
-
-        let detail = document.createElement("input");
-        detail.type = "text";
-        detail.name = "itemsdetail6"+row;
-        detail.size = "30";
-        td[2].appendChild(detail);
-
-        for(let i = 0; i < 3; i++){
-            tr.appendChild(td[i]);
-        }
-        document.getElementById("items6").appendChild(tr);
-        calc6();
     }
 }
 
-function del6(name){
-    if(name == "battle"){
-        if(document.getElementById("battle6").rows.length > defpcbattlenum+1){
-            document.getElementById("battle6").deleteRow(document.getElementById("battle6").rows.length - 1);
-        }
-    }else if(name == "search"){
-        if(document.getElementById("search6").rows.length > defpcsearchnum+1){
-            document.getElementById("search6").deleteRow(document.getElementById("search6").rows.length - 1);
-        }
-    }else if(name == "action"){
-        if(document.getElementById("action6").rows.length > defpcactionnum+1){
-            document.getElementById("action6").deleteRow(document.getElementById("action6").rows.length - 1);
-        }
-    }else if(name == "negotiations"){
-        if(document.getElementById("negotiations6").rows.length > defpcnegotiationsnum+1){
-            document.getElementById("negotiations6").deleteRow(document.getElementById("negotiations6").rows.length - 1);
-        }
-    }else if(name == "knowledge"){
-        if(document.getElementById("knowledge6").rows.length > defpcknowledgenum+1){
-            document.getElementById("knowledge6").deleteRow(document.getElementById("knowledge6").rows.length - 1);
-        }
-    }else if(name == "etc"){
-        if(document.getElementById("etc6").rows.length > defpcetcnum+1){
-            document.getElementById("etc6").deleteRow(document.getElementById("etc6").rows.length - 1);
-        }
-    }else if(name == "standabilitybattle"){
-        if(document.getElementById("standabilitybattle6").rows.length > defstandbattlenum+1){
-            document.getElementById("standabilitybattle6").deleteRow(document.getElementById("standabilitybattle6").rows.length - 1);
-        }
-    }else if(name == "standabilityaction"){
-        if(document.getElementById("standabilityaction6").rows.length > defstandactionnum+1){
-            document.getElementById("standabilityaction6").deleteRow(document.getElementById("standabilityaction6").rows.length - 1);
-        }
-    }else if(name == "items"){
-        if(document.getElementById("items6").rows.length > defpcitemsnum+1){
-            document.getElementById("items6").deleteRow(document.getElementById("items6").rows.length - 1);
-        }
+function additemsload(numb, data){
+    let tr = document.createElement("tr");
+    var row = document.getElementById("items"+numb).rows.length - 1;
+    const td = [];
+    for(let i = 0; i < 3; i++){
+        td.push(document.createElement("td"));
+    }
+
+    let name = document.createElement("input");
+    name.type = "text";
+    name.name = "itemsname"+numb+row;
+    name.value = data.name;
+    td[0].appendChild(name);
+
+    let num = document.createElement("input");
+    num.type = "text";
+    num.name = "itemsnum"+numb+row;
+    num.size = "2";
+    num.value = data.num;
+    td[1].appendChild(num);
+
+    let detail = document.createElement("input");
+    detail.type = "text";
+    detail.name = "itemsdetail"+numb+row;
+    detail.size = "30";
+    detail.value = data.detail;
+    td[2].appendChild(detail);
+
+    for(let i = 0; i < 3; i++){
+        tr.appendChild(td[i]);
+    }
+    document.getElementById("items"+numb).appendChild(tr);
+}
+
+function loadadditems(numb, data){
+    let status = data;
+
+    for(let table = 0; table < status.length; table++){
+        additemsload(numb, status[table]);
     }
 }
