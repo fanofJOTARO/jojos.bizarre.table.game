@@ -3,7 +3,7 @@ body{
     background-image: url("images/background.png");
     background-size: cover;
     background-attachment: fixed;
-    background-position: center 50px;
+    background-position: center top;
     background-color: #C0C0C0;
     margin: 0;
 }
@@ -51,7 +51,7 @@ button{
     padding: 0.75em 1em;              /* 内側の余白 */
     text-decoration: none;            /* リンクの下線を消す */
     color: black;                     /* 文字色：黒色 */
-    background-color: white;          /* 背景色：白色 */
+    background-color: rgba(255, 255, 255, 0.75);          /* 背景色：白色 */
     font-weight: bold;                /* 太字 */
     position: relative;               /* JavaScriptでz-indexを調整するために必要 */
 }
@@ -60,7 +60,7 @@ button{
     margin-top: -16px;        /* 上側にあるタブと1pxだけ重ねるために「-1px」を指定 */
     padding: 3em;            /* 内側の余白量 */
     padding-top: 1em;            /* 内側の余白量 */
-    background-color: white; /* 背景色：白色 */
+    background-color: rgba(255, 255, 255, 0.75); /* 背景色：白色 */
     position: relative;      /* z-indexを調整するために必要 */
     z-index: 0;              /* 重なり順序を「最も背面」にするため */
     margin-left: 50px;

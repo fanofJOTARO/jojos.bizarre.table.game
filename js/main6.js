@@ -1094,9 +1094,9 @@ function chapare6(){
     */
 }
 
-function savepage6(){
+function savepage6(type){
     const sheet = {
-        version: "1.1.0",
+        version: "2.0.1",
         url: "https://fanofjotaro.github.io/jojos.bizarre.table.game/",
         pcdetail: {
             name: "names",
@@ -1158,9 +1158,9 @@ function savepage6(){
     sheet.pcdetail.name = document.status6.charaname.value;
     sheet.pcdetail.usestand = document.status6.usestand.value;
     sheet.pcdetail.sex = document.status6.sex.value;
-    sheet.pcdetail.age = document.status6.age.value;
-    sheet.pcdetail.stature = document.status6.stature.value;
-    sheet.pcdetail.weight = document.status6.weight.value;
+    sheet.pcdetail.age = Number(document.status6.age.value);
+    sheet.pcdetail.stature = Number(document.status6.stature.value);
+    sheet.pcdetail.weight = Number(document.status6.weight.value);
     sheet.pcdetail.from = document.status6.from.value;
     sheet.pcdetail.heir = document.status6.heir.value;
     sheet.pcdetail.eye = document.status6.eye.value;
@@ -1171,67 +1171,67 @@ function savepage6(){
     sheet.standdetail.name = document.status6.standname.value;
     sheet.standdetail.detail = document.status6.standdetail.value;
 
-    sheet.pcstatus.str[0] = document.status6.str0.value;
-    sheet.pcstatus.str[1] = document.status6.str1.value;
-    sheet.pcstatus.str[2] = document.status6.str2.value;
-    sheet.pcstatus.con[0] = document.status6.con0.value;
-    sheet.pcstatus.con[1] = document.status6.con1.value;
-    sheet.pcstatus.con[2] = document.status6.con2.value;
-    sheet.pcstatus.pow[0] = document.status6.pow0.value;
-    sheet.pcstatus.pow[1] = document.status6.pow1.value;
-    sheet.pcstatus.pow[2] = document.status6.pow2.value;
-    sheet.pcstatus.dex[0] = document.status6.dex0.value;
-    sheet.pcstatus.dex[1] = document.status6.dex1.value;
-    sheet.pcstatus.dex[2] = document.status6.dex2.value;
-    sheet.pcstatus.app[0] = document.status6.app0.value;
-    sheet.pcstatus.app[1] = document.status6.app1.value;
-    sheet.pcstatus.app[2] = document.status6.app2.value;
-    sheet.pcstatus.siz[0] = document.status6.siz0.value;
-    sheet.pcstatus.siz[1] = document.status6.siz1.value;
-    sheet.pcstatus.siz[2] = document.status6.siz2.value;
-    sheet.pcstatus.int[0] = document.status6.int0.value;
-    sheet.pcstatus.int[1] = document.status6.int1.value;
-    sheet.pcstatus.int[2] = document.status6.int2.value;
-    sheet.pcstatus.edu[0] = document.status6.edu0.value;
-    sheet.pcstatus.edu[1] = document.status6.edu1.value;
-    sheet.pcstatus.edu[2] = document.status6.edu2.value;
-    sheet.pcstatus.hp[0] = document.status6.hp0.value;
-    sheet.pcstatus.hp[1] = document.status6.hp1.value;
-    sheet.pcstatus.hp[2] = document.status6.hp2.value;
-    sheet.pcstatus.mp[0] = document.status6.mp0.value;
-    sheet.pcstatus.mp[1] = document.status6.mp1.value;
-    sheet.pcstatus.mp[2] = document.status6.mp2.value;
-    sheet.pcstatus.san[0] = document.status6.san0.value;
-    sheet.pcstatus.san[1] = document.status6.san1.value;
-    sheet.pcstatus.san[2] = document.status6.san2.value;
-    sheet.pcstatus.idea[0] = document.status6.idea0.value;
-    sheet.pcstatus.idea[1] = document.status6.idea1.value;
-    sheet.pcstatus.idea[2] = document.status6.idea2.value;
-    sheet.pcstatus.luck[0] = document.status6.luck0.value;
-    sheet.pcstatus.luck[1] = document.status6.luck1.value;
-    sheet.pcstatus.luck[2] = document.status6.luck2.value;
-    sheet.pcstatus.know[0] = document.status6.know0.value;
-    sheet.pcstatus.know[1] = document.status6.know1.value;
-    sheet.pcstatus.know[2] = document.status6.know2.value;
+    sheet.pcstatus.str[0] = Number(document.status6.str0.value);
+    sheet.pcstatus.str[1] = Number(document.status6.str1.value);
+    sheet.pcstatus.str[2] = Number(document.status6.str2.value);
+    sheet.pcstatus.con[0] = Number(document.status6.con0.value);
+    sheet.pcstatus.con[1] = Number(document.status6.con1.value);
+    sheet.pcstatus.con[2] = Number(document.status6.con2.value);
+    sheet.pcstatus.pow[0] = Number(document.status6.pow0.value);
+    sheet.pcstatus.pow[1] = Number(document.status6.pow1.value);
+    sheet.pcstatus.pow[2] = Number(document.status6.pow2.value);
+    sheet.pcstatus.dex[0] = Number(document.status6.dex0.value);
+    sheet.pcstatus.dex[1] = Number(document.status6.dex1.value);
+    sheet.pcstatus.dex[2] = Number(document.status6.dex2.value);
+    sheet.pcstatus.app[0] = Number(document.status6.app0.value);
+    sheet.pcstatus.app[1] = Number(document.status6.app1.value);
+    sheet.pcstatus.app[2] = Number(document.status6.app2.value);
+    sheet.pcstatus.siz[0] = Number(document.status6.siz0.value);
+    sheet.pcstatus.siz[1] = Number(document.status6.siz1.value);
+    sheet.pcstatus.siz[2] = Number(document.status6.siz2.value);
+    sheet.pcstatus.int[0] = Number(document.status6.int0.value);
+    sheet.pcstatus.int[1] = Number(document.status6.int1.value);
+    sheet.pcstatus.int[2] = Number(document.status6.int2.value);
+    sheet.pcstatus.edu[0] = Number(document.status6.edu0.value);
+    sheet.pcstatus.edu[1] = Number(document.status6.edu1.value);
+    sheet.pcstatus.edu[2] = Number(document.status6.edu2.value);
+    sheet.pcstatus.hp[0] = Number(document.status6.hp0.value);
+    sheet.pcstatus.hp[1] = Number(document.status6.hp1.value);
+    sheet.pcstatus.hp[2] = Number(document.status6.hp2.value);
+    sheet.pcstatus.mp[0] = Number(document.status6.mp0.value);
+    sheet.pcstatus.mp[1] = Number(document.status6.mp1.value);
+    sheet.pcstatus.mp[2] = Number(document.status6.mp2.value);
+    sheet.pcstatus.san[0] = Number(document.status6.san0.value);
+    sheet.pcstatus.san[1] = Number(document.status6.san1.value);
+    sheet.pcstatus.san[2] = Number(document.status6.san2.value);
+    sheet.pcstatus.idea[0] = Number(document.status6.idea0.value);
+    sheet.pcstatus.idea[1] = Number(document.status6.idea1.value);
+    sheet.pcstatus.idea[2] = Number(document.status6.idea2.value);
+    sheet.pcstatus.luck[0] = Number(document.status6.luck0.value);
+    sheet.pcstatus.luck[1] = Number(document.status6.luck1.value);
+    sheet.pcstatus.luck[2] = Number(document.status6.luck2.value);
+    sheet.pcstatus.know[0] = Number(document.status6.know0.value);
+    sheet.pcstatus.know[1] = Number(document.status6.know1.value);
+    sheet.pcstatus.know[2] = Number(document.status6.know2.value);
 
     sheet.pcstatus.db    =    document.status6.db.value;
-    sheet.pcstatus.bp[0] = document.status6.curBP.value;
-    sheet.pcstatus.bp[1] = document.status6.maxBP.value;
-    sheet.pcstatus.ip[0] = document.status6.curIP.value;
-    sheet.pcstatus.ip[1] = document.status6.maxIP.value;
-    sheet.pcstatus.sp[0] = document.status6.curSP.value;
-    sheet.pcstatus.sp[1] = document.status6.maxSP.value;
+    sheet.pcstatus.bp[0] = Number(document.status6.curBP.value);
+    sheet.pcstatus.bp[1] = Number(document.status6.maxBP.value);
+    sheet.pcstatus.ip[0] = Number(document.status6.curIP.value);
+    sheet.pcstatus.ip[1] = Number(document.status6.maxIP.value);
+    sheet.pcstatus.sp[0] = Number(document.status6.curSP.value);
+    sheet.pcstatus.sp[1] = Number(document.status6.maxSP.value);
 
-    sheet.standstatus.parameter[0] = document.status6.power.value;
-    sheet.standstatus.parameter[1] = document.status6.speed.value;
-    sheet.standstatus.parameter[2] = document.status6.durability.value;
-    sheet.standstatus.parameter[3] = document.status6.range.value;
-    sheet.standstatus.parameter[4] = document.status6.accuracy.value;
-    sheet.standstatus.parameter[5] = document.status6.growth.value;
-    sheet.standstatus.parameter[6] = document.status6.dexS.value;
+    sheet.standstatus.parameter[0] = Number(document.status6.power.value);
+    sheet.standstatus.parameter[1] = Number(document.status6.speed.value);
+    sheet.standstatus.parameter[2] = Number(document.status6.durability.value);
+    sheet.standstatus.parameter[3] = Number(document.status6.range.value);
+    sheet.standstatus.parameter[4] = Number(document.status6.accuracy.value);
+    sheet.standstatus.parameter[5] = Number(document.status6.growth.value);
+    sheet.standstatus.parameter[6] = Number(document.status6.dexS.value);
     sheet.standstatus.db =           document.status6.dbS.value;
     sheet.standstatus.deffence =     document.status6.deffenceS.value;
-    sheet.standstatus.mpcost =       document.status6.usempS.value;
+    sheet.standstatus.mpcost =       Number(document.status6.usempS.value);
 
     var standabilitybattle = document.getElementById("standabilitybattle6");
     var standabilityaction = document.getElementById("standabilityaction6");
@@ -1275,11 +1275,11 @@ function savepage6(){
             standstatus.isinput = false;
             standstatus.inputname = "";
         }
-        standstatus.num[0] = document.getElementsByName("defstandabilitybattle6"+table)[0].value;
-        standstatus.num[1] = document.getElementsByName("corstandabilitybattle6"+table)[0].value;
-        standstatus.num[2] = document.getElementsByName("plstandabilitybattle6"+table)[0].value;
-        standstatus.num[3] = document.getElementsByName("addstandabilitybattle6"+table)[0].value;
-        standstatus.num[4] = document.getElementsByName("tostandabilitybattle6"+table)[0].value;
+        standstatus.num[0] = Number(document.getElementsByName("defstandabilitybattle6"+table)[0].value);
+        standstatus.num[1] = Number(document.getElementsByName("corstandabilitybattle6"+table)[0].value);
+        standstatus.num[2] = Number(document.getElementsByName("plstandabilitybattle6"+table)[0].value);
+        standstatus.num[3] = Number(document.getElementsByName("addstandabilitybattle6"+table)[0].value);
+        standstatus.num[4] = Number(document.getElementsByName("tostandabilitybattle6"+table)[0].value);
         sheet.standstatus.battle.push(standstatus);
     }
     for(let table = 0; table < standabilityaction.rows.length-1; table++){
@@ -1306,11 +1306,11 @@ function savepage6(){
             standstatus.isinput = false;
             standstatus.inputname = "";
         }
-        standstatus.num[0] = document.getElementsByName("defstandabilityaction6"+table)[0].value;
-        standstatus.num[1] = document.getElementsByName("corstandabilityaction6"+table)[0].value;
-        standstatus.num[2] = document.getElementsByName("plstandabilityaction6"+table)[0].value;
-        standstatus.num[3] = document.getElementsByName("addstandabilityaction6"+table)[0].value;
-        standstatus.num[4] = document.getElementsByName("tostandabilityaction6"+table)[0].value;
+        standstatus.num[0] = Number(document.getElementsByName("defstandabilityaction6"+table)[0].value);
+        standstatus.num[1] = Number(document.getElementsByName("corstandabilityaction6"+table)[0].value);
+        standstatus.num[2] = Number(document.getElementsByName("plstandabilityaction6"+table)[0].value);
+        standstatus.num[3] = Number(document.getElementsByName("addstandabilityaction6"+table)[0].value);
+        standstatus.num[4] = Number(document.getElementsByName("tostandabilityaction6"+table)[0].value);
         sheet.standstatus.action.push(standstatus);
     }
     for(let table = 0; table < battle.rows.length-1; table++){
@@ -1337,12 +1337,12 @@ function savepage6(){
             pcstatus.isinput = false;
             pcstatus.inputname = "";
         }
-        pcstatus.num[0] = document.getElementsByName("defbattle6"+table)[0].value;
-        pcstatus.num[1] = document.getElementsByName("bpbattle6"+table)[0].value;
-        pcstatus.num[2] = document.getElementsByName("ipbattle6"+table)[0].value;
-        pcstatus.num[3] = document.getElementsByName("plbattle6"+table)[0].value;
-        pcstatus.num[4] = document.getElementsByName("addbattle6"+table)[0].value;
-        pcstatus.num[5] = document.getElementsByName("tobattle6"+table)[0].value;
+        pcstatus.num[0] = Number(document.getElementsByName("defbattle6"+table)[0].value);
+        pcstatus.num[1] = Number(document.getElementsByName("bpbattle6"+table)[0].value);
+        pcstatus.num[2] = Number(document.getElementsByName("ipbattle6"+table)[0].value);
+        pcstatus.num[3] = Number(document.getElementsByName("plbattle6"+table)[0].value);
+        pcstatus.num[4] = Number(document.getElementsByName("addbattle6"+table)[0].value);
+        pcstatus.num[5] = Number(document.getElementsByName("tobattle6"+table)[0].value);
         sheet.pcstatus.battle.push(pcstatus);
     }
     for(let table = 0; table < search.rows.length-1; table++){
@@ -1369,12 +1369,12 @@ function savepage6(){
             pcstatus.isinput = false;
             pcstatus.inputname = "";
         }
-        pcstatus.num[0] = document.getElementsByName("defsearch6"+table)[0].value;
-        pcstatus.num[1] = document.getElementsByName("bpsearch6"+table)[0].value;
-        pcstatus.num[2] = document.getElementsByName("ipsearch6"+table)[0].value;
-        pcstatus.num[3] = document.getElementsByName("plsearch6"+table)[0].value;
-        pcstatus.num[4] = document.getElementsByName("addsearch6"+table)[0].value;
-        pcstatus.num[5] = document.getElementsByName("tosearch6"+table)[0].value;
+        pcstatus.num[0] = Number(document.getElementsByName("defsearch6"+table)[0].value);
+        pcstatus.num[1] = Number(document.getElementsByName("bpsearch6"+table)[0].value);
+        pcstatus.num[2] = Number(document.getElementsByName("ipsearch6"+table)[0].value);
+        pcstatus.num[3] = Number(document.getElementsByName("plsearch6"+table)[0].value);
+        pcstatus.num[4] = Number(document.getElementsByName("addsearch6"+table)[0].value);
+        pcstatus.num[5] = Number(document.getElementsByName("tosearch6"+table)[0].value);
         sheet.pcstatus.search.push(pcstatus);
     }
     for(let table = 0; table < action.rows.length-1; table++){
@@ -1401,12 +1401,12 @@ function savepage6(){
             pcstatus.isinput = false;
             pcstatus.inputname = "";
         }
-        pcstatus.num[0] = document.getElementsByName("defaction6"+table)[0].value;
-        pcstatus.num[1] = document.getElementsByName("bpaction6"+table)[0].value;
-        pcstatus.num[2] = document.getElementsByName("ipaction6"+table)[0].value;
-        pcstatus.num[3] = document.getElementsByName("plaction6"+table)[0].value;
-        pcstatus.num[4] = document.getElementsByName("addaction6"+table)[0].value;
-        pcstatus.num[5] = document.getElementsByName("toaction6"+table)[0].value;
+        pcstatus.num[0] = Number(document.getElementsByName("defaction6"+table)[0].value);
+        pcstatus.num[1] = Number(document.getElementsByName("bpaction6"+table)[0].value);
+        pcstatus.num[2] = Number(document.getElementsByName("ipaction6"+table)[0].value);
+        pcstatus.num[3] = Number(document.getElementsByName("plaction6"+table)[0].value);
+        pcstatus.num[4] = Number(document.getElementsByName("addaction6"+table)[0].value);
+        pcstatus.num[5] = Number(document.getElementsByName("toaction6"+table)[0].value);
         sheet.pcstatus.action.push(pcstatus);
     }
     for(let table = 0; table < negotiations.rows.length-1; table++){
@@ -1433,12 +1433,12 @@ function savepage6(){
             pcstatus.isinput = false;
             pcstatus.inputname = "";
         }
-        pcstatus.num[0] = document.getElementsByName("defnegotiations6"+table)[0].value;
-        pcstatus.num[1] = document.getElementsByName("bpnegotiations6"+table)[0].value;
-        pcstatus.num[2] = document.getElementsByName("ipnegotiations6"+table)[0].value;
-        pcstatus.num[3] = document.getElementsByName("plnegotiations6"+table)[0].value;
-        pcstatus.num[4] = document.getElementsByName("addnegotiations6"+table)[0].value;
-        pcstatus.num[5] = document.getElementsByName("tonegotiations6"+table)[0].value;
+        pcstatus.num[0] = Number(document.getElementsByName("defnegotiations6"+table)[0].value);
+        pcstatus.num[1] = Number(document.getElementsByName("bpnegotiations6"+table)[0].value);
+        pcstatus.num[2] = Number(document.getElementsByName("ipnegotiations6"+table)[0].value);
+        pcstatus.num[3] = Number(document.getElementsByName("plnegotiations6"+table)[0].value);
+        pcstatus.num[4] = Number(document.getElementsByName("addnegotiations6"+table)[0].value);
+        pcstatus.num[5] = Number(document.getElementsByName("tonegotiations6"+table)[0].value);
         sheet.pcstatus.negotiations.push(pcstatus);
     }
     for(let table = 0; table < knowledge.rows.length-1; table++){
@@ -1465,12 +1465,12 @@ function savepage6(){
             pcstatus.isinput = false;
             pcstatus.inputname = "";
         }
-        pcstatus.num[0] = document.getElementsByName("defknowledge6"+table)[0].value;
-        pcstatus.num[1] = document.getElementsByName("bpknowledge6"+table)[0].value;
-        pcstatus.num[2] = document.getElementsByName("ipknowledge6"+table)[0].value;
-        pcstatus.num[3] = document.getElementsByName("plknowledge6"+table)[0].value;
-        pcstatus.num[4] = document.getElementsByName("addknowledge6"+table)[0].value;
-        pcstatus.num[5] = document.getElementsByName("toknowledge6"+table)[0].value;
+        pcstatus.num[0] = Number(document.getElementsByName("defknowledge6"+table)[0].value);
+        pcstatus.num[1] = Number(document.getElementsByName("bpknowledge6"+table)[0].value);
+        pcstatus.num[2] = Number(document.getElementsByName("ipknowledge6"+table)[0].value);
+        pcstatus.num[3] = Number(document.getElementsByName("plknowledge6"+table)[0].value);
+        pcstatus.num[4] = Number(document.getElementsByName("addknowledge6"+table)[0].value);
+        pcstatus.num[5] = Number(document.getElementsByName("toknowledge6"+table)[0].value);
         sheet.pcstatus.knowledge.push(pcstatus);
     }
     for(let table = 0; table < etc.rows.length-1; table++){
@@ -1485,12 +1485,12 @@ function savepage6(){
         pcstatus.name = document.getElementsByName("etcname6"+table)[0].value;
         pcstatus.isinput = false;
         pcstatus.inputname = "";
-        pcstatus.num[0] = document.getElementsByName("defetc6"+table)[0].value;
-        pcstatus.num[1] = document.getElementsByName("bpetc6"+table)[0].value;
-        pcstatus.num[2] = document.getElementsByName("ipetc6"+table)[0].value;
-        pcstatus.num[3] = document.getElementsByName("pletc6"+table)[0].value;
-        pcstatus.num[4] = document.getElementsByName("addetc6"+table)[0].value;
-        pcstatus.num[5] = document.getElementsByName("toetc6"+table)[0].value;
+        pcstatus.num[0] = Number(document.getElementsByName("defetc6"+table)[0].value);
+        pcstatus.num[1] = Number(document.getElementsByName("bpetc6"+table)[0].value);
+        pcstatus.num[2] = Number(document.getElementsByName("ipetc6"+table)[0].value);
+        pcstatus.num[3] = Number(document.getElementsByName("pletc6"+table)[0].value);
+        pcstatus.num[4] = Number(document.getElementsByName("addetc6"+table)[0].value);
+        pcstatus.num[5] = Number(document.getElementsByName("toetc6"+table)[0].value);
         sheet.pcstatus.etc.push(pcstatus);
     }
     for(let table = 0; table < items.rows.length-1; table++){
@@ -1506,11 +1506,16 @@ function savepage6(){
     }
     
     const data = JSON.stringify(sheet);
-    const link = document.createElement("a");
+    if(type == "PC"){
+        const link = document.createElement("a");
 
-    link.href = "data:text/plain," + encodeURIComponent(data);
-    link.download = document.status6.charaname.value+"6版.json";
-    link.click();
+        link.href = "data:text/plain," + encodeURIComponent(data);
+        link.download = document.status6.charaname.value+"6版.json";
+        link.click();
+    }else{
+        navigator.clipboard.writeText(data);
+        document.getElementById("saveS6").innerText = "クリップボードにコピー済み";
+    }
 }
 
 function loadpage6(input){
@@ -1612,422 +1617,6 @@ function loadpage6(input){
     };
     reader.readAsText(input.files[0], "UTF-8");
     //let data = JSON.parse(reader.result);
-}
-
-function savepageS6(){
-    const sheet = {
-        version: "1.1.0",
-        url: "https://fanofjotaro.github.io/jojos.bizarre.table.game/",
-        pcdetail: {
-            name: "names",
-            usestand: true,
-            sex: "man",
-            age: 20,
-            stature: 175,
-            weight: 65,
-            from: "日本",
-            heir: "黒",
-            eye: "橙",
-            skin: "薄橙",
-            business: "会社員",
-            detail: "見本"
-        },
-        standdetail: {
-            name: "names",
-            detail: "見本"
-        },
-        items: [],
-        pcstatus: {
-            str: [0, 0, 0],
-            con: [0, 0, 0],
-            pow: [0, 0, 0],
-            dex: [0, 0, 0],
-            app: [0, 0, 0],
-            siz: [0, 0, 0],
-            int: [0, 0, 0],
-            edu: [0, 0, 0],
-            hp: [0, 0, 0],
-            mp: [0, 0, 0],
-            san: [0, 0, 0],
-            idea: [0, 0, 0],
-            luck: [0, 0, 0],
-            know: [0, 0, 0],
-            db: "0",
-            bp: [0, 0],
-            ip: [0, 0],
-            sp: [0, 0],
-            battle: [],
-            search: [],
-            action: [],
-            negotiations: [],
-            knowledge: [],
-            etc: []
-        },
-        standstatus: {
-            parameter: [0, 0, 0, 0, 0, 0, 0],
-            db: "-2d6",
-            deffence: "0",
-            mpcost: 5,
-            battle: [],
-            action: []
-        },
-    };
-    
-    
-    
-    sheet.pcdetail.name = document.status6.charaname.value;
-    sheet.pcdetail.usestand = document.status6.usestand.value;
-    sheet.pcdetail.sex = document.status6.sex.value;
-    sheet.pcdetail.age = document.status6.age.value;
-    sheet.pcdetail.stature = document.status6.stature.value;
-    sheet.pcdetail.weight = document.status6.weight.value;
-    sheet.pcdetail.from = document.status6.from.value;
-    sheet.pcdetail.heir = document.status6.heir.value;
-    sheet.pcdetail.eye = document.status6.eye.value;
-    sheet.pcdetail.skin = document.status6.skin.value;
-    sheet.pcdetail.business = document.status6.business.value;
-    sheet.pcdetail.detail = document.status6.charadetail.value;
-
-    sheet.standdetail.name = document.status6.standname.value;
-    sheet.standdetail.detail = document.status6.standdetail.value;
-
-    sheet.pcstatus.str[0] = document.status6.str0.value;
-    sheet.pcstatus.str[1] = document.status6.str1.value;
-    sheet.pcstatus.str[2] = document.status6.str2.value;
-    sheet.pcstatus.con[0] = document.status6.con0.value;
-    sheet.pcstatus.con[1] = document.status6.con1.value;
-    sheet.pcstatus.con[2] = document.status6.con2.value;
-    sheet.pcstatus.pow[0] = document.status6.pow0.value;
-    sheet.pcstatus.pow[1] = document.status6.pow1.value;
-    sheet.pcstatus.pow[2] = document.status6.pow2.value;
-    sheet.pcstatus.dex[0] = document.status6.dex0.value;
-    sheet.pcstatus.dex[1] = document.status6.dex1.value;
-    sheet.pcstatus.dex[2] = document.status6.dex2.value;
-    sheet.pcstatus.app[0] = document.status6.app0.value;
-    sheet.pcstatus.app[1] = document.status6.app1.value;
-    sheet.pcstatus.app[2] = document.status6.app2.value;
-    sheet.pcstatus.siz[0] = document.status6.siz0.value;
-    sheet.pcstatus.siz[1] = document.status6.siz1.value;
-    sheet.pcstatus.siz[2] = document.status6.siz2.value;
-    sheet.pcstatus.int[0] = document.status6.int0.value;
-    sheet.pcstatus.int[1] = document.status6.int1.value;
-    sheet.pcstatus.int[2] = document.status6.int2.value;
-    sheet.pcstatus.edu[0] = document.status6.edu0.value;
-    sheet.pcstatus.edu[1] = document.status6.edu1.value;
-    sheet.pcstatus.edu[2] = document.status6.edu2.value;
-    sheet.pcstatus.hp[0] = document.status6.hp0.value;
-    sheet.pcstatus.hp[1] = document.status6.hp1.value;
-    sheet.pcstatus.hp[2] = document.status6.hp2.value;
-    sheet.pcstatus.mp[0] = document.status6.mp0.value;
-    sheet.pcstatus.mp[1] = document.status6.mp1.value;
-    sheet.pcstatus.mp[2] = document.status6.mp2.value;
-    sheet.pcstatus.san[0] = document.status6.san0.value;
-    sheet.pcstatus.san[1] = document.status6.san1.value;
-    sheet.pcstatus.san[2] = document.status6.san2.value;
-    sheet.pcstatus.idea[0] = document.status6.idea0.value;
-    sheet.pcstatus.idea[1] = document.status6.idea1.value;
-    sheet.pcstatus.idea[2] = document.status6.idea2.value;
-    sheet.pcstatus.luck[0] = document.status6.luck0.value;
-    sheet.pcstatus.luck[1] = document.status6.luck1.value;
-    sheet.pcstatus.luck[2] = document.status6.luck2.value;
-    sheet.pcstatus.know[0] = document.status6.know0.value;
-    sheet.pcstatus.know[1] = document.status6.know1.value;
-    sheet.pcstatus.know[2] = document.status6.know2.value;
-
-    sheet.pcstatus.db    =    document.status6.db.value;
-    sheet.pcstatus.bp[0] = document.status6.curBP.value;
-    sheet.pcstatus.bp[1] = document.status6.maxBP.value;
-    sheet.pcstatus.ip[0] = document.status6.curIP.value;
-    sheet.pcstatus.ip[1] = document.status6.maxIP.value;
-    sheet.pcstatus.sp[0] = document.status6.curSP.value;
-    sheet.pcstatus.sp[1] = document.status6.maxSP.value;
-
-    sheet.standstatus.parameter[0] = document.status6.power.value;
-    sheet.standstatus.parameter[1] = document.status6.speed.value;
-    sheet.standstatus.parameter[2] = document.status6.durability.value;
-    sheet.standstatus.parameter[3] = document.status6.range.value;
-    sheet.standstatus.parameter[4] = document.status6.accuracy.value;
-    sheet.standstatus.parameter[5] = document.status6.growth.value;
-    sheet.standstatus.parameter[6] = document.status6.dexS.value;
-    sheet.standstatus.db =           document.status6.dbS.value;
-    sheet.standstatus.deffence =     document.status6.deffenceS.value;
-    sheet.standstatus.mpcost =       document.status6.usempS.value;
-
-    var standabilitybattle = document.getElementById("standabilitybattle6");
-    var standabilityaction = document.getElementById("standabilityaction6");
-    var battle = document.getElementById("battle6");
-    var search = document.getElementById("search6");
-    var action = document.getElementById("action6");
-    var negotiations = document.getElementById("negotiations6");
-    var knowledge = document.getElementById("knowledge6");
-    var etc = document.getElementById("etc6");
-    var items = document.getElementById("items6");
-
-    var defpcbattlenum = defpcbattlenum6;
-    var defpcsearchnum = defpcsearchnum6;
-    var defpcactionnum = defpcactionnum6;
-    var defpcnegotiationsnum = defpcnegotiationsnum6;
-    var defpcknowledgenum = defpcknowledgenum6;
-    var defstandbattlenum = defstandbattlenum6;
-    var defstandactionnum = defstandactionnum6;
-
-    for(let table = 0; table < standabilitybattle.rows.length-1; table++){
-        let standstatus = {
-            isinput: false,
-            growth: false,
-            name: "技能名",
-            inputname: "()",
-            num: [0, 0, 0, 0, 0]
-        }
-        standstatus.growth = document.getElementsByName("chstandabilitybattle6"+table)[0].checked;
-        if(table < defstandbattlenum){
-            standstatus.name = standabilitybattle.rows[table+1].cells[1].innerText;
-            if(standabilitybattle.rows[table+1].cells[1].innerHTML.includes("input")){
-                standstatus.isinput = true;
-                standstatus.inputname = document.getElementsByName("standabilitybattlename6"+table)[0].value;
-            }else{
-                standstatus.isinput = false;
-                standstatus.inputname = "";
-            }
-            
-        }else{
-            standstatus.name = document.getElementsByName("standabilitybattlename6"+table)[0].value;
-            standstatus.isinput = false;
-            standstatus.inputname = "";
-        }
-        standstatus.num[0] = document.getElementsByName("defstandabilitybattle6"+table)[0].value;
-        standstatus.num[1] = document.getElementsByName("corstandabilitybattle6"+table)[0].value;
-        standstatus.num[2] = document.getElementsByName("plstandabilitybattle6"+table)[0].value;
-        standstatus.num[3] = document.getElementsByName("addstandabilitybattle6"+table)[0].value;
-        standstatus.num[4] = document.getElementsByName("tostandabilitybattle6"+table)[0].value;
-        sheet.standstatus.battle.push(standstatus);
-    }
-    for(let table = 0; table < standabilityaction.rows.length-1; table++){
-        let standstatus = {
-            isinput: false,
-            growth: false,
-            name: "技能名",
-            inputname: "()",
-            num: [0, 0, 0, 0, 0]
-        }
-        standstatus.growth = document.getElementsByName("chstandabilityaction6"+table)[0].checked;
-        if(table < defstandactionnum){
-            standstatus.name = standabilityaction.rows[table+1].cells[1].innerText;
-            if(standabilityaction.rows[table+1].cells[1].innerHTML.includes("input")){
-                standstatus.isinput = true;
-                standstatus.inputname = document.getElementsByName("standabilityactionname6"+table)[0].value;
-            }else{
-                standstatus.isinput = false;
-                standstatus.inputname = "";
-            }
-            
-        }else{
-            standstatus.name = document.getElementsByName("standabilityactionname6"+table)[0].value;
-            standstatus.isinput = false;
-            standstatus.inputname = "";
-        }
-        standstatus.num[0] = document.getElementsByName("defstandabilityaction6"+table)[0].value;
-        standstatus.num[1] = document.getElementsByName("corstandabilityaction6"+table)[0].value;
-        standstatus.num[2] = document.getElementsByName("plstandabilityaction6"+table)[0].value;
-        standstatus.num[3] = document.getElementsByName("addstandabilityaction6"+table)[0].value;
-        standstatus.num[4] = document.getElementsByName("tostandabilityaction6"+table)[0].value;
-        sheet.standstatus.action.push(standstatus);
-    }
-    for(let table = 0; table < battle.rows.length-1; table++){
-        let pcstatus = {
-            isinput: false,
-            growth: false,
-            name: "技能名",
-            inputname: "()",
-            num: [0, 0, 0, 0, 0, 0]
-        }
-        pcstatus.growth = document.getElementsByName("chbattle6"+table)[0].checked;
-        if(table < defpcbattlenum){
-            pcstatus.name = battle.rows[table+1].cells[1].innerText;
-            if(battle.rows[table+1].cells[1].innerHTML.includes("input")){
-                pcstatus.isinput = true;
-                pcstatus.inputname = document.getElementsByName("battlename6"+table)[0].value;
-            }else{
-                pcstatus.isinput = false;
-                pcstatus.inputname = "";
-            }
-        
-        }else{
-            pcstatus.name = document.getElementsByName("battlename6"+table)[0].value;
-            pcstatus.isinput = false;
-            pcstatus.inputname = "";
-        }
-        pcstatus.num[0] = document.getElementsByName("defbattle6"+table)[0].value;
-        pcstatus.num[1] = document.getElementsByName("bpbattle6"+table)[0].value;
-        pcstatus.num[2] = document.getElementsByName("ipbattle6"+table)[0].value;
-        pcstatus.num[3] = document.getElementsByName("plbattle6"+table)[0].value;
-        pcstatus.num[4] = document.getElementsByName("addbattle6"+table)[0].value;
-        pcstatus.num[5] = document.getElementsByName("tobattle6"+table)[0].value;
-        sheet.pcstatus.battle.push(pcstatus);
-    }
-    for(let table = 0; table < search.rows.length-1; table++){
-        let pcstatus = {
-            isinput: false,
-            growth: false,
-            name: "技能名",
-            inputname: "()",
-            num: [0, 0, 0, 0, 0, 0]
-        }
-        pcstatus.growth = document.getElementsByName("chsearch6"+table)[0].checked;
-        if(table < defpcsearchnum){
-            pcstatus.name = search.rows[table+1].cells[1].innerText;
-            if(search.rows[table+1].cells[1].innerHTML.includes("input")){
-                pcstatus.isinput = true;
-                pcstatus.inputname = document.getElementsByName("searchname6"+table)[0].value;
-            }else{
-                pcstatus.isinput = false;
-                pcstatus.inputname = "";
-            }
-        
-        }else{
-            pcstatus.name = document.getElementsByName("searchname6"+table)[0].value;
-            pcstatus.isinput = false;
-            pcstatus.inputname = "";
-        }
-        pcstatus.num[0] = document.getElementsByName("defsearch6"+table)[0].value;
-        pcstatus.num[1] = document.getElementsByName("bpsearch6"+table)[0].value;
-        pcstatus.num[2] = document.getElementsByName("ipsearch6"+table)[0].value;
-        pcstatus.num[3] = document.getElementsByName("plsearch6"+table)[0].value;
-        pcstatus.num[4] = document.getElementsByName("addsearch6"+table)[0].value;
-        pcstatus.num[5] = document.getElementsByName("tosearch6"+table)[0].value;
-        sheet.pcstatus.search.push(pcstatus);
-    }
-    for(let table = 0; table < action.rows.length-1; table++){
-        let pcstatus = {
-            isinput: false,
-            growth: false,
-            name: "技能名",
-            inputname: "()",
-            num: [0, 0, 0, 0, 0, 0]
-        }
-        pcstatus.growth = document.getElementsByName("chaction6"+table)[0].checked;
-        if(table < defpcactionnum){
-            pcstatus.name = action.rows[table+1].cells[1].innerText;
-            if(action.rows[table+1].cells[1].innerHTML.includes("input")){
-                pcstatus.isinput = true;
-                pcstatus.inputname = document.getElementsByName("actionname6"+table)[0].value;
-            }else{
-                pcstatus.isinput = false;
-                pcstatus.inputname = "";
-            }
-        
-        }else{
-            pcstatus.name = document.getElementsByName("actionname6"+table)[0].value;
-            pcstatus.isinput = false;
-            pcstatus.inputname = "";
-        }
-        pcstatus.num[0] = document.getElementsByName("defaction6"+table)[0].value;
-        pcstatus.num[1] = document.getElementsByName("bpaction6"+table)[0].value;
-        pcstatus.num[2] = document.getElementsByName("ipaction6"+table)[0].value;
-        pcstatus.num[3] = document.getElementsByName("plaction6"+table)[0].value;
-        pcstatus.num[4] = document.getElementsByName("addaction6"+table)[0].value;
-        pcstatus.num[5] = document.getElementsByName("toaction6"+table)[0].value;
-        sheet.pcstatus.action.push(pcstatus);
-    }
-    for(let table = 0; table < negotiations.rows.length-1; table++){
-        let pcstatus = {
-            isinput: false,
-            growth: false,
-            name: "技能名",
-            inputname: "()",
-            num: [0, 0, 0, 0, 0, 0]
-        }
-        pcstatus.growth = document.getElementsByName("chnegotiations6"+table)[0].checked;
-        if(table < defpcnegotiationsnum){
-            pcstatus.name = negotiations.rows[table+1].cells[1].innerText;
-            if(negotiations.rows[table+1].cells[1].innerHTML.includes("input")){
-                pcstatus.isinput = true;
-                pcstatus.inputname = document.getElementsByName("negotiationsname6"+table)[0].value;
-            }else{
-                pcstatus.isinput = false;
-                pcstatus.inputname = "";
-            }
-        
-        }else{
-            pcstatus.name = document.getElementsByName("negotiationsname6"+table)[0].value;
-            pcstatus.isinput = false;
-            pcstatus.inputname = "";
-        }
-        pcstatus.num[0] = document.getElementsByName("defnegotiations6"+table)[0].value;
-        pcstatus.num[1] = document.getElementsByName("bpnegotiations6"+table)[0].value;
-        pcstatus.num[2] = document.getElementsByName("ipnegotiations6"+table)[0].value;
-        pcstatus.num[3] = document.getElementsByName("plnegotiations6"+table)[0].value;
-        pcstatus.num[4] = document.getElementsByName("addnegotiations6"+table)[0].value;
-        pcstatus.num[5] = document.getElementsByName("tonegotiations6"+table)[0].value;
-        sheet.pcstatus.negotiations.push(pcstatus);
-    }
-    for(let table = 0; table < knowledge.rows.length-1; table++){
-        let pcstatus = {
-            isinput: false,
-            growth: false,
-            name: "技能名",
-            inputname: "()",
-            num: [0, 0, 0, 0, 0, 0]
-        }
-        pcstatus.growth = document.getElementsByName("chknowledge6"+table)[0].checked;
-        if(table < defpcknowledgenum){
-            pcstatus.name = knowledge.rows[table+1].cells[1].innerText;
-            if(knowledge.rows[table+1].cells[1].innerHTML.includes("input")){
-                pcstatus.isinput = true;
-                pcstatus.inputname = document.getElementsByName("knowledgename6"+table)[0].value;
-            }else{
-                pcstatus.isinput = false;
-                pcstatus.inputname = "";
-            }
-        
-        }else{
-            pcstatus.name = document.getElementsByName("knowledgename6"+table)[0].value;
-            pcstatus.isinput = false;
-            pcstatus.inputname = "";
-        }
-        pcstatus.num[0] = document.getElementsByName("defknowledge6"+table)[0].value;
-        pcstatus.num[1] = document.getElementsByName("bpknowledge6"+table)[0].value;
-        pcstatus.num[2] = document.getElementsByName("ipknowledge6"+table)[0].value;
-        pcstatus.num[3] = document.getElementsByName("plknowledge6"+table)[0].value;
-        pcstatus.num[4] = document.getElementsByName("addknowledge6"+table)[0].value;
-        pcstatus.num[5] = document.getElementsByName("toknowledge6"+table)[0].value;
-        sheet.pcstatus.knowledge.push(pcstatus);
-    }
-    for(let table = 0; table < etc.rows.length-1; table++){
-        let pcstatus = {
-            isinput: false,
-            growth: false,
-            name: "技能名",
-            inputname: "()",
-            num: [0, 0, 0, 0, 0, 0]
-        }
-        pcstatus.growth = document.getElementsByName("chetc6"+table)[0].checked;
-        pcstatus.name = document.getElementsByName("etcname6"+table)[0].value;
-        pcstatus.isinput = false;
-        pcstatus.inputname = "";
-        pcstatus.num[0] = document.getElementsByName("defetc6"+table)[0].value;
-        pcstatus.num[1] = document.getElementsByName("bpetc6"+table)[0].value;
-        pcstatus.num[2] = document.getElementsByName("ipetc6"+table)[0].value;
-        pcstatus.num[3] = document.getElementsByName("pletc6"+table)[0].value;
-        pcstatus.num[4] = document.getElementsByName("addetc6"+table)[0].value;
-        pcstatus.num[5] = document.getElementsByName("toetc6"+table)[0].value;
-        sheet.pcstatus.etc.push(pcstatus);
-    }
-    for(let table = 0; table < items.rows.length-1; table++){
-        let itemsdata = {
-            name: "names",
-            num: "0",
-            detail: "見本"
-        };
-        itemsdata.name = document.getElementsByName("itemsname6"+table)[0].value;
-        itemsdata.num = document.getElementsByName("itemsnum6"+table)[0].value;
-        itemsdata.detail = document.getElementsByName("itemsdetail6"+table)[0].value;
-        sheet.items.push(itemsdata);
-    }
-    
-    const data = JSON.stringify(sheet);
-    navigator.clipboard.writeText(data);
-    document.getElementById("saveS6").innerText = "クリップボードにコピー済み";
 }
 
 function loadpageS6(){
