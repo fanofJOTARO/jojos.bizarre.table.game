@@ -286,6 +286,8 @@ function reset(numb){
     }
 
     document.getElementsByName("defbattle"+numb+"0")[0].readOnly = "";
+    document.getElementsByName("bpbattle"+numb+"0")[0].readOnly = "readonly";
+    document.getElementsByName("ipbattle"+numb+"0")[0].readOnly = "readonly";
     if(numb == 7){
         document.getElementsByName("defbattle"+numb+"2")[0].readOnly = "";
         document.getElementsByName("defbattle"+numb+"4")[0].readOnly = "";
